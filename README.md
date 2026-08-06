@@ -6,7 +6,7 @@
 ```
 welco-coffee.github.io/
 ├─ index.html          ← 사이트 본체 (전부 이 한 파일)
-├─ assets/             ← 이미지 (원본은 C:\Users\DGIST\케냐AA)
+├─ assets/             ← 이미지 (원본은 ..\케냐AA)
 │  ├─ hero-beans.jpg  logo.png  roaster.jpg  hmi.jpg  package.jpg  patent.jpg
 ├─ .nojekyll           ← GitHub Pages가 Jekyll 처리를 건너뛰게 함
 ├─ 로컬실행.cmd        ← 내 PC에서 미리보기
@@ -57,5 +57,5 @@ HACCP 인증 여부, 월 생산 캐파, 배치 사이클 타임은 확인되지 
 
 - '검출한계 미만' 문구에는 시험기관·일자·시료 한정 단서를 항상 함께 둡니다(푸터·검증 섹션에 이미 포함).
 - 질병 예방·치료 효과를 뜻하는 표현은 넣지 않습니다(식품표시광고법).
-- 이미지 원본: `C:\Users\DGIST\케냐AA\로스팅 기계 관련 사진`.
+- 이미지 원본: `D:\_개인·부업\사업_원두·카페\케냐AA\로스팅 기계 관련 사진`.
   재가공 스크립트는 세션 스크래치패드의 `build_assets.py` 참고.

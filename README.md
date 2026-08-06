@@ -9,36 +9,46 @@ welco-coffee.github.io/
 ├─ assets/             ← 이미지 (원본은 ..\케냐AA)
 │  ├─ hero-beans.jpg  logo.png  roaster.jpg  hmi.jpg  package.jpg  patent.jpg
 ├─ .nojekyll           ← GitHub Pages가 Jekyll 처리를 건너뛰게 함
-├─ 로컬실행.cmd        ← 내 PC에서 미리보기
+├─ serve-local.cmd     ← 내 PC에서 미리보기
 └─ README.md
 ```
 
+> 파일명은 모두 영문으로 둡니다. GitHub Pages 빌드가 한글 파일명에서 실패한 적이 있습니다.
+
 ## 1. 내 PC에서 보기
 
-`로컬실행.cmd` 를 더블클릭하면 <http://localhost:8080> 이 열립니다. (Python 필요, 이미 설치되어 있음)
+`serve-local.cmd` 를 더블클릭하면 <http://localhost:8080> 이 열립니다. (Python 필요, 이미 설치되어 있음)
 
 `index.html` 을 그냥 더블클릭해도 동일하게 보입니다. 서버 없이도 동작하도록 만들었습니다.
 
-## 2. GitHub Pages 에 올리기
+## 2. 인터넷 주소
 
-주소를 `welco-coffee.github.io` 로 쓰려면 **GitHub 계정 이름이 `welco-coffee`** 여야 하고,
-저장소 이름도 `welco-coffee.github.io` 여야 합니다. (계정 이름이 다르면 주소는
-`<계정이름>.github.io/welco-coffee` 형태가 됩니다.)
+현재 배포처: <https://leeseunghun815-create.github.io/welco/>
+(저장소 `leeseunghun815-create/welco`, 브랜치 `main`, 루트)
+
+수정한 뒤에는 이 폴더에서 `git add . && git commit -m "수정" && git push` 만 하면
+1~2분 뒤 반영됩니다.
+
+### `welco-coffee.github.io` 주소로 바꾸려면
+
+`<이름>.github.io` 는 **그 이름의 계정 또는 조직**만 쓸 수 있습니다.
+개인 계정 이름이 `leeseunghun815-create` 이므로, 조직을 만드는 쪽이 깔끔합니다.
+
+1. <https://github.com/account/organizations/new?plan=free> 에서 **Free** 플랜으로
+   조직 이름 `welco-coffee` 생성
+2. 저장소를 조직으로 이전하고 이름을 바꿉니다.
 
 ```bash
-# 이 폴더에서
-git init
-git add .
-git commit -m "WELCO B2B 사이트 첫 배포"
-git branch -M main
-git remote add origin https://github.com/welco-coffee/welco-coffee.github.io.git
-git push -u origin main
+gh api -X POST repos/leeseunghun815-create/welco/transfer -f new_owner=welco-coffee
+gh repo rename welco-coffee.github.io --repo welco-coffee/welco
+gh api -X POST repos/welco-coffee/welco-coffee.github.io/pages \
+  -f "source[branch]=main" -f "source[path]=/"
+git remote set-url origin https://github.com/welco-coffee/welco-coffee.github.io.git
 ```
 
-푸시 후 저장소 **Settings → Pages → Source: Deploy from a branch → main / (root)** 로 두면
-1~2분 뒤 <https://welco-coffee.github.io> 에서 열립니다.
-
-수정한 뒤에는 `git add . && git commit -m "수정" && git push` 만 하면 반영됩니다.
+그러면 <https://welco-coffee.github.io> 에서 열립니다.
+나중에 자체 도메인(예: welco.co.kr)을 사면 저장소 Settings → Pages → Custom domain 에
+넣고 DNS만 맞추면 됩니다.
 
 ## 3. 아직 비어 있는 항목 (사람이 채워야 함)
 

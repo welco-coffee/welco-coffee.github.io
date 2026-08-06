@@ -23,32 +23,25 @@ welco-coffee.github.io/
 
 ## 2. 인터넷 주소
 
-현재 배포처: <https://leeseunghun815-create.github.io/welco/>
-(저장소 `leeseunghun815-create/welco`, 브랜치 `main`, 루트)
+**<https://welco-coffee.github.io>** (2026-08-06 공개)
 
-수정한 뒤에는 이 폴더에서 `git add . && git commit -m "수정" && git push` 만 하면
-1~2분 뒤 반영됩니다.
+저장소 `welco-coffee/welco-coffee.github.io` · 브랜치 `main` · 루트 · 공개(public).
+`welco-coffee` 는 GitHub **조직(Organization)** 이고, 개인 계정
+`leeseunghun815-create` 가 소유자입니다.
 
-### `welco-coffee.github.io` 주소로 바꾸려면
-
-`<이름>.github.io` 는 **그 이름의 계정 또는 조직**만 쓸 수 있습니다.
-개인 계정 이름이 `leeseunghun815-create` 이므로, 조직을 만드는 쪽이 깔끔합니다.
-
-1. <https://github.com/account/organizations/new?plan=free> 에서 **Free** 플랜으로
-   조직 이름 `welco-coffee` 생성
-2. 저장소를 조직으로 이전하고 이름을 바꿉니다.
+수정한 뒤에는 이 폴더에서 아래만 하면 1~2분 뒤 반영됩니다.
 
 ```bash
-gh api -X POST repos/leeseunghun815-create/welco/transfer -f new_owner=welco-coffee
-gh repo rename welco-coffee.github.io --repo welco-coffee/welco
-gh api -X POST repos/welco-coffee/welco-coffee.github.io/pages \
-  -f "source[branch]=main" -f "source[path]=/"
-git remote set-url origin https://github.com/welco-coffee/welco-coffee.github.io.git
+git add . && git commit -m "수정" && git push
 ```
 
-그러면 <https://welco-coffee.github.io> 에서 열립니다.
 나중에 자체 도메인(예: welco.co.kr)을 사면 저장소 Settings → Pages → Custom domain 에
-넣고 DNS만 맞추면 됩니다.
+넣고 DNS만 맞추면 그 주소로 바뀝니다.
+
+### 빌드가 실패할 때 확인할 것
+
+- **한글 파일명을 넣지 말 것.** `로컬실행.cmd` 때문에 빌드가 깨진 적이 있습니다.
+- 저장소 이름은 반드시 `welco-coffee.github.io` — 소유자 이름과 다르면 빌드가 거부됩니다.
 
 ## 3. 아직 비어 있는 항목 (사람이 채워야 함)
 

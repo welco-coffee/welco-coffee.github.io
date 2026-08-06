@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  WELCO (주식회사 디올) B2B 브랜드 사이트 — GitHub Pages 정적 페이지
+  저장소: welco-coffee.github.io   /   로컬 실행: 로컬실행.cmd
+
+  ⚑ 사람이 채워야 할 항목 (지금은 안전한 값으로 비워 두었습니다)
+     1) 문의 이메일 주소 — 아래 "MAIL_TODO" 검색해서 교체
+     2) 쿠팡·스마트스토어 상품 링크 — "SHOP_TODO" 검색해서 교체
+     3) 위탁생산 최소 수량(MOQ)·리드타임·HACCP 여부 — 현재 "협의"로 표기.
+        확정되면 #oem 섹션의 표를 숫자로 바꾸면 됩니다.
+  ============================================================================
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WELCO — 진공 질소 저온 로스팅 원두 위탁생산·도매 | 주식회사 디올</title>
+<meta name="description" content="특허 진공 질소 150℃ 저온 로스팅. 아크릴아마이드 공인기관 2곳 검출한계 미만. 온라인 원두 판매사·카페를 위한 원두 위탁생산(OEM·화이트라벨)과 도매 납품. 경북 고령 자사 로스터리.">
+<meta property="og:title" content="WELCO — 진공 질소 저온 로스팅 원두 위탁생산·도매">
+<meta property="og:description" content="당신의 브랜드 이름으로, 특허받은 저온 로스팅 원두를. 200g 무료 샘플을 보내 드립니다.">
+<meta property="og:image" content="assets/hero-beans.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.png">
+<style>
+  :root{
+    --espresso:#2b1c12; --espresso2:#3b2718; --cream:#faf7f2; --paper:#ffffff;
+    --ink:#241a12; --ink2:#5b4b3c; --line:#e2d8c9;
+    --gold:#b08d3f; --gold-lt:#d9bb72; --sage:#5f9c74;
+    --col:700px; --wide:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕','Noto Sans KR',sans-serif;
+    font-size:16px; line-height:1.85; word-break:keep-all; overflow-wrap:break-word;
+    -webkit-text-size-adjust:100%;
+  }
+  h1,h2,h3,h4{
+    font-family:'Noto Serif KR','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕','Nanum Myeongjo',serif;
+    font-weight:800; letter-spacing:-0.01em; word-break:keep-all; margin:0;
+  }
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%; height:auto; display:block;}
+
+  .wide{width:100%; max-width:var(--wide); margin:0 auto; padding:0 22px;}
+  .col{width:100%; max-width:var(--col); margin:0 auto;}
+  section{padding:72px 0; scroll-margin-top:64px;}
+  .lead{font-size:17px; color:var(--ink2); line-height:1.9;}
+  .eyebrow{font-size:12.5px; letter-spacing:.22em; font-weight:700; color:var(--gold);
+           text-transform:uppercase; margin:0 0 14px;}
+  h2.sec{font-size:29px; line-height:1.42; margin:0 0 18px;}
+  h3{font-size:19px; line-height:1.5; margin:0 0 8px;}
+  .rule{width:44px; height:3px; background:var(--gold); margin:0 0 22px;}
+
+  /* ── 상단 바 ───────────────────────────────────────── */
+  header{position:sticky; top:0; z-index:50; background:rgba(43,28,18,.97);
+         border-bottom:1px solid rgba(217,187,114,.28);}
+  .nav{display:flex; align-items:center; gap:18px; height:62px;}
+  .nav .mark{display:flex; align-items:center; gap:9px; text-decoration:none;}
+  .nav .mark img{width:26px;}
+  .nav .mark b{color:#f3e9d8; font-size:15px; letter-spacing:.26em; font-weight:700;}
+  .nav nav{margin-left:auto; display:flex; gap:20px; align-items:center;}
+  .nav nav a{color:#e6dac6; text-decoration:none; font-size:14px; opacity:.88;}
+  .nav nav a:hover{opacity:1; color:var(--gold-lt);}
+  .nav .btn-sm{background:var(--gold); color:#241a12; padding:9px 16px; border-radius:2px;
+               font-weight:700; font-size:14px; text-decoration:none;}
+  @media(max-width:820px){ .nav nav a{display:none;} .nav nav a.keep{display:inline;} }
+
+  /* ── 히어로 ────────────────────────────────────────── */
+  .hero{position:relative; background:var(--espresso); color:#f6efe3; padding:0; overflow:hidden;}
+  .hero .bg{position:absolute; inset:0; background:url('assets/hero-beans.jpg') center 78%/cover no-repeat;
+            opacity:.32;}
+  .hero .veil{position:absolute; inset:0;
+              background:linear-gradient(180deg, rgba(43,28,18,.72) 0%, rgba(43,28,18,.90) 62%, rgba(43,28,18,.98) 100%);}
+  .hero .inner{position:relative; padding:96px 0 84px;}
+  .hero h1{font-size:44px; line-height:1.34; color:#fbf5ea; margin:0 0 20px;}
+  .hero h1 em{font-style:normal; color:var(--gold-lt);}
+  .hero .sub{font-size:17.5px; line-height:1.9; color:#d9cbb4; max-width:640px; margin:0 0 30px;}
+  .hero .facts{display:flex; flex-wrap:wrap; gap:10px; margin:0 0 34px;}
+  .hero .facts span{border:1px solid rgba(217,187,114,.45); color:#e8d9bd;
+                    padding:7px 13px; font-size:13.5px; border-radius:2px;}
+  .cta-row{display:flex; flex-wrap:wrap; gap:12px;}
+  .btn{display:inline-block; text-decoration:none; padding:15px 26px; font-weight:700;
+       font-size:15.5px; border-radius:2px;}
+  .btn-gold{background:var(--gold); color:#241a12;}
+  .btn-gold:hover{background:var(--gold-lt);}
+  .btn-ghost{border:1px solid rgba(240,230,210,.5); color:#f0e6d2;}
+  .btn-ghost:hover{border-color:var(--gold-lt); color:var(--gold-lt);}
+  @media(max-width:700px){ .hero h1{font-size:31px;} .hero .inner{padding:56px 0 54px;}
+    .eyebrow{letter-spacing:.14em; font-size:11.5px;} h2.sec{font-size:24px;} }
+
+  /* ── 신뢰 스트립 ───────────────────────────────────── */
+  .strip{background:var(--espresso2); color:#e8dcc6; padding:0;}
+  .strip .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(217,187,114,.20);}
+  .strip .cell{background:var(--espresso2); padding:26px 20px;}
+  .strip .n{font-family:'Noto Serif KR',serif; font-size:21px; color:var(--gold-lt); font-weight:800;
+            display:block; margin-bottom:4px; line-height:1.4;}
+  .strip .t{font-size:13.5px; color:#c6b79c; line-height:1.7;}
+  @media(max-width:860px){ .strip .grid{grid-template-columns:repeat(2,1fr);} }
+
+  /* ── 카드 ──────────────────────────────────────────── */
+  .cards{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:34px;}
+  .card{background:var(--paper); border:1px solid var(--line); padding:32px 30px;}
+  .card .no{font-size:12px; letter-spacing:.2em; color:var(--gold); font-weight:700; margin-bottom:10px;}
+  .card ul{margin:14px 0 0; padding-left:18px; color:var(--ink2); font-size:15px; line-height:1.85;}
+  .card li{margin-bottom:6px;}
+  @media(max-width:820px){ .cards{grid-template-columns:1fr;} }
+
+  /* ── 본문 블록 ─────────────────────────────────────── */
+  .white{background:var(--paper);}
+  .dark{background:var(--espresso); color:#ece0cc;}
+  .dark h2.sec{color:#fbf5ea;} .dark .lead{color:#c9b99e;} .dark .eyebrow{color:var(--gold-lt);}
+
+  .media{display:grid; grid-template-columns:1fr 1fr; gap:26px; align-items:center; margin-top:36px;}
+  .media figure{margin:0;}
+  .media figcaption{font-size:13px; color:var(--ink2); line-height:1.7; margin-top:10px;}
+  .dark .media figcaption{color:#b6a68b;}
+  .media img{border:1px solid rgba(0,0,0,.10); width:100%; height:360px; object-fit:cover;
+             object-position:center;}
+  .media .tall img{height:440px;}
+  .media .top img{object-position:center 22%;}
+  .media .portrait img{height:auto; max-height:540px; width:auto; max-width:100%; margin:0 auto;}
+  @media(max-width:820px){ .media{grid-template-columns:1fr;}
+    .media img, .media .tall img{height:300px;} }
+
+  table{width:100%; border-collapse:collapse; margin:18px 0 10px; background:var(--paper);}
+  th,td{border:1px solid var(--line); padding:12px 14px; font-size:15px; line-height:1.75;
+        text-align:left; vertical-align:top; word-break:keep-all;}
+  th{background:#f4ede2; font-weight:700; color:#4a3a26; width:130px;}
+  table.price th{width:auto; text-align:center;}
+  table.price td{text-align:center;}
+  table.price td.q{text-align:left; font-weight:700;}
+  table.price tr.hi td{background:#fcf6e9;}
+  .note{font-size:13px; color:var(--ink2); line-height:1.75; margin:6px 0 0;}
+
+  .steps{counter-reset:s; margin:26px 0 0; padding:0; list-style:none;}
+  .steps li{counter-increment:s; position:relative; padding:0 0 20px 52px; border-left:1px solid var(--line);
+            margin-left:15px;}
+  .steps li:last-child{border-left-color:transparent; padding-bottom:0;}
+  .steps li::before{content:counter(s); position:absolute; left:-16px; top:-2px; width:32px; height:32px;
+                    background:var(--gold); color:#241a12; border-radius:50%; font-weight:800;
+                    font-size:14px; display:flex; align-items:center; justify-content:center;}
+  .steps b{display:block; font-size:16.5px; margin-bottom:2px;}
+  .steps span{font-size:14.5px; color:var(--ink2); line-height:1.8;}
+
+  .seal{display:flex; gap:20px; flex-wrap:wrap; margin-top:26px;}
+  .seal .item{flex:1 1 260px; background:var(--paper); border:1px solid var(--line); padding:22px 24px;}
+  .seal .badge{display:inline-block; border:2px solid var(--sage); color:var(--sage); font-weight:800;
+               font-size:13px; padding:4px 12px; border-radius:20px; margin-bottom:10px;}
+  .seal .m{font-size:15px; line-height:1.8;}
+  .seal .d{font-size:13px; color:var(--ink2); margin-top:6px;}
+
+  .faq{margin-top:26px; border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line); padding:16px 0;}
+  .faq summary{cursor:pointer; font-weight:700; font-size:16px; list-style:none; line-height:1.6;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:'＋'; color:var(--gold); font-weight:800; margin-right:10px;}
+  .faq details[open] summary::before{content:'－';}
+  .faq p{margin:12px 0 0; font-size:15px; color:var(--ink2); line-height:1.9;}
+
+  .contact-box{background:var(--paper); border:2px solid var(--gold); padding:34px 32px; margin-top:30px;}
+  .contact-box .tel{font-family:'Noto Serif KR',serif; font-size:31px; font-weight:800; color:var(--espresso);
+                    text-decoration:none; display:inline-block; margin:6px 0 10px; letter-spacing:.01em;}
+  .contact-box .who{font-size:15px; color:var(--ink2);}
+
+  footer{background:var(--espresso); color:#a9987e; padding:46px 0 56px; font-size:13.5px; line-height:1.9;}
+  footer b{color:#d7c6a8;}
+  footer .disc{margin-top:18px; padding-top:16px; border-top:1px solid rgba(217,187,114,.20); font-size:12.5px; color:#8e8069;}
+  footer a{color:#c9b591;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wide nav">
+    <a class="mark" href="#top"><img src="assets/logo.png" alt=""><b>WELCO</b></a>
+    <nav>
+      <a href="#oem">위탁생산</a>
+      <a href="#wholesale">원두 납품</a>
+      <a href="#tech">로스팅 기술</a>
+      <a href="#proof">시험·특허</a>
+      <a class="btn-sm keep" href="#contact">샘플 요청</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── 히어로 ───────────────────────────────────────── -->
+<div class="hero" id="top">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="wide inner">
+    <p class="eyebrow" style="color:var(--gold-lt);">Vacuum&nbsp;Nitrogen Roasting &middot; 경북 고령 로스터리</p>
+    <h1>귀사의 브랜드 이름으로,<br><em>특허받은 저온 로스팅 원두</em>를<br>만들어 드립니다.</h1>
+    <p class="sub">
+      웰코는 진공 질소 상태에서 150℃로 볶는 로스팅 설비를 직접 운영합니다.
+      온라인에서 원두를 파는 회사에는 <b>위탁생산(OEM&middot;화이트라벨)</b>을,
+      카페와 사무실에는 <b>원두 도매 납품</b>을 합니다.
+    </p>
+    <div class="facts">
+      <span>특허 등록 제10-2004953호</span>
+      <span>아크릴아마이드 검출한계 미만 &middot; 공인기관 2곳</span>
+      <span>식품제조가공업 등록 자사 로스터리</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="#contact">200g 샘플 무료 요청</a>
+      <a class="btn btn-ghost" href="#oem">위탁생산 조건 보기</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── 신뢰 스트립 ──────────────────────────────────── -->
+<div class="strip">
+  <div class="wide" style="padding:0;">
+    <div class="grid">
+      <div class="cell"><span class="n">150&#8451;</span><span class="t">진공 질소 저온 로스팅 설정 온도. 일반 로스팅은 200&#8451;대에서 볶습니다.</span></div>
+      <div class="cell"><span class="n">불검출</span><span class="t">아크릴아마이드 &mdash; 공인 시험기관 두 곳에서 모두 검출한계 미만.</span></div>
+      <div class="cell"><span class="n">특허 등록</span><span class="t">제10-2004953호 &lsquo;곡물 로스팅장치 및 곡물의 로스팅 방법&rsquo;.</span></div>
+      <div class="cell"><span class="n">자사 생산</span><span class="t">경북 고령 자체 설비. 외주 로스팅이 아닙니다.</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 두 가지 거래 방식 ────────────────────────────── -->
+<section class="white">
+  <div class="wide">
+    <p class="eyebrow">What we do</p>
+    <h2 class="sec">원두를 파는 회사에는 생산을,<br>원두를 쓰는 곳에는 납품을 합니다.</h2>
+    <div class="rule"></div>
+    <p class="lead" style="max-width:var(--col);">
+      직접 로스팅 설비를 갖추는 데는 설비비와 인력, 그리고 식품제조가공업 등록이 필요합니다.
+      웰코는 이미 갖춰 두었습니다. 브랜드와 판매는 귀사가, 로스팅과 포장은 웰코가 맡는 구조입니다.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="no">01 &nbsp;OEM &middot; ODM</div>
+        <h3>원두 위탁생산</h3>
+        <p style="margin:0; font-size:15.5px; color:var(--ink2);">
+          자사몰&middot;스마트스토어&middot;쿠팡에서 원두를 파는 브랜드를 위한 생산 대행입니다.
+          귀사 라벨을 붙인 완제품으로 출고합니다.
+        </p>
+        <ul>
+          <li>귀사 브랜드 라벨 부착 &middot; 화이트라벨</li>
+          <li>200g &middot; 500g &middot; 1kg 등 포장 사양 협의</li>
+          <li>홀빈 기본, 요청 시 분쇄</li>
+          <li>특허&middot;시험성적서 정보를 상세페이지에 쓰실 수 있게 자료로 드립니다</li>
+        </ul>
+        <p style="margin:18px 0 0;"><a href="#oem" style="color:var(--gold); font-weight:700; text-decoration:none;">진행 절차 보기 &rsaquo;</a></p>
+      </div>
+      <div class="card">
+        <div class="no">02 &nbsp;WHOLESALE</div>
+        <h3>원두 도매 납품</h3>
+        <p style="margin:0; font-size:15.5px; color:var(--ink2);">
+          카페&middot;사무실&middot;식음 매장에 웰코 케냐 AA를 그대로 납품합니다.
+          주문 후 로스팅해 2~3일 안에 보냅니다.
+        </p>
+        <ul>
+          <li>1kg 28,000원 &middot; 5kg 이상 26,000원 &middot; 10kg 이상 24,000원</li>
+          <li>5kg 이상 배송비 없음</li>
+          <li>고령&middot;성주&middot;달성은 수량과 무관하게 직접 배송</li>
+          <li>200g 샘플 무료</li>
+        </ul>
+        <p style="margin:18px 0 0;"><a href="#wholesale" style="color:var(--gold); font-weight:700; text-decoration:none;">단가표 보기 &rsaquo;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 위탁생산 ─────────────────────────────────────── -->
+<section id="oem" style="background:var(--cream);">
+  <div class="wide">
+    <p class="eyebrow">OEM &middot; White Label</p>
+    <h2 class="sec">원두 위탁생산</h2>
+    <div class="rule"></div>
+    <p class="lead" style="max-width:var(--col);">
+      온라인에서 원두를 팔 때 가장 어려운 부분은 &lsquo;남과 다른 이야기&rsquo;입니다.
+      산지와 로스팅 포인트로 차별화하기는 갈수록 어렵습니다.
+      웰코가 만드는 원두에는 특허받은 공법과 공인기관 시험 결과라는,
+      상세페이지에 그대로 쓸 수 있는 근거가 붙습니다.
+    </p>
+
+    <div class="media">
+      <figure class="top">
+        <img src="assets/roaster.jpg" alt="웰코 진공 질소 저온 로스팅 설비">
+        <figcaption>경북 고령 로스터리의 진공 질소 로스팅 설비. 진공으로 산소를 빼고 질소를 채운 상태에서 볶습니다.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/hmi.jpg" alt="로스팅 제어 화면 - 케냐 1.9kg 배치, 설정 온도 150℃">
+        <figcaption>실제 생산 제어 화면. 케냐 1.9kg 배치, 용기&middot;하부 설정값 모두 150&#8451;, 질소&middot;진공 공정이 순서대로 들어갑니다.</figcaption>
+      </figure>
+    </div>
+
+    <div class="col" style="margin-top:52px;">
+      <h3 style="font-size:21px; margin-bottom:14px;">이런 회사에 맞습니다</h3>
+      <table>
+        <tr><th>온라인 셀러</th><td>자사몰&middot;스마트스토어&middot;쿠팡에서 원두를 팔고 있지만, 생산은 외부에 맡기고 싶은 브랜드</td></tr>
+        <tr><th>신규 브랜드</th><td>로스팅 설비 없이 원두 브랜드를 시작하려는 경우. 식품제조가공업 등록은 웰코 쪽에 있습니다</td></tr>
+        <tr><th>선물&middot;기념품</th><td>기업 답례품&middot;굿즈&middot;구독 박스에 자기 이름을 붙인 원두를 넣으려는 경우</td></tr>
+        <tr><th>차별화가 필요한 곳</th><td>&lsquo;쓴맛&middot;탄맛이 적다&rsquo;는 특징을 시험 결과로 설명하고 싶은 경우</td></tr>
+      </table>
+
+      <h3 style="font-size:21px; margin:44px 0 6px;">진행 절차</h3>
+      <ol class="steps">
+        <li><b>문의</b><span>필요한 물량, 포장 단위, 원하는 맛의 방향을 알려 주십시오. 전화 한 통이면 됩니다.</span></li>
+        <li><b>샘플 발송</b><span>200g 샘플을 무료로 보내 드립니다. 직접 내려 보시고 판단하시면 됩니다.</span></li>
+        <li><b>사양 확정</b><span>생두&middot;로스팅 정도&middot;포장 규격&middot;라벨 표시사항&middot;단가를 함께 정합니다.</span></li>
+        <li><b>시험 생산</b><span>확정한 사양으로 소량을 먼저 만들어 확인받습니다.</span></li>
+        <li><b>정기 공급</b><span>주문 주기에 맞춰 로스팅해 귀사 라벨 완제품으로 출고합니다.</span></li>
+      </ol>
+
+      <h3 style="font-size:21px; margin:44px 0 6px;">조건</h3>
+      <table>
+        <tr><th>생두</th><td>케냐 AA 기본. 다른 산지는 요청 주시면 검토해 협의합니다</td></tr>
+        <tr><th>로스팅</th><td>진공 질소 저온 로스팅(설정 150&#8451;) &middot; 특허 등록 제10-2004953호</td></tr>
+        <tr><th>포장</th><td>200g &middot; 500g &middot; 1kg 파우치(아웃가스 밸브). 그 외 규격 협의</td></tr>
+        <tr><th>라벨</th><td>귀사 디자인 부착. 식품 표시사항 기재 항목은 함께 확인해 드립니다</td></tr>
+        <tr><th>최소 수량&middot;단가</th><td>물량과 포장 사양에 따라 협의합니다. 문의 주시면 조건에 맞춰 산정해 회신드립니다</td></tr>
+        <tr><th>납기</th><td>사양 확정 후 주문 주기에 맞춰 협의합니다</td></tr>
+      </table>
+      <p class="note">※ 최소 수량&middot;납기&middot;단가는 포장 규격과 물량에 따라 달라지므로 일괄 공개하지 않습니다. 조건을 알려 주시면 그대로 계산해 드립니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 기술 ─────────────────────────────────────────── -->
+<section id="tech" class="dark">
+  <div class="wide">
+    <p class="eyebrow">Technology</p>
+    <h2 class="sec">산소를 빼고, 150&#8451;에서 볶습니다.</h2>
+    <div class="rule"></div>
+    <div class="col" style="margin:0;">
+      <p class="lead">
+        아크릴아마이드는 곡물&middot;커피를 높은 온도에서 볶을 때 생기는 물질입니다.
+        세계보건기구가 발암 가능 물질(2A군)로 분류했고, 커피의 쓴맛과 탄맛을 만드는 원인이기도 합니다.
+      </p>
+      <p class="lead">
+        웰코의 로스팅은 용기 안을 진공으로 만들어 산소를 빼내고 질소를 채운 뒤,
+        150&#8451;라는 낮은 온도에서 원두를 익힙니다.
+        높은 온도와 산소가 함께 있어야 잘 생기는 물질이라, 그 조건 자체를 없앤 방식입니다.
+        이 장치와 방법은 2019년 특허로 등록되었습니다.
+      </p>
+    </div>
+
+    <div class="media" style="margin-top:44px;">
+      <figure class="portrait">
+        <img src="assets/package.jpg" alt="WELCO 케냐 AA 200g 파우치">
+        <figcaption>웰코 케냐 AA 200g 완제품. 위탁생산에서는 이 자리에 귀사 라벨이 들어갑니다.</figcaption>
+      </figure>
+      <div>
+        <h3 style="color:#fbf5ea; font-size:20px;">일반 로스팅과 무엇이 다른가</h3>
+        <table style="background:transparent;">
+          <tr><th style="background:rgba(255,255,255,.06); color:#e2d3b7; border-color:rgba(217,187,114,.25);">분위기</th>
+              <td style="color:#d8c9ae; border-color:rgba(217,187,114,.25);">일반: 대기(산소 있음) &nbsp;/&nbsp; 웰코: 진공 후 질소 충전</td></tr>
+          <tr><th style="background:rgba(255,255,255,.06); color:#e2d3b7; border-color:rgba(217,187,114,.25);">온도</th>
+              <td style="color:#d8c9ae; border-color:rgba(217,187,114,.25);">일반: 200&#8451;대 &nbsp;/&nbsp; 웰코: 설정 150&#8451;</td></tr>
+          <tr><th style="background:rgba(255,255,255,.06); color:#e2d3b7; border-color:rgba(217,187,114,.25);">맛</th>
+              <td style="color:#d8c9ae; border-color:rgba(217,187,114,.25);">쓴맛&middot;탄맛이 적고 산미와 단맛이 남습니다</td></tr>
+          <tr><th style="background:rgba(255,255,255,.06); color:#e2d3b7; border-color:rgba(217,187,114,.25);">검증</th>
+              <td style="color:#d8c9ae; border-color:rgba(217,187,114,.25);">공인기관 두 곳 시험 결과 검출한계 미만</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 시험·특허 ────────────────────────────────────── -->
+<section id="proof" class="white">
+  <div class="wide">
+    <p class="eyebrow">Verification</p>
+    <h2 class="sec">말이 아니라 서류로 보여 드립니다.</h2>
+    <div class="rule"></div>
+    <p class="lead" style="max-width:var(--col);">
+      아래 두 건은 공인 시험기관에 의뢰한 아크릴아마이드 시험 결과입니다.
+      성적서 사본은 요청하시면 그대로 보내 드립니다. 거래 전에 먼저 확인하셔도 됩니다.
+    </p>
+
+    <div class="seal">
+      <div class="item">
+        <span class="badge">검출한계 미만</span>
+        <p class="m" style="margin:0;"><b>한국기능성식품연구원</b></p>
+        <p class="d">아크릴아마이드 시험 &middot; 2025. 9. 11.</p>
+      </div>
+      <div class="item">
+        <span class="badge">검출한계 미만</span>
+        <p class="m" style="margin:0;"><b>Intertek</b> (한국인터텍테스팅서비스)</p>
+        <p class="d">아크릴아마이드 시험 &middot; 2025. 9. 10. &middot; 성적서번호 RT25B-S0676</p>
+      </div>
+      <div class="item">
+        <span class="badge" style="border-color:var(--gold); color:var(--gold);">특허 등록</span>
+        <p class="m" style="margin:0;"><b>제10-2004953호</b></p>
+        <p class="d">곡물 로스팅장치 및 곡물의 로스팅 방법 &middot; 2019. 7. 23. 등록</p>
+      </div>
+    </div>
+
+    <div style="max-width:400px; margin:40px auto 0;">
+      <img src="assets/patent.jpg" alt="특허증 제10-2004953호" style="border:1px solid var(--line);">
+      <p class="note" style="text-align:center;">특허증 &middot; 주식회사 디올</p>
+    </div>
+
+    <p class="note col" style="margin-top:34px;">
+      ※ &lsquo;검출한계 미만&rsquo;은 위 두 시험기관 성적서에 기재된 결과이며, 시험 대상은 의뢰한 해당 시료에 한합니다.
+      웰코는 이 결과를 근거로 특정 질병의 예방이나 치료 효과를 주장하지 않습니다.
+    </p>
+  </div>
+</section>
+
+<!-- ── 원두 · 도매 ──────────────────────────────────── -->
+<section id="wholesale" style="background:var(--cream);">
+  <div class="wide">
+    <p class="eyebrow">Wholesale</p>
+    <h2 class="sec">케냐 AA &middot; 도매 납품</h2>
+    <div class="rule"></div>
+    <div class="col" style="margin:0;">
+      <table>
+        <tr><th>품목</th><td>Kenya AA &middot; 니에리(Nyeri) 고원 해발 1,500m 이상 &middot; SL28/34 &middot; 워시드</td></tr>
+        <tr><th>맛</th><td>자몽 같은 산미와 황설탕 단맛이 균형을 이룹니다. 쓴맛&middot;탄맛이 적어 산미가 부담스러운 손님에게도 호불호가 크지 않습니다</td></tr>
+        <tr><th>로스팅</th><td>진공 질소 저온 로스팅(설정 150&#8451;) &middot; 특허 등록 제10-2004953호</td></tr>
+        <tr><th>형태</th><td>홀빈(분쇄하지 않음) 기본 &middot; 요청 시 분쇄 &middot; 콜드브루용 별도 문의</td></tr>
+        <tr><th>납품</th><td>주문 후 로스팅해 2~3일 안에 발송</td></tr>
+      </table>
+
+      <h3 style="font-size:21px; margin:40px 0 6px;">납품 단가</h3>
+      <table class="price">
+        <tr><th>수량</th><th>1kg당 단가</th><th>배송비</th></tr>
+        <tr><td class="q">1kg</td><td>28,000원</td><td>3,500원</td></tr>
+        <tr class="hi"><td class="q">5kg 이상</td><td>26,000원</td><td>없음</td></tr>
+        <tr><td class="q">10kg 이상</td><td>24,000원</td><td>없음</td></tr>
+      </table>
+      <p class="note">부가가치세 별도 &middot; 고령&middot;성주&middot;달성 지역은 수량과 무관하게 직접 배송해 드립니다.</p>
+
+      <div style="background:var(--paper); border:1px solid var(--line); padding:24px 26px; margin-top:34px;">
+        <h3 style="font-size:17.5px; margin-bottom:6px;">개인 구매</h3>
+        <p style="margin:0; font-size:15px; color:var(--ink2);">
+          낱개로 드셔 보실 분은 완제품(홀빈 200g)으로도 판매합니다.
+          200g 7,700원, 2봉 13,800원(봉당 6,900원)이며 배송비가 포함된 금액입니다.
+          <!-- SHOP_TODO: 쿠팡·스마트스토어 상품 링크를 확보하면 아래 문장을 링크 버튼으로 교체 -->
+          구매처 안내가 필요하시면 아래 연락처로 문의해 주십시오.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ──────────────────────────────────────────── -->
+<section class="white">
+  <div class="wide col" style="max-width:var(--col);">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="sec">자주 받는 질문</h2>
+    <div class="rule"></div>
+    <div class="faq">
+      <details open>
+        <summary>최소 주문 수량이 어떻게 되나요?</summary>
+        <p>포장 규격과 주문 주기에 따라 달라져서 일괄로 정해 두지 않았습니다. 필요한 물량과 포장 단위를 알려 주시면 그 조건으로 계산해 회신드립니다. 처음부터 큰 물량을 요구하지는 않습니다.</p>
+      </details>
+      <details>
+        <summary>저희 브랜드 라벨을 붙여서 받을 수 있나요?</summary>
+        <p>가능합니다. 귀사가 디자인한 라벨을 부착해 완제품으로 출고합니다. 식품 표시사항에 반드시 들어가야 하는 항목은 함께 확인해 드립니다.</p>
+      </details>
+      <details>
+        <summary>시험성적서와 특허를 저희 상세페이지에 써도 되나요?</summary>
+        <p>웰코가 생산한 제품에 한해 자료를 제공해 드립니다. 다만 표기 문구는 사실 범위를 넘지 않아야 하므로, 문안은 사전에 함께 확인하는 것을 원칙으로 합니다.</p>
+      </details>
+      <details>
+        <summary>케냐 AA 말고 다른 산지도 되나요?</summary>
+        <p>현재 주력은 케냐 AA입니다. 다른 산지는 생두 수급과 로스팅 프로파일을 검토한 뒤 답변드립니다. 문의해 주시면 가능 여부를 먼저 확인해 알려 드립니다.</p>
+      </details>
+      <details>
+        <summary>샘플은 정말 무료인가요?</summary>
+        <p>200g 한 봉을 무료로 보내 드립니다. 내려 드셔 보시고 지금 쓰시는 원두가 더 좋으면 그대로 쓰시면 됩니다. 비교해 보시라고 드리는 것이지 바꾸시라는 말씀이 아닙니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── 문의 ─────────────────────────────────────────── -->
+<section id="contact" class="dark" style="padding-bottom:80px;">
+  <div class="wide">
+    <p class="eyebrow">Contact</p>
+    <h2 class="sec">200g 샘플을 무료로 보내 드립니다.</h2>
+    <div class="rule"></div>
+    <p class="lead" style="max-width:var(--col);">
+      전화 한 통이면 됩니다. 받으실 주소만 알려 주시면 다음 날 발송합니다.
+      위탁생산 문의는 필요한 물량과 포장 단위를 함께 말씀해 주시면 조건을 계산해 회신드립니다.
+    </p>
+
+    <div class="contact-box col" style="margin-left:0;">
+      <p style="margin:0; font-size:14px; color:var(--ink2); letter-spacing:.02em;">주식회사 디올 &middot; 웰코 &nbsp;|&nbsp; 이승훈</p>
+      <a class="tel" href="tel:01075707891">010-7570-7891</a>
+      <div class="cta-row" style="margin-top:6px;">
+        <a class="btn btn-gold" href="tel:01075707891">전화 걸기</a>
+        <a class="btn btn-ghost" href="sms:01075707891" style="border-color:var(--espresso); color:var(--espresso);">문자 보내기</a>
+      </div>
+      <p class="who" style="margin:18px 0 0;">
+        경상북도 고령군 개진면 치산길 2<br>
+        평일 오전 9시 ~ 오후 6시 &middot; 통화가 어려우면 문자 남겨 주시면 회신드립니다.
+        <!-- MAIL_TODO: 사업용 이메일 주소가 정해지면 아래 형태로 한 줄 추가
+             <br>이메일 <a href="mailto:주소@도메인">주소@도메인</a> -->
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wide">
+    <p style="margin:0 0 10px;"><b>주식회사 디올</b> (브랜드 WELCO) &middot; 대표 이승훈</p>
+    <p style="margin:0;">
+      경상북도 고령군 개진면 치산길 2 &middot; 사업자등록번호 815-87-02736 &middot; 식품제조가공업 등록업소<br>
+      전화 <a href="tel:01075707891">010-7570-7891</a>
+    </p>
+    <p class="disc">
+      ※ 본 페이지의 &lsquo;검출한계 미만&rsquo;은 한국기능성식품연구원(2025. 9. 11.)과 Intertek(2025. 9. 10., RT25B-S0676)
+      시험성적서에 기재된 결과이며, 시험 대상은 의뢰한 해당 시료에 한합니다. 성적서 사본은 요청 시 제공해 드립니다.<br>
+      ※ 본 페이지는 특정 질병의 예방&middot;치료 효과를 표방하지 않습니다.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

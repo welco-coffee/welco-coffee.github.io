@@ -26,15 +26,43 @@
 <meta property="og:description" content="귀사의 브랜드 이름으로, 특허받은 저온 로스팅 원두를. 200g 무료 샘플을 보내 드립니다.">
 <meta property="og:image" content="assets/beans.jpg">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://welco-coffee.github.io/">
 <link rel="icon" href="assets/logo.png">
+<link rel="preload" as="image" href="assets/roaster.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "WELCO",
+  "legalName": "주식회사 디올",
+  "url": "https://welco-coffee.github.io/",
+  "logo": "https://welco-coffee.github.io/assets/logo.png",
+  "description": "진공 질소 150℃ 저온 로스팅 원두의 위탁생산(OEM·화이트라벨)과 도매 납품. 경북 고령 자사 로스터리.",
+  "email": "leeseunghun815@gmail.com",
+  "telephone": "+82-70-7700-7891",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "개진면 치산길 2",
+    "addressLocality": "고령군",
+    "addressRegion": "경상북도",
+    "addressCountry": "KR"
+  },
+  "makesOffer": [
+    {"@type": "Offer", "name": "원두 위탁생산 (OEM·화이트라벨)"},
+    {"@type": "Offer", "name": "케냐 AA 원두 도매 납품"}
+  ]
+}
+</script>
+<!-- 웹폰트는 라틴(Plex)과 제목용 한글 명조(Noto Serif KR 600)만 받는다.
+     한글 본문까지 웹폰트로 받으면 전송량이 1.5MB를 넘어서므로, 본문 한글은 OS 기본 고딕에 맡긴다. -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#f2f0ea; --raised:#fbfaf7; --ink:#15120e; --ink2:#4a453d; --ink3:#7d786f;
     --rule:#d8d3c8; --rule2:#c2bcaf; --sage:#3f7a56;
-    --sans:'IBM Plex Sans','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    --sans:'IBM Plex Sans','Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
     --serif:'Noto Serif KR','Apple SD Gothic Neo','Nanum Myeongjo','Malgun Gothic',serif;
     --mono:'IBM Plex Mono','Consolas',monospace;
     --pad:26px;
@@ -99,8 +127,10 @@
   .hero .lede{margin:24px 0 30px;}
   .hero .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:44px;}
   .specs{margin-top:auto; border-top:1px solid var(--ink);}
-  .srow{display:grid; grid-template-columns:118px 1fr auto; gap:16px; align-items:baseline;
-        border-bottom:1px solid var(--rule); padding:12px 0;}
+  /* 그리드 자식의 기본 min-width:auto 때문에 좁은 화면에서 칸이 밀려 가로 스크롤이 생긴다 */
+  .hero .L, .hero .R, .specs{min-width:0;}
+  .srow{display:grid; grid-template-columns:minmax(0,118px) minmax(0,1fr) auto; gap:16px;
+        align-items:baseline; border-bottom:1px solid var(--rule); padding:12px 0;}
   .srow .v{font-size:14.5px; color:var(--ink2);}
   .srow .n{font-family:var(--mono); font-size:18px; font-weight:600; letter-spacing:-.01em; white-space:nowrap;}
   .srow .n.sg{color:var(--sage);}
@@ -286,7 +316,8 @@
   </div>
 
   <figure class="R">
-    <img src="assets/roaster.jpg" alt="웰코 진공 질소 저온 로스팅 설비">
+    <img src="assets/roaster.jpg" alt="웰코 진공 질소 저온 로스팅 설비"
+         width="611" height="1047" fetchpriority="high" decoding="async">
     <figcaption><span>Vacuum Nitrogen Roaster</span><span>Goryeong, Korea</span></figcaption>
   </figure>
 </div>
@@ -407,7 +438,8 @@
 
     <div class="two">
       <figure class="shot">
-        <img src="assets/hmi.jpg" alt="로스팅 제어 화면 — 케냐 1.9kg 배치, 설정 온도 150℃">
+        <img src="assets/hmi.jpg" alt="로스팅 제어 화면 — 케냐 1.9kg 배치, 설정 온도 150℃"
+             width="1000" height="684" loading="lazy" decoding="async">
         <figcaption>실제 생산 제어 화면 · 케냐 1.9kg 배치 · 용기/하부 설정값 150℃ · 질소·진공 공정 순차 투입</figcaption>
       </figure>
       <div>
@@ -456,7 +488,8 @@
 
     <div class="two narrow-l" style="margin-top:44px;">
       <figure class="shot">
-        <img src="assets/patent.jpg" alt="특허증 제10-2004953호">
+        <img src="assets/patent.jpg" alt="특허증 제10-2004953호"
+             width="760" height="974" loading="lazy" decoding="async">
         <figcaption>특허증 · 주식회사 디올</figcaption>
       </figure>
       <div style="padding-top:6px;">
@@ -515,7 +548,8 @@
       </div>
 
       <figure class="shot">
-        <img src="assets/package.jpg" alt="WELCO 케냐 AA 200g 파우치">
+        <img src="assets/package.jpg" alt="WELCO 케냐 AA 200g 파우치"
+             width="820" height="1093" loading="lazy" decoding="async">
         <figcaption>웰코 케냐 AA 200g 완제품<br>위탁생산에서는 이 자리에 귀사 라벨이 들어갑니다</figcaption>
       </figure>
     </div>

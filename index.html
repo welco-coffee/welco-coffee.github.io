@@ -28,7 +28,7 @@
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://welco-coffee.github.io/">
 <link rel="icon" href="assets/logo.png">
-<link rel="preload" as="image" href="assets/roaster.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/roaster.webp" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script type="application/ld+json">
@@ -74,7 +74,8 @@
     font-size:15.5px; line-height:1.9; word-break:keep-all; overflow-wrap:break-word;
     -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:100%;
   }
-  img{max-width:100%; display:block;}
+  /* width/height 속성을 CLS 방지용으로 달았으므로 height:auto가 없으면 사진이 늘어난다 */
+  img{max-width:100%; height:auto; display:block;}
   a{color:inherit;}
   p{margin:0 0 1.15em;}
   h1,h2,h3,h4{font-family:var(--serif); font-weight:600; letter-spacing:-.022em; margin:0; word-break:keep-all;}
@@ -134,17 +135,23 @@
   .srow .v{font-size:14.5px; color:var(--ink2);}
   .srow .n{font-family:var(--mono); font-size:18px; font-weight:600; letter-spacing:-.01em; white-space:nowrap;}
   .srow .n.sg{color:var(--sage);}
-  .hero .R{position:relative; background:var(--ink); overflow:hidden;}
-  .hero .R img{width:100%; height:100%; object-fit:cover; object-position:center 30%;
-               filter:grayscale(1) contrast(1.12) brightness(.88);}
-  .hero .R figcaption{position:absolute; left:32px; right:32px; bottom:30px; display:flex;
-        justify-content:space-between; gap:14px; color:#f0ece3; font-family:var(--mono);
+  /* 로스팅기는 배경을 지운 컷아웃이라 종이 위에 놓는다 */
+  .hero .R{position:relative; background:var(--paper); border-left:1px solid var(--rule2);
+           overflow:hidden; display:flex; align-items:center; justify-content:center;
+           padding:44px 40px 74px;}
+  .hero .R picture{display:contents;}
+  .hero .R img{width:auto; max-width:100%; height:100%; max-height:100%; object-fit:contain;
+               filter:grayscale(1) contrast(1.04);}
+  .hero .R figcaption{position:absolute; left:40px; right:40px; bottom:28px; display:flex;
+        justify-content:space-between; gap:14px; color:var(--ink3); font-family:var(--mono);
         font-size:10.5px; letter-spacing:.13em; text-transform:uppercase;
-        border-top:1px solid rgba(240,236,227,.42); padding-top:11px;}
+        border-top:1px solid var(--rule2); padding-top:11px;}
   @media(max-width:980px){
     .hero{grid-template-columns:1fr; min-height:0;}
     .hero .L{max-width:none; margin:0 auto; width:100%; max-width:1180px; padding-top:44px;}
-    .hero .R{height:340px; order:-1;}
+    .hero .R{height:430px; order:-1; border-left:0; border-bottom:1px solid var(--rule2);
+             padding:24px 20px 56px;}
+    .hero .R figcaption{left:20px; right:20px; bottom:18px; font-size:9.5px; letter-spacing:.1em;}
     .hero h1{font-size:38px; margin-top:34px;}
   }
 
@@ -263,10 +270,57 @@
   footer{background:var(--ink); color:#8d8579; padding:34px 0 56px; border-top:1px solid #332f28;}
   footer .grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
   footer b{color:#cdc7ba; font-weight:500;}
-  footer .disc{font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; line-height:2;
-               color:#736c60; grid-column:1 / -1; border-top:1px solid #332f28; padding-top:18px; margin-top:8px;}
+  footer .disc{font-size:12px; line-height:1.95;
+               color:#8a8276; grid-column:1 / -1; border-top:1px solid #332f28; padding-top:18px; margin-top:8px;}
   footer a{color:#a8a094;}
   @media(max-width:820px){ footer .grid{grid-template-columns:1fr;} }
+
+  /* ══ 모바일 가독성 ═══════════════════════════════════════════
+     핵심은 표다. 좁은 화면에서 132px 항목명 칸이 본문을 짓눌러
+     서너 글자마다 줄이 바뀐다. 모바일에서는 항목명을 위로 올리고
+     내용을 폭 전체로 편다. */
+  @media(max-width:700px){
+    :root{ --pad:20px; }
+    body{ font-size:16px; line-height:1.85; }
+    .sect{ padding:58px 0; }
+    h2.t{ font-size:25px; line-height:1.42; margin-bottom:16px; }
+    h3{ font-size:19px !important; }
+    .lede{ font-size:16.5px; line-height:1.85; }
+    .head{ margin-bottom:22px; }
+
+    /* 설명형 표만 쌓는다. 단가표(.price)는 숫자를 나란히 봐야 하므로 표 형태 유지 */
+    table.tbl:not(.price), table.tbl:not(.price) tbody, table.tbl:not(.price) tr,
+    table.tbl:not(.price) th, table.tbl:not(.price) td{ display:block; width:auto; }
+    table.tbl:not(.price){ border-top:1px solid var(--ink); }
+    table.tbl:not(.price) tr{ border-bottom:1px solid var(--rule); padding:14px 0; }
+    table.tbl:not(.price) th{ border:0; padding:0 0 5px; font-size:12.5px; color:var(--ink3); white-space:normal; }
+    table.tbl:not(.price) td{ border:0; padding:0; font-size:15.5px; line-height:1.8; color:var(--ink); }
+    .plate table.tbl:not(.price) tr{ border-bottom-color:#332f28; }
+    .plate table.tbl:not(.price) td{ color:#d5cfc2; }
+
+    table.price th, table.price td{ padding:13px 8px 13px 0; font-size:14.5px; }
+    table.price th:first-child, table.price td:first-child{ padding-left:0; }
+    table.price td:nth-child(2){ font-size:17px; font-weight:500; }
+
+    .duo > div{ padding:26px 22px 28px; }
+    .duo li{ font-size:15px; }
+    .warn{ padding:22px 20px; }
+    .warn p{ font-size:15px; }
+    .steps div{ padding:20px 18px 22px; }
+    .steps p{ font-size:14.5px; }
+    .faq summary{ font-size:17px; }
+    .faq p{ font-size:15.5px; margin-left:0; }
+    .note{ font-size:13.5px; line-height:2; }
+    .proof > div{ padding:22px 20px 24px; }
+    .btn{ padding:14px 20px; font-size:15px; }
+    .cta-row{ gap:8px; }
+    .srow{ grid-template-columns:minmax(0,1fr) auto; gap:6px 12px; padding:14px 0; }
+    .srow .mono{ grid-column:1 / -1; }
+    .srow .n{ font-size:17px; }
+    .tel, .mail{ font-size:19px; }
+    .contact > div{ padding:26px 22px 28px; }
+    .ol li{ font-size:15px; }
+  }
 </style>
 </head>
 <body>
@@ -315,8 +369,11 @@
   </div>
 
   <figure class="R">
-    <img src="assets/roaster.jpg" alt="웰코 진공 질소 저온 로스팅 설비"
-         width="611" height="1047" fetchpriority="high" decoding="async">
+    <picture>
+      <source srcset="assets/roaster.webp" type="image/webp">
+      <img src="assets/roaster.jpg" alt="웰코 진공 질소 저온 로스팅 설비"
+           width="603" height="1046" fetchpriority="high" decoding="async">
+    </picture>
     <figcaption><span>Vacuum Nitrogen Roaster</span><span>Goryeong, Korea</span></figcaption>
   </figure>
 </div>
@@ -574,8 +631,11 @@
       </div>
 
       <figure class="shot">
-        <img src="assets/package.jpg" alt="WELCO 케냐 AA 200g 파우치"
-             width="820" height="1093" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="assets/package.webp" type="image/webp">
+          <img src="assets/package.jpg" alt="WELCO 케냐 AA 200g 파우치"
+               width="700" height="1112" loading="lazy" decoding="async">
+        </picture>
         <figcaption>웰코 케냐 AA 200g 완제품<br>위탁생산에서는 이 자리에 귀사 라벨이 들어갑니다</figcaption>
       </figure>
     </div>
@@ -640,7 +700,7 @@
 
     <div class="contact">
       <div>
-        <span class="label">주식회사 디올 · 웰코 &nbsp;|&nbsp; 이승훈</span>
+        <span class="label">주식회사 디올 · 웰코</span>
         <a class="mail" href="mailto:leeseunghun815@gmail.com">leeseunghun815@gmail.com</a>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           <a class="btn btn-fill" href="mailto:leeseunghun815@gmail.com?subject=%5BWELCO%5D%20%EC%9C%84%ED%83%81%EC%83%9D%EC%82%B0%C2%B7%EB%8F%84%EB%A7%A4%20%EB%AC%B8%EC%9D%98&amp;body=%E2%91%A0%20%ED%9A%8C%EC%82%AC%EB%AA%85(%EB%98%90%EB%8A%94%20%EB%A7%A4%EC%9E%A5%EB%AA%85)%3A%0A%E2%91%A1%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%E2%91%A2%20%ED%95%84%EC%9A%94%ED%95%9C%20%EB%AC%BC%EB%9F%89%C2%B7%ED%8F%AC%EC%9E%A5%20%EB%8B%A8%EC%9C%84%3A%0A%E2%91%A3%20%EC%9C%84%ED%83%81%EC%83%9D%EC%82%B0%20%2F%20%EB%8F%84%EB%A7%A4%20%EB%82%A9%ED%92%88%3A%0A%E2%91%A4%20%EC%83%98%ED%94%84%20%EB%B0%9B%EC%9C%BC%EC%8B%A4%20%EC%A3%BC%EC%86%8C%3A%0A">이메일 보내기</a>
@@ -672,7 +732,7 @@
 <footer>
   <div class="wrap grid">
     <div>
-      <p style="margin:0 0 6px;"><b>주식회사 디올</b> (브랜드 WELCO) · 대표 이승훈</p>
+      <p style="margin:0 0 6px;"><b>주식회사 디올</b> (브랜드 WELCO)</p>
       <p style="margin:0; font-size:14px;">
         경상북도 고령군 개진면 치산길 2<br>
         사업자등록번호 815-87-02736 · 식품제조가공업 등록업소

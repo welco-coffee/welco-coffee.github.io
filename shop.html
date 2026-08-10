@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  WELCO (주식회사 디올) — B2C 원두 소개 / shop.html
+  디자인 시스템 v2 "SPEC SHEET" — assets/spec.css 를 index.html과 공유한다.
+
+  이 페이지의 성격: 쿠팡 상세페이지(감성·전환형)를 되풀이하지 않는다.
+  쿠팡이 보여줄 수 없는 것 — 공정 제어 화면, 시험성적서, 특허증 — 을 맡는다.
+
+  ⚑ 남은 항목: 가격 · 구매처 링크(쿠팡/네이버) · 대용량 SKU(500g·1kg)
+     지금은 전부 '구매 문의'로 열어 두었다. 확정되면 06 섹션과 FAQ를 함께 고친다.
+  ⚑ 표기 원칙: 효능·질병 표현 금지 / '검출한계 미만'에는 기관·일자·해당 시료 단서 병기
+     / 타사 비교("일반 원두는 검출됨") 금지
+  ============================================================================
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>웰코 케냐 AA 원두 — 진공 질소 150℃ 저온 로스팅 홀빈 | WELCO</title>
+<meta name="description" content="케냐 니에리 고원 SL28/34 워시드 생두를 진공 질소 150℃에서 볶은 홀빈 원두. 쓴맛·탄맛이 적고 자몽 같은 산미와 황설탕 단맛. 아크릴아마이드 공인기관 2곳 검출한계 미만. 특허 제10-2004953호, 경북 고령 자사 로스터리에서 주문 후 로스팅.">
+<meta property="og:title" content="웰코 케냐 AA — 산소를 빼고 볶은 원두">
+<meta property="og:description" content="쓴맛과 탄맛을 만드는 조건 자체를 없앴습니다. 진공 질소 150℃ 저온 로스팅 홀빈.">
+<meta property="og:image" content="assets/package.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://welco-coffee.github.io/shop.html">
+<link rel="icon" href="assets/logo.png">
+<link rel="preload" as="image" href="assets/package.webp" type="image/webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "웰코 케냐 AA 원두 (홀빈)",
+  "brand": {"@type": "Brand", "name": "WELCO"},
+  "image": "https://welco-coffee.github.io/assets/package.jpg",
+  "description": "케냐 니에리 고원 SL28/34 워시드 생두를 진공 질소 150℃ 저온으로 볶은 홀빈 원두. 경북 고령 자사 로스터리 생산.",
+  "manufacturer": {"@type": "Organization", "name": "주식회사 디올", "url": "https://welco-coffee.github.io/"}
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<!-- 디자인 시스템 v2 'SPEC SHEET' — index.html과 shop.html이 공유한다 -->
+<link rel="stylesheet" href="assets/spec.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wm" href="#top">WELCO</a>
+    <ul>
+      <li><a href="#bean">이 원두</a></li>
+      <li><a href="#process">볶는 방법</a></li>
+      <li><a href="#proof">검증</a></li>
+      <li><a href="#brew">마시는 법</a></li>
+      <li><a href="#spec">제품 사양</a></li>
+      <li><a class="x" href="index.html">임가공 · 도매</a></li>
+    </ul>
+    <a class="cta" href="#buy">구매 문의</a>
+  </div>
+</header>
+
+<!-- ══ HERO ══════════════════════════════════════════════════ -->
+<div class="hero" id="top">
+  <div class="L">
+    <div class="top">
+      <span class="mono" style="color:var(--ink); font-size:12px; letter-spacing:.42em; font-weight:600;">WELCO</span>
+      <span class="mono">Product Sheet / Kenya AA / Rev. 2026-08</span>
+    </div>
+
+    <h1>탄맛이 나지 않게,<br><i>산소를 빼고</i><br>볶았습니다.</h1>
+
+    <p class="lede">
+      커피의 쓴맛과 탄맛은 높은 온도에서 산소와 만나 생깁니다.
+      웰코는 볶는 통 안을 진공으로 만들어 산소를 빼내고 질소를 채운 뒤, 150℃에서 익힙니다.
+      그래서 케냐 특유의 산미와 단맛이 탄맛에 덮이지 않고 남습니다.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-fill" href="#buy">구매 문의</a>
+      <a class="btn btn-line" href="#process">어떻게 볶는지 보기</a>
+    </div>
+
+    <div class="specs">
+      <div class="srow"><span class="mono">Origin</span><span class="v">케냐 니에리 고원 해발 1,500m 이상 · 워시드</span><span class="n">SL28/34</span></div>
+      <div class="srow"><span class="mono">Roast</span><span class="v">진공 질소 저온 로스팅 · 설정 온도</span><span class="n">150℃</span></div>
+      <div class="srow"><span class="mono">Form</span><span class="v">홀빈(통원두) · 주문 후 로스팅</span><span class="n">200g</span></div>
+      <div class="srow"><span class="mono">Acrylamide</span><span class="v">공인 시험기관 2곳 · 검출한계 미만</span><span class="n sg">N.D.</span></div>
+    </div>
+  </div>
+
+  <figure class="R">
+    <picture>
+      <source srcset="assets/package.webp" type="image/webp">
+      <img src="assets/package.jpg" alt="웰코 케냐 AA 200g 원두 파우치"
+           width="700" height="1112" fetchpriority="high" decoding="async">
+    </picture>
+    <figcaption><span>Kenya AA · Whole Bean 200g</span><span>Roasted in Goryeong</span></figcaption>
+  </figure>
+</div>
+
+<!-- ══ 00 이 원두 ════════════════════════════════════════════ -->
+<section class="sect" id="bean">
+  <div class="wrap">
+    <div class="head"><span class="mono">The Bean</span><span class="line"></span><span class="mono">00</span></div>
+    <h2 class="t">산미가 부담스러운 분도<br>마실 수 있는 케냐입니다.</h2>
+    <p class="lede">
+      케냐 커피는 원래 산미가 뚜렷합니다. 그래서 좋아하는 사람과 부담스러워하는 사람이 갈립니다.
+      웰코 케냐 AA는 저온으로 볶아 쓴맛과 탄맛이 적습니다.
+      산미를 누른 것이 아니라, 산미와 부딪히던 탄맛 쪽을 덜어낸 쪽에 가깝습니다.
+    </p>
+
+    <div class="two narrow-r" style="margin-top:34px;">
+      <div>
+        <table class="tbl" style="margin-top:0;">
+          <tr><th>산지</th><td>케냐 니에리(Nyeri) 고원 · 해발 1,500m 이상</td></tr>
+          <tr><th>품종 · 가공</th><td>SL28 / SL34 · 워시드(습식)</td></tr>
+          <tr><th>등급</th><td>AA — 케냐 등급 체계에서 생두 크기 기준 최상위 등급</td></tr>
+          <tr><th>맛</th><td>자몽 같은 산미와 황설탕 단맛이 균형을 이룹니다. 식으면서 단맛이 더 또렷해집니다</td></tr>
+          <tr><th>어울리는 방식</th><td>핸드드립 · 아이스 · 콜드브루. 우유를 섞는 라떼에는 산미가 다소 가려집니다</td></tr>
+          <tr><th>로스팅</th><td>주문을 확인한 뒤 볶습니다. 미리 볶아 쌓아 두지 않습니다</td></tr>
+        </table>
+        <p class="note">
+          맛에 대한 서술은 웰코의 관능 평가에 따른 것으로, 추출 방식과 물 온도, 분쇄 굵기에 따라 다르게 느껴질 수 있습니다.
+        </p>
+      </div>
+
+      <figure class="shot">
+        <img src="assets/beans.jpg" alt="웰코 케냐 AA 로스팅 원두"
+             width="1200" height="515" loading="lazy" decoding="async">
+        <figcaption>진공 질소 150℃로 볶은 케냐 AA 홀빈</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 01 볶는 방법 (다크 플레이트) ══════════════════════════ -->
+<section class="sect plate" id="process">
+  <div class="wrap">
+    <div class="head"><span class="mono">Process</span><span class="line"></span><span class="mono">01</span></div>
+    <h2 class="t">쓴맛을 만드는 조건 자체를<br>없애고 볶습니다.</h2>
+    <p class="lede">
+      곡물이나 커피를 높은 온도에서 볶으면 아크릴아마이드라는 물질이 생깁니다.
+      세계보건기구가 발암 가능 물질(2A군)로 분류한 물질이고,
+      같은 조건에서 커피의 쓴맛과 탄맛도 함께 만들어집니다.
+      웰코는 통 안을 진공으로 만들어 산소를 빼고 질소를 채운 뒤 150℃에서 익힙니다.
+      이 장치와 방법은 2019년 특허로 등록되었습니다.
+    </p>
+
+    <div class="two">
+      <figure class="shot">
+        <img src="assets/hmi.jpg" alt="로스팅 제어 화면 — 케냐 1.9kg 배치, 설정 온도 150℃"
+             width="1000" height="684" loading="lazy" decoding="async">
+        <figcaption>실제 생산 제어 화면 · 케냐 1.9kg 배치 · 용기/하부 설정값 150℃ · 질소·진공 공정 순차 투입</figcaption>
+      </figure>
+      <div>
+        <table class="tbl" style="margin-top:0;">
+          <tr><th>분위기</th><td>일반 대기(산소 있음) &nbsp;→&nbsp; <b style="color:#f0ece3;">진공 후 질소 충전</b></td></tr>
+          <tr><th>온도</th><td>일반 200℃대 &nbsp;→&nbsp; <b style="color:#f0ece3;">설정 150℃</b></td></tr>
+          <tr><th>한 번에</th><td>1.8kg씩 12분. 큰 통에 몰아 볶지 않습니다</td></tr>
+          <tr><th>맛</th><td>쓴맛·탄맛이 적고 산미와 단맛이 남습니다</td></tr>
+          <tr><th>생산</th><td>경상북도 고령 자사 설비 · 외주 로스팅이 아닙니다</td></tr>
+        </table>
+        <p class="note" style="color:#8d8579;">
+          위 화면은 실제 생산 중에 촬영한 것입니다. 같은 설비로 다른 회사의 원두와 곡물도 볶아 드리고 있습니다 —
+          <a href="index.html" style="color:#cdc7ba;">임가공·도매 안내</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 검증 ═══════════════════════════════════════════════ -->
+<section class="sect" id="proof">
+  <div class="wrap">
+    <div class="head"><span class="mono">Verification</span><span class="line"></span><span class="mono">02</span></div>
+    <h2 class="t">맛있다는 말은 못 믿으셔도,<br>성적서는 확인하실 수 있습니다.</h2>
+    <p class="lede" style="margin-bottom:34px;">
+      아래 두 건은 공인 시험기관에 의뢰한 아크릴아마이드 시험 결과입니다.
+      성적서 사본은 요청하시면 그대로 보내 드립니다.
+    </p>
+
+    <div class="proof">
+      <div>
+        <span class="badge">검출한계 미만</span>
+        <p class="org">한국기능성식품연구원</p>
+        <p class="det">아크릴아마이드 시험<br><span class="n">2025. 09. 11.</span></p>
+      </div>
+      <div>
+        <span class="badge">검출한계 미만</span>
+        <p class="org">Intertek<br><span style="font-size:14px; color:var(--ink2);">한국인터텍테스팅서비스</span></p>
+        <p class="det">아크릴아마이드 시험 · <span class="n">2025. 09. 10.</span><br>성적서 <span class="n">RT25B-S0676</span></p>
+      </div>
+      <div>
+        <span class="badge gold">특허 등록</span>
+        <p class="org">제10-2004953호</p>
+        <p class="det">곡물 로스팅장치 및 곡물의 로스팅 방법<br><span class="n">2019. 07. 23.</span> 등록</p>
+      </div>
+    </div>
+
+    <div class="two narrow-l" style="margin-top:44px;">
+      <figure class="shot">
+        <img src="assets/patent.jpg" alt="특허증 제10-2004953호"
+             width="760" height="974" loading="lazy" decoding="async">
+        <figcaption>특허증 · 주식회사 디올</figcaption>
+      </figure>
+      <div style="padding-top:6px;">
+        <table class="tbl" style="margin-top:0;">
+          <tr><th>만드는 곳</th><td>주식회사 디올 (브랜드 WELCO)</td></tr>
+          <tr><th>사업자등록번호</th><td>815-87-02736</td></tr>
+          <tr><th>소재지</th><td>경상북도 고령군 개진면 치산길 2</td></tr>
+          <tr><th>업종</th><td>식품제조가공업 등록업소</td></tr>
+        </table>
+        <p class="note">
+          &lsquo;검출한계 미만&rsquo;은 위 두 시험기관의 성적서에 기재된 결과이며, 시험 대상은 의뢰한 해당 시료에 한합니다.
+          웰코는 이 결과를 근거로 특정 질병의 예방이나 치료 효과를 주장하지 않으며,
+          다른 회사 제품과 비교해 우열을 말하지도 않습니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 마시는 법 ══════════════════════════════════════════ -->
+<section class="sect" id="brew">
+  <div class="wrap">
+    <div class="head"><span class="mono">Brewing</span><span class="line"></span><span class="mono">03</span></div>
+    <h2 class="t">세 가지 방법을 권해 드립니다.</h2>
+    <p class="lede">
+      아래는 웰코가 이 원두로 여러 번 내려 보고 정한 기준점입니다.
+      그대로 하실 필요는 없고, 여기서 시작해 취향 쪽으로 옮겨 가시면 됩니다.
+    </p>
+
+    <div class="steps c3">
+      <div>
+        <div class="no">Brew 01</div><b>핸드드립</b>
+        <p>원두 15g · 물 240ml · 92~94℃ · 중간 굵기.<br>
+        먼저 30ml로 30초 뜸을 들인 뒤 두세 번 나눠 붓습니다. 총 2분 30초 안팎.</p>
+      </div>
+      <div>
+        <div class="no">Brew 02</div><b>아이스</b>
+        <p>원두 18g · 뜨거운 물 130ml로 진하게 내린 뒤, 얼음 120g 위로 바로 붓습니다.<br>
+        급히 식히면 산미가 또렷하게 살아납니다.</p>
+      </div>
+      <div>
+        <div class="no">Brew 03</div><b>콜드브루</b>
+        <p>원두 60g · 찬물 700ml · 굵게 분쇄.<br>
+        상온 2시간 뒤 냉장 12~14시간. 걸러서 3일 안에 드십시오.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:26px; margin:56px 0 14px;">보관</h3>
+    <table class="tbl">
+      <tr><th>기본</th><td>봉투의 공기를 빼고 밀봉해 직사광선이 닿지 않는 상온에 두십시오. 아웃가스 밸브가 있어 그대로 두셔도 됩니다</td></tr>
+      <tr><th>냉동</th><td>한 달 이상 두실 때만. 꺼낸 뒤 상온이 될 때까지 봉투를 열지 마십시오 — 찬 원두에 물이 맺힙니다</td></tr>
+      <tr><th>분쇄</th><td>내리기 직전에 갈아야 향이 남습니다. 미리 갈아 두면 하루가 지나며 눈에 띄게 옅어집니다</td></tr>
+      <tr><th>맛의 정점</th><td>볶은 뒤 3일에서 3주 사이. 표시 소비기한과 별개로, 맛으로는 이 구간을 권합니다</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ══ 04 제품 사양 ══════════════════════════════════════════ -->
+<section class="sect" id="spec">
+  <div class="wrap">
+    <div class="head"><span class="mono">Specification</span><span class="line"></span><span class="mono">04</span></div>
+    <h2 class="t">제품 사양</h2>
+
+    <table class="tbl" style="margin-top:34px;">
+      <tr><th>제품명</th><td>웰코 케냐 AA 원두커피 (홀빈)</td></tr>
+      <tr><th>식품유형</th><td>볶은 커피</td></tr>
+      <tr><th>원재료</th><td>커피 원두(생두 원산지 : 케냐) 100%</td></tr>
+      <tr><th>중량</th><td>200g</td></tr>
+      <tr><th>형태</th><td>홀빈(분쇄하지 않은 통원두) 기본 · 분쇄를 원하시면 주문 시 말씀해 주십시오</td></tr>
+      <tr><th>포장</th><td>아웃가스 밸브가 달린 파우치</td></tr>
+      <tr><th>소비기한</th><td>제조일로부터 365일 (제품 표시면 참조)</td></tr>
+      <tr><th>보관 방법</th><td>직사광선을 피해 서늘하고 건조한 곳</td></tr>
+      <tr><th>제조원</th><td>주식회사 디올 · 경상북도 고령군 개진면 치산길 2 · 식품제조가공업 등록업소</td></tr>
+      <tr><th>대용량</th><td>현재 200g을 기준으로 만들고 있습니다. 더 큰 단위가 필요하시면 문의해 주십시오</td></tr>
+    </table>
+    <p class="note">
+      실제 표시사항은 제품 포장에 기재된 내용을 따릅니다.
+      카페·사무실 등 사업자로서 정기적으로 쓰실 물량은
+      <a href="index.html#wholesale">도매 안내</a>를 보십시오.
+    </p>
+  </div>
+</section>
+
+<!-- ══ 05 FAQ ════════════════════════════════════════════════ -->
+<section class="sect" id="faq">
+  <div class="wrap">
+    <div class="head"><span class="mono">Questions</span><span class="line"></span><span class="mono">05</span></div>
+    <h2 class="t">자주 받는 질문</h2>
+    <div class="faq">
+      <details open>
+        <summary>어디서 살 수 있나요?</summary>
+        <p>현재 온라인 판매처에서 판매 중이며, 자사 직접 주문도 준비하고 있습니다. 판매처와 가격은 아래 &lsquo;구매 문의&rsquo;로 연락 주시면 바로 안내해 드립니다.</p>
+      </details>
+      <details>
+        <summary>홀빈이라는데, 분쇄기가 없습니다.</summary>
+        <p>주문하실 때 말씀해 주시면 갈아서 보내 드립니다. 다만 원두는 갈아 두면 향이 빠르게 날아가므로, 가능하면 홀빈으로 받으셔서 내리기 직전에 가시는 편을 권합니다. 분쇄를 요청하실 때는 쓰시는 도구(핸드드립·모카포트·에스프레소 머신 등)를 함께 알려 주십시오. 굵기가 달라집니다.</p>
+      </details>
+      <details>
+        <summary>산미가 있는 커피는 부담스러운데요.</summary>
+        <p>케냐는 산미가 뚜렷한 산지가 맞습니다. 다만 산미를 부담스럽게 만드는 것은 대개 산미 자체보다 함께 올라오는 쓴맛·탄맛과의 충돌입니다. 웰코는 저온으로 볶아 그쪽이 적습니다. 그래도 산미를 아예 피하고 싶으시다면 이 원두는 맞지 않을 수 있습니다 — 미리 말씀드리는 편이 낫겠습니다.</p>
+      </details>
+      <details>
+        <summary>언제 볶은 원두가 오나요?</summary>
+        <p>주문을 확인한 뒤에 볶습니다. 미리 볶아 창고에 쌓아 두지 않습니다. 한 번에 1.8kg씩 볶는 설비라 그렇게 할 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>아크릴아마이드 이야기를 왜 하시나요?</summary>
+        <p>곡물이나 커피를 높은 온도에서 볶을 때 생기는 물질입니다. 웰코가 산소를 빼고 낮은 온도에서 볶는 이유를 설명하려면 이 물질을 빼놓기 어렵습니다. 다만 저희가 말씀드릴 수 있는 것은 <b>공인기관 두 곳에 의뢰한 시료에서 검출한계 미만이었다</b>는 사실까지입니다. 건강상의 효과를 주장하지 않고, 다른 회사 제품이 어떻다고 말하지도 않습니다.</p>
+      </details>
+      <details>
+        <summary>냉동실에 보관해도 되나요?</summary>
+        <p>한 달 넘게 두실 때만 권합니다. 중요한 것은 꺼낸 뒤입니다 — 찬 원두를 바로 열면 표면에 물이 맺혀 향이 상합니다. 봉투째 상온이 될 때까지 두었다가 여십시오. 그보다 짧게 드실 양이면 그냥 상온 밀봉이 낫습니다.</p>
+      </details>
+      <details>
+        <summary>카페를 하는데 정기적으로 받고 싶습니다.</summary>
+        <p>사업자 대상 도매로 안내해 드립니다. 수량에 따라 1kg 단가가 달라지고 일정 수량 이상은 배송비가 없습니다. <a href="index.html#wholesale">도매 안내</a>를 보시고 문의 주십시오. 고령·성주·달성 지역은 직접 배송해 드립니다.</p>
+      </details>
+      <details>
+        <summary>제 브랜드로 원두를 만들고 싶습니다.</summary>
+        <p>같은 설비로 다른 회사의 생두와 곡물을 볶아 드리는 임가공을 하고 있습니다. 원물을 보내 주시면 볶아서 돌려드리고, 원물까지 웰코가 준비하는 완제품 생산도 합니다. <a href="index.html">임가공·도매 페이지</a>에 단가표와 절차가 있습니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 구매 문의 (다크 플레이트) ══════════════════════════ -->
+<section class="sect plate" id="buy" style="padding-bottom:76px;">
+  <div class="wrap">
+    <div class="head"><span class="mono">Order</span><span class="line"></span><span class="mono">06</span></div>
+    <h2 class="t">필요하신 수량만 알려 주시면<br>구매처와 가격을 안내해 드립니다.</h2>
+    <p class="lede">
+      이메일로 주시면 가장 빠릅니다. 아래 항목을 적어 보내 주시면 그대로 확인해 회신드립니다.
+      선물용이라 포장이 따로 필요하시거나, 분쇄해서 받고 싶으시면 그 점도 함께 적어 주십시오.
+    </p>
+
+    <div class="contact">
+      <div>
+        <span class="label">주식회사 디올 · 웰코</span>
+        <a class="mail" href="mailto:leeseunghun815@gmail.com">leeseunghun815@gmail.com</a>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-fill" href="mailto:leeseunghun815@gmail.com?subject=%5BWELCO%5D%20%EC%9B%90%EB%91%90%20%EA%B5%AC%EB%A7%A4%20%EB%AC%B8%EC%9D%98&amp;body=%E2%91%A0%20%EC%84%B1%ED%95%A8%3A%0A%E2%91%A1%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%E2%91%A2%20%EC%9B%90%ED%95%98%EC%8B%9C%EB%8A%94%20%EC%88%98%EB%9F%89%20%28200g%20%EA%B8%B0%EC%A4%80%20%EB%B4%89%EC%88%98%29%3A%0A%E2%91%A3%20%EB%B0%9B%EC%9C%BC%EC%8B%A4%20%EC%A3%BC%EC%86%8C%3A%0A%E2%91%A4%20%EB%B6%84%EC%87%84%20%EC%97%AC%EB%B6%80%20%28%ED%99%80%EB%B9%88%20%EA%B7%B8%EB%8C%80%EB%A1%9C%20/%20%EB%B6%84%EC%87%84%20%E2%80%94%20%EC%82%AC%EC%9A%A9%ED%95%98%EC%8B%9C%EB%8A%94%20%EB%8F%84%EA%B5%AC%29%3A%0A">이메일 보내기</a>
+          <a class="btn btn-line" href="tel:07077007891">전화 070-7700-7891</a>
+        </div>
+        <p style="margin:24px 0 0; font-size:14.5px; color:#c5bfb2;">
+          경상북도 고령군 개진면 치산길 2<br>
+          평일 09:00 ~ 18:00 · 이메일은 받는 즉시 확인합니다
+        </p>
+      </div>
+      <div>
+        <span class="label">메일에 적어 주실 내용</span>
+        <ol class="ol">
+          <li>성함 · 연락처</li>
+          <li>원하시는 수량 (200g 기준 봉수)</li>
+          <li>받으실 주소</li>
+          <li>홀빈 그대로 / 분쇄 — 분쇄라면 쓰시는 도구</li>
+          <li>선물 포장 등 따로 필요하신 것</li>
+        </ol>
+        <p class="note" style="color:#8d8579;">
+          위 &lsquo;이메일 보내기&rsquo;를 누르시면 이 항목이 채워진 채로 메일이 열립니다.
+          전화가 편하시면 070-7700-7891로 주셔도 됩니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap grid">
+    <div>
+      <p style="margin:0 0 6px;"><b>주식회사 디올</b> (브랜드 WELCO)</p>
+      <p style="margin:0; font-size:14px;">
+        경상북도 고령군 개진면 치산길 2<br>
+        사업자등록번호 815-87-02736 · 식품제조가공업 등록업소
+      </p>
+    </div>
+    <div>
+      <p style="margin:0; font-size:14px;">
+        이메일 <a href="mailto:leeseunghun815@gmail.com">leeseunghun815@gmail.com</a><br>
+        전화 <a href="tel:07077007891">070-7700-7891</a><br>
+        <a href="index.html">임가공 · 도매 안내</a> · 특허 등록 제10-2004953호
+      </p>
+    </div>
+    <p class="disc">
+      ※ 본 페이지의 &lsquo;검출한계 미만&rsquo;은 한국기능성식품연구원(2025. 09. 11.)과 Intertek(2025. 09. 10., RT25B-S0676)
+      시험성적서에 기재된 결과이며, 시험 대상은 의뢰한 해당 시료에 한합니다. 성적서 사본은 요청 시 제공해 드립니다.<br>
+      ※ 본 페이지는 특정 질병의 예방·치료 효과를 표방하지 않습니다.<br>
+      ※ 제품의 실제 표시사항은 포장에 기재된 내용을 따릅니다.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

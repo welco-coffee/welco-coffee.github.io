@@ -13,7 +13,8 @@
          구분은 오직 1px 괘선과 여백으로. 사진은 흑백.
   격자   컨테이너 1180px / 데이터행 120px│1fr│수치 / 섹션 머리 = 라벨+괘선+번호
 
-  ⚑ 남은 항목: SHOP_TODO(쿠팡 링크) · 위탁생산 MOQ·납기·단가 · HACCP 여부
+  ⚑ 남은 항목: 쿠팡 링크 · 위탁생산 MOQ·납기·단가 · HACCP 여부
+     (네이버 스마트스토어 링크는 2026-08-10 연결 완료. B2C 상세는 shop.html)
   ============================================================================
 -->
 <html lang="ko">
@@ -360,20 +361,23 @@
 
         <div style="border:1px solid var(--rule2); padding:24px 26px; margin-top:34px; background:var(--raised);">
           <h3 style="font-size:19px; margin-bottom:8px;">소비자에게도 직접 팔고 있습니다</h3>
-          <p style="margin:0; font-size:14.5px; color:var(--ink2);">
-            웰코 케냐 AA는 자사 브랜드로 쿠팡에서 판매 중입니다(홀빈 200g 7,700원, 2봉 13,800원 · 배송비 포함).
+          <p style="margin:0 0 16px; font-size:14.5px; color:var(--ink2);">
+            웰코 케냐 AA는 자사 브랜드로 쿠팡과 네이버 스마트스토어에서 판매 중입니다.
             납품이나 위탁생산을 검토하시는 분께는, 이 원두가 실제 소비자 앞에 놓여 있는 제품이라는 뜻이기도 합니다.
-            <!-- SHOP_TODO: 쿠팡·스마트스토어 링크 확보 시 버튼으로 교체 -->
-            제품 자체가 궁금하시면 <a href="shop.html" style="border-bottom:1px solid var(--ink3);">원두 소개 페이지</a>를 보십시오.
           </p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-line" href="shop.html">원두 소개 보기</a>
+            <a class="btn btn-line" href="https://smartstore.naver.com/vacuum_roasting/products/12684056589"
+               target="_blank" rel="noopener">스마트스토어에서 보기</a>
+          </div>
         </div>
       </div>
 
       <figure class="shot">
         <picture>
           <source srcset="assets/package.webp" type="image/webp">
-          <img src="assets/package.jpg" alt="WELCO 케냐 AA 200g 파우치"
-               width="700" height="1112" loading="lazy" decoding="async">
+          <img src="assets/package.png" alt="WELCO 케냐 AA 200g 파우치"
+               width="388" height="617" loading="lazy" decoding="async">
         </picture>
         <figcaption>웰코 케냐 AA 200g 완제품<br>위탁생산에서는 이 자리에 귀사 라벨이 들어갑니다</figcaption>
       </figure>

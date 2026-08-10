@@ -1,13 +1,20 @@
-# WELCO — B2B 브랜드 사이트
+# WELCO — 브랜드 사이트
 
-주식회사 디올(브랜드 WELCO)의 원두 **위탁생산(OEM·화이트라벨)**과 **도매 납품**을 소개하는
-1페이지 정적 사이트입니다. 빌드 도구·서버가 필요 없는 순수 HTML/CSS입니다.
+주식회사 디올(브랜드 WELCO)의 사이트입니다. 독자가 달라 두 페이지로 나뉩니다.
+
+- `index.html` — **B2B**. 로스팅 임가공(OEM·화이트라벨)과 도매 납품.
+- `shop.html` — **B2C**. 케냐 AA 원두 소개. 구매는 네이버 스마트스토어로 보냅니다.
+
+빌드 도구·서버가 필요 없는 순수 HTML/CSS입니다.
 
 ```
 welco-coffee.github.io/
-├─ index.html          ← 사이트 본체 (전부 이 한 파일)
+├─ index.html          ← B2B (임가공·도매)
+├─ shop.html           ← B2C (원두 소개)
 ├─ assets/             ← 이미지 (원본은 ..\케냐AA)
-│  ├─ hero-beans.jpg  logo.png  roaster.jpg  hmi.jpg  package.jpg  patent.jpg
+│  ├─ spec.css         ← 디자인 시스템. 두 페이지가 공유하므로 여기만 고치면 둘 다 바뀐다
+│  ├─ hero-beans.jpg  logo.png  roaster.jpg  hmi.jpg  package.png  patent.jpg  beans.jpg
+│  └─ package-og.jpg   ← SNS 공유 미리보기 전용(투명 배경을 못 쓰는 곳이 있어 따로 둔다)
 ├─ .nojekyll           ← GitHub Pages가 Jekyll 처리를 건너뛰게 함
 ├─ serve-local.cmd     ← 내 PC에서 미리보기
 └─ README.md
@@ -45,11 +52,13 @@ git add . && git commit -m "수정" && git push
 
 ## 3. 아직 비어 있는 항목 (사람이 채워야 함)
 
-`index.html` 안에서 아래 키워드를 검색하면 해당 위치에 주석으로 표시해 두었습니다.
+각 파일 맨 위 주석의 `⚑ 남은 항목` 에도 같은 내용을 적어 두었습니다.
 
-| 키워드 | 내용 |
+| 항목 | 내용 |
 |---|---|
-| `SHOP_TODO` | 쿠팡·스마트스토어 상품 링크. 확보되면 '개인 구매' 블록을 버튼으로 교체 |
+| 쿠팡 링크 | 아직 없습니다. 네이버 스마트스토어는 2026-08-10 연결 완료 |
+| 가격 | 두 페이지 모두 금액을 적지 않고 스토어에 맡겼습니다. 가격이 바뀌어도 사이트를 고칠 일이 없습니다 |
+| 대용량 SKU | 500g·1kg. 지금은 200g뿐이라 `shop.html` 제품 사양에 "문의"로만 적어 두었습니다 |
 | `#oem` 조건 표 | 최소 수량(MOQ)·납기·단가. 지금은 "협의"로 표기 — 확정되면 숫자로 교체 |
 
 HACCP 인증 여부, 월 생산 캐파, 배치 사이클 타임은 확인되지 않아 **본문에 넣지 않았습니다.**

@@ -7,8 +7,8 @@
   이 페이지의 성격: 쿠팡 상세페이지(감성·전환형)를 되풀이하지 않는다.
   쿠팡이 보여줄 수 없는 것 — 공정 제어 화면, 시험성적서, 특허증 — 을 맡는다.
 
-  ⚑ 남은 항목: 가격 · 구매처 링크(쿠팡/네이버) · 대용량 SKU(500g·1kg)
-     지금은 전부 '구매 문의'로 열어 두었다. 확정되면 06 섹션과 FAQ를 함께 고친다.
+  ⚑ 남은 항목: 가격(페이지에 적지 않고 스토어에 맡김) · 대용량 SKU(500g·1kg)
+     구매처 = 네이버 스마트스토어(2026-08-10 연결). 쿠팡 링크는 아직 없다.
   ⚑ 표기 원칙: 효능·질병 표현 금지 / '검출한계 미만'에는 기관·일자·해당 시료 단서 병기
      / 타사 비교("일반 원두는 검출됨") 금지
   ============================================================================
@@ -18,10 +18,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>웰코 케냐 AA 원두 — 진공 질소 150℃ 저온 로스팅 홀빈 | WELCO</title>
-<meta name="description" content="케냐 니에리 고원 SL28/34 워시드 생두를 진공 질소 150℃에서 볶은 홀빈 원두. 쓴맛·탄맛이 적고 자몽 같은 산미와 황설탕 단맛. 아크릴아마이드 공인기관 2곳 검출한계 미만. 특허 제10-2004953호, 경북 고령 자사 로스터리에서 주문 후 로스팅.">
+<meta name="description" content="케냐 니에리 고원 SL28/34 워시드 원두를 진공 질소 150℃에서 볶은 홀빈 원두. 쓴맛·탄맛이 적고 자몽 같은 산미와 황설탕 단맛. 아크릴아마이드 공인기관 2곳 검출한계 미만. 특허 제10-2004953호, 경북 고령 자사 로스터리에서 주문 후 로스팅.">
 <meta property="og:title" content="웰코 케냐 AA — 산소를 빼고 볶은 원두">
 <meta property="og:description" content="쓴맛과 탄맛을 만드는 조건 자체를 없앴습니다. 진공 질소 150℃ 저온 로스팅 홀빈.">
-<meta property="og:image" content="assets/package.jpg">
+<meta property="og:image" content="assets/package-og.jpg">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://welco-coffee.github.io/shop.html">
 <link rel="icon" href="assets/logo.png">
@@ -34,9 +34,16 @@
   "@type": "Product",
   "name": "웰코 케냐 AA 원두 (홀빈)",
   "brand": {"@type": "Brand", "name": "WELCO"},
-  "image": "https://welco-coffee.github.io/assets/package.jpg",
-  "description": "케냐 니에리 고원 SL28/34 워시드 생두를 진공 질소 150℃ 저온으로 볶은 홀빈 원두. 경북 고령 자사 로스터리 생산.",
-  "manufacturer": {"@type": "Organization", "name": "주식회사 디올", "url": "https://welco-coffee.github.io/"}
+  "image": "https://welco-coffee.github.io/assets/package-og.jpg",
+  "description": "케냐 니에리 고원 SL28/34 워시드 원두를 진공 질소 150℃ 저온으로 볶은 홀빈. 경북 고령 자사 로스터리 생산.",
+  "manufacturer": {"@type": "Organization", "name": "주식회사 디올", "url": "https://welco-coffee.github.io/"},
+  "offers": {
+    "@type": "Offer",
+    "url": "https://smartstore.naver.com/vacuum_roasting/products/12684056589",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "KRW",
+    "seller": {"@type": "Organization", "name": "주식회사 디올"}
+  }
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
@@ -56,7 +63,8 @@
       <li><a href="#spec">제품 사양</a></li>
       <li><a class="x" href="index.html">임가공 · 도매</a></li>
     </ul>
-    <a class="cta" href="#buy">구매 문의</a>
+    <a class="cta" href="https://smartstore.naver.com/vacuum_roasting/products/12684056589"
+       target="_blank" rel="noopener">스토어에서 구매</a>
   </div>
 </header>
 
@@ -77,8 +85,9 @@
     </p>
 
     <div class="cta-row">
-      <a class="btn btn-fill" href="#buy">구매 문의</a>
-      <a class="btn btn-line" href="#process">어떻게 볶는지 보기</a>
+      <a class="btn btn-fill" href="https://smartstore.naver.com/vacuum_roasting/products/12684056589"
+         target="_blank" rel="noopener">네이버 스마트스토어에서 구매</a>
+      <a class="btn btn-line" href="#buy">문의하기</a>
     </div>
 
     <div class="specs">
@@ -92,8 +101,8 @@
   <figure class="R">
     <picture>
       <source srcset="assets/package.webp" type="image/webp">
-      <img src="assets/package.jpg" alt="웰코 케냐 AA 200g 원두 파우치"
-           width="700" height="1112" fetchpriority="high" decoding="async">
+      <img src="assets/package.png" alt="웰코 케냐 AA 200g 원두 파우치"
+           width="388" height="617" fetchpriority="high" decoding="async">
     </picture>
     <figcaption><span>Kenya AA · Whole Bean 200g</span><span>Roasted in Goryeong</span></figcaption>
   </figure>
@@ -115,7 +124,7 @@
         <table class="tbl" style="margin-top:0;">
           <tr><th>산지</th><td>케냐 니에리(Nyeri) 고원 · 해발 1,500m 이상</td></tr>
           <tr><th>품종 · 가공</th><td>SL28 / SL34 · 워시드(습식)</td></tr>
-          <tr><th>등급</th><td>AA — 케냐 등급 체계에서 생두 크기 기준 최상위 등급</td></tr>
+          <tr><th>등급</th><td>AA — 케냐 등급 체계에서 콩 크기 기준 최상위 등급</td></tr>
           <tr><th>맛</th><td>자몽 같은 산미와 황설탕 단맛이 균형을 이룹니다. 식으면서 단맛이 더 또렷해집니다</td></tr>
           <tr><th>어울리는 방식</th><td>핸드드립 · 아이스 · 콜드브루. 우유를 섞는 라떼에는 산미가 다소 가려집니다</td></tr>
           <tr><th>로스팅</th><td>주문을 확인한 뒤 볶습니다. 미리 볶아 쌓아 두지 않습니다</td></tr>
@@ -268,7 +277,7 @@
     <table class="tbl" style="margin-top:34px;">
       <tr><th>제품명</th><td>웰코 케냐 AA 원두커피 (홀빈)</td></tr>
       <tr><th>식품유형</th><td>볶은 커피</td></tr>
-      <tr><th>원재료</th><td>커피 원두(생두 원산지 : 케냐) 100%</td></tr>
+      <tr><th>원재료</th><td>커피 원두 100% (원산지 : 케냐)</td></tr>
       <tr><th>중량</th><td>200g</td></tr>
       <tr><th>형태</th><td>홀빈(분쇄하지 않은 통원두) 기본 · 분쇄를 원하시면 주문 시 말씀해 주십시오</td></tr>
       <tr><th>포장</th><td>아웃가스 밸브가 달린 파우치</td></tr>
@@ -276,6 +285,7 @@
       <tr><th>보관 방법</th><td>직사광선을 피해 서늘하고 건조한 곳</td></tr>
       <tr><th>제조원</th><td>주식회사 디올 · 경상북도 고령군 개진면 치산길 2 · 식품제조가공업 등록업소</td></tr>
       <tr><th>대용량</th><td>현재 200g을 기준으로 만들고 있습니다. 더 큰 단위가 필요하시면 문의해 주십시오</td></tr>
+      <tr><th>판매처</th><td><a href="https://smartstore.naver.com/vacuum_roasting/products/12684056589" target="_blank" rel="noopener" style="border-bottom:1px solid var(--ink3);">네이버 스마트스토어 &mdash; 진공 질소 로스팅 원두</a></td></tr>
     </table>
     <p class="note">
       실제 표시사항은 제품 포장에 기재된 내용을 따릅니다.
@@ -293,7 +303,7 @@
     <div class="faq">
       <details open>
         <summary>어디서 살 수 있나요?</summary>
-        <p>현재 온라인 판매처에서 판매 중이며, 자사 직접 주문도 준비하고 있습니다. 판매처와 가격은 아래 &lsquo;구매 문의&rsquo;로 연락 주시면 바로 안내해 드립니다.</p>
+        <p><a href="https://smartstore.naver.com/vacuum_roasting/products/12684056589" target="_blank" rel="noopener" style="border-bottom:1px solid var(--ink);">네이버 스마트스토어</a>에서 판매하고 있습니다. 가격과 배송은 그곳에서 확인하시면 됩니다. 수량이 많거나 선물 포장이 필요하시면 아래로 문의해 주십시오.</p>
       </details>
       <details>
         <summary>홀빈이라는데, 분쇄기가 없습니다.</summary>
@@ -321,7 +331,7 @@
       </details>
       <details>
         <summary>제 브랜드로 원두를 만들고 싶습니다.</summary>
-        <p>같은 설비로 다른 회사의 생두와 곡물을 볶아 드리는 임가공을 하고 있습니다. 원물을 보내 주시면 볶아서 돌려드리고, 원물까지 웰코가 준비하는 완제품 생산도 합니다. <a href="index.html">임가공·도매 페이지</a>에 단가표와 절차가 있습니다.</p>
+        <p>같은 설비로 다른 회사의 커피와 곡물을 볶아 드리는 임가공을 하고 있습니다. 원물을 보내 주시면 볶아서 돌려드리고, 원물까지 웰코가 준비하는 완제품 생산도 합니다. <a href="index.html">임가공·도매 페이지</a>에 단가표와 절차가 있습니다.</p>
       </details>
     </div>
   </div>
@@ -331,10 +341,11 @@
 <section class="sect plate" id="buy" style="padding-bottom:76px;">
   <div class="wrap">
     <div class="head"><span class="mono">Order</span><span class="line"></span><span class="mono">06</span></div>
-    <h2 class="t">필요하신 수량만 알려 주시면<br>구매처와 가격을 안내해 드립니다.</h2>
+    <h2 class="t">바로 사셔도 되고,<br>물어보고 정하셔도 됩니다.</h2>
     <p class="lede">
-      이메일로 주시면 가장 빠릅니다. 아래 항목을 적어 보내 주시면 그대로 확인해 회신드립니다.
-      선물용이라 포장이 따로 필요하시거나, 분쇄해서 받고 싶으시면 그 점도 함께 적어 주십시오.
+      한두 봉이면 네이버 스마트스토어가 가장 빠릅니다. 가격·배송·결제가 그곳에 있습니다.
+      수량이 많거나, 선물 포장이 필요하거나, 분쇄해서 받고 싶으시면 아래 항목을 적어 메일로 보내 주십시오.
+      그대로 확인해 회신드립니다.
     </p>
 
     <div class="contact">
@@ -342,7 +353,9 @@
         <span class="label">주식회사 디올 · 웰코</span>
         <a class="mail" href="mailto:leeseunghun815@gmail.com">leeseunghun815@gmail.com</a>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-fill" href="mailto:leeseunghun815@gmail.com?subject=%5BWELCO%5D%20%EC%9B%90%EB%91%90%20%EA%B5%AC%EB%A7%A4%20%EB%AC%B8%EC%9D%98&amp;body=%E2%91%A0%20%EC%84%B1%ED%95%A8%3A%0A%E2%91%A1%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%E2%91%A2%20%EC%9B%90%ED%95%98%EC%8B%9C%EB%8A%94%20%EC%88%98%EB%9F%89%20%28200g%20%EA%B8%B0%EC%A4%80%20%EB%B4%89%EC%88%98%29%3A%0A%E2%91%A3%20%EB%B0%9B%EC%9C%BC%EC%8B%A4%20%EC%A3%BC%EC%86%8C%3A%0A%E2%91%A4%20%EB%B6%84%EC%87%84%20%EC%97%AC%EB%B6%80%20%28%ED%99%80%EB%B9%88%20%EA%B7%B8%EB%8C%80%EB%A1%9C%20/%20%EB%B6%84%EC%87%84%20%E2%80%94%20%EC%82%AC%EC%9A%A9%ED%95%98%EC%8B%9C%EB%8A%94%20%EB%8F%84%EA%B5%AC%29%3A%0A">이메일 보내기</a>
+          <a class="btn btn-fill" href="https://smartstore.naver.com/vacuum_roasting/products/12684056589"
+             target="_blank" rel="noopener">스마트스토어에서 구매</a>
+          <a class="btn btn-line" href="mailto:leeseunghun815@gmail.com?subject=%5BWELCO%5D%20%EC%9B%90%EB%91%90%20%EA%B5%AC%EB%A7%A4%20%EB%AC%B8%EC%9D%98&amp;body=%E2%91%A0%20%EC%84%B1%ED%95%A8%3A%0A%E2%91%A1%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%E2%91%A2%20%EC%9B%90%ED%95%98%EC%8B%9C%EB%8A%94%20%EC%88%98%EB%9F%89%20%28200g%20%EA%B8%B0%EC%A4%80%20%EB%B4%89%EC%88%98%29%3A%0A%E2%91%A3%20%EB%B0%9B%EC%9C%BC%EC%8B%A4%20%EC%A3%BC%EC%86%8C%3A%0A%E2%91%A4%20%EB%B6%84%EC%87%84%20%EC%97%AC%EB%B6%80%20%28%ED%99%80%EB%B9%88%20%EA%B7%B8%EB%8C%80%EB%A1%9C%20/%20%EB%B6%84%EC%87%84%20%E2%80%94%20%EC%82%AC%EC%9A%A9%ED%95%98%EC%8B%9C%EB%8A%94%20%EB%8F%84%EA%B5%AC%29%3A%0A">이메일 보내기</a>
           <a class="btn btn-line" href="tel:07077007891">전화 070-7700-7891</a>
         </div>
         <p style="margin:24px 0 0; font-size:14.5px; color:#c5bfb2;">

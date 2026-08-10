@@ -216,6 +216,11 @@
   /* 사진 */
   figure{margin:0;}
   .shot img{filter:grayscale(1) contrast(1.1); width:100%;}
+  /* 디자인 규칙("사진은 전부 흑백")의 유일한 예외.
+     원두는 이 제품의 주인공이라 색을 살린다 — 흑백에 넣으면 짙은 갈색이
+     배경과 함께 검정으로 수렴해 형태까지 사라진다.
+     황금빛은 이미지 자체에 구워 두었으므로 여기서는 필터만 벗긴다. */
+  .shot.color img{filter:none;}
   .shot figcaption{font-size:13px; color:var(--ink3);
                    border-top:1px solid var(--rule); padding-top:10px; margin-top:12px; line-height:1.85;}
   .plate .shot figcaption{color:#a8a094; border-top-color:#3a352d;}

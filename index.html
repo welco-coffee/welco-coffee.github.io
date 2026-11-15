@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <!--
   ============================================================================
-  WELCO (주식회사 디올) — B2B 브랜드 사이트 / welco-coffee.github.io
-  디자인 시스템 v2 "SPEC SHEET" (스위스 타이포그래피 계열, 2026-08-06)
+  WELCO (주식회사 디올) — B2B / welco-coffee.github.io  (v3, 2026-11-15)
+  디자인 시스템 v3 "N₂ SHEET" — assets/spec.css 를 shop.html과 공유한다.
 
-  타입   제목 Noto Serif KR 600 · 본문 IBM Plex Sans + Noto Sans KR
-         라벨·수치 IBM Plex Mono 500 (letter-spacing .13em, 대문자)
-  스케일 11 / 13 / 15.5(본문) / 19(리드) / 26 / 40 / 60
-  색     paper #f2f0ea · raised #fbfaf7 · ink #15120e · ink2 #4a453d · ink3 #7d786f
-         rule #d8d3c8 · sage #3f7a56(검증 전용)
-  금지   그라디언트 · 그림자 · 둥근 모서리 · 이모지 · 컬러 배경 블록
-         구분은 오직 1px 괘선과 여백으로. 사진은 흑백.
-  격자   컨테이너 1180px / 데이터행 120px│1fr│수치 / 섹션 머리 = 라벨+괘선+번호
-
-  ⚑ 남은 항목: 쿠팡 링크 · 위탁생산 MOQ·납기·단가 · HACCP 여부
-     (네이버 스마트스토어 링크는 2026-08-10 연결 완료. B2C 상세는 shop.html)
+  독자 = ① 개인 카페(원두 납품 · 샘플 신청)  ② 로스팅 임가공 의뢰처
+  ⚑ 원두 납품 단가는 적지 않는다 — 샘플 뒤 물량 · 주기로 견적(2026-11-15 개편 때 1kg 단가표 내림).
+     임가공 단가표는 B2B 공개 단가라 유지(2026-08-10 원칙과 동일).
+  ⚑ 특허 = 질소 · 무산소 분위기 로스팅. 진공 단계는 WELCO 자체 공정.
+  ⚑ 아크릴아마이드는 "케냐 AA 시료 기준"을 붙여서만 쓴다.
   ============================================================================
 -->
 <html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WELCO — 곡물·커피 생두 로스팅 임가공 | 진공 질소 150℃ | 주식회사 디올</title>
-<meta name="description" content="특허 진공 질소 150℃ 저온 로스팅. 아크릴아마이드 공인기관 2곳 검출한계 미만. 원두 위탁생산(OEM·화이트라벨), 커피 생두를 포함한 곡물 로스팅 임가공(1kg 9,500원부터), 케냐 AA 도매 납품. 경북 고령 자사 로스터리.">
-<meta property="og:title" content="WELCO — 곡물·커피 생두 로스팅 임가공">
-<meta property="og:description" content="보내 주시면 진공 질소 150℃로 볶아 돌려드립니다. 1kg 7,000원부터. 특허 제10-2004953호.">
-<meta property="og:image" content="assets/beans.jpg">
+<title>WELCO — 카페 원두 납품 · 로스팅 임가공 | 진공·질소 로스팅 | 주식회사 디올</title>
+<meta name="description" content="개인 카페에 진공·질소 로스팅 싱글오리진(에티오피아 · 케냐 AA · 콜롬비아)을 납품합니다. 200g 샘플로 먼저 맛보고 정하세요. 커피 생두와 곡물 로스팅 임가공도 합니다. 질소 로스팅 등록특허 제10-2004953호, 경북 고령 로스터리.">
+<meta property="og:title" content="WELCO — 카페 원두 납품 · 로스팅 임가공">
+<meta property="og:description" content="산소를 빼고 설정 150°C로 볶은 싱글오리진 3종. 카페라면 200g 샘플부터.">
+<meta property="og:image" content="https://welco-coffee.github.io/assets/img/og-lineup.jpg">
+<meta property="og:url" content="https://welco-coffee.github.io/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://welco-coffee.github.io/">
 <link rel="icon" href="assets/logo.png">
-<link rel="preload" as="image" href="assets/roaster.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/roaster.webp" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script type="application/ld+json">
@@ -40,7 +37,7 @@
   "legalName": "주식회사 디올",
   "url": "https://welco-coffee.github.io/",
   "logo": "https://welco-coffee.github.io/assets/logo.png",
-  "description": "진공 질소 150℃ 저온 로스팅 원두의 위탁생산(OEM·화이트라벨)과 도매 납품. 경북 고령 자사 로스터리.",
+  "description": "진공·질소 로스팅 싱글오리진 원두의 카페 납품과 커피 생두 · 곡물 로스팅 임가공. 경북 고령 로스터리.",
   "email": "leeseunghun815@gmail.com",
   "telephone": "+82-70-7700-7891",
   "address": {
@@ -51,16 +48,46 @@
     "addressCountry": "KR"
   },
   "makesOffer": [
-    {"@type": "Offer", "name": "원두 위탁생산 (OEM·화이트라벨)"},
-    {"@type": "Offer", "name": "케냐 AA 원두 도매 납품"}
+    {"@type": "Offer", "name": "카페 원두 납품 (에티오피아 · 케냐 AA · 콜롬비아)"},
+    {"@type": "Offer", "name": "커피 생두 · 곡물 로스팅 임가공"}
   ]
 }
 </script>
-<!-- 웹폰트는 라틴(Plex)과 제목용 한글 명조(Noto Serif KR 600)만 받는다.
-     한글 본문까지 웹폰트로 받으면 전송량이 1.5MB를 넘어서므로, 본문 한글은 OS 기본 고딕에 맡긴다. -->
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
-<!-- 디자인 시스템 v2 'SPEC SHEET' — index.html과 shop.html이 공유한다 -->
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/spec.css">
+<style>
+  .hero .R{background:var(--paper2);}
+  .hero .R img{max-height:600px;}
+  .hero .R .el{position:absolute; left:40px; top:40px;}
+  @media(max-width:980px){ .hero .R .el{left:20px; top:20px;} .hero .R img{max-height:320px;} }
+  @media(max-width:700px){ .hero .R img{max-height:290px;} }
+
+  /* 카페 납품: 원두 3종 표 */
+  .beans3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--ink); margin-top:34px;}
+  .beans3 > div{padding:24px 24px 26px; border-right:1px solid var(--rule2); border-bottom:1px solid var(--rule2); min-width:0;}
+  .beans3 > div:first-child{padding-left:0;} .beans3 > div:last-child{border-right:0; padding-right:0;}
+  .beans3 .id{display:flex; gap:14px; align-items:flex-start; margin-bottom:14px;}
+  .beans3 h3{font-size:21px; line-height:1.35;}
+  .beans3 .reg{font-size:12.5px; color:var(--ink3); margin:2px 0 4px;}
+  .beans3 .notes{font-size:14.5px; color:var(--cherry); font-weight:500; margin:0 0 8px;}
+  .beans3 p{font-size:14.5px; color:var(--ink2); margin:0 0 6px;}
+  .beans3 .use{font-size:13px; color:var(--ink3); border-top:1px solid var(--rule); padding-top:10px; margin-top:12px;}
+  .steps.c4{grid-template-columns:repeat(4,1fr);}
+  .sample{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:20px 34px; align-items:center;
+          background:var(--leaf); color:#E2E7E3; padding:30px 34px; margin-top:40px;}
+  .sample h3{color:#F6F7F3; font-size:24px; margin-bottom:6px;}
+  .sample p{margin:0; font-size:14.5px; color:#CBD3CD;}
+  .sample .btns{display:flex; gap:10px; flex-wrap:wrap;}
+  .sample .btn-line{border-color:#F1F2EE; color:#F1F2EE;}
+  .sample .btn-line:hover{background:#F1F2EE; color:var(--ink);}
+  @media(max-width:980px){
+    .beans3{grid-template-columns:1fr;}
+    .beans3 > div, .beans3 > div:first-child, .beans3 > div:last-child{padding:22px 0; border-right:0;}
+    .steps.c4{grid-template-columns:1fr 1fr;}
+    .sample{grid-template-columns:1fr;}
+  }
+  @media(max-width:560px){ .steps.c4{grid-template-columns:1fr;} .sample{padding:24px 20px;} .sample .btns .btn{flex:1 1 100%; text-align:center;} }
+</style>
 </head>
 <body>
 
@@ -68,14 +95,14 @@
   <div class="wrap nav">
     <a class="wm" href="#top">WELCO</a>
     <ul>
-      <li><a href="#oem">임가공 단가</a></li>
+      <li><a href="#cafe">카페 원두 납품</a></li>
+      <li><a href="#oem">로스팅 임가공</a></li>
       <li><a href="#process">공정</a></li>
-      <li><a href="#proof">검증</a></li>
-      <li><a href="#wholesale">완제품 · 도매</a></li>
+      <li><a href="#proof">특허 · 시험</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a class="x" href="shop.html">원두 구매</a></li>
+      <li><a class="x" href="shop.html">원두 3종 · 구매</a></li>
     </ul>
-    <a class="cta" href="#contact">견적 문의</a>
+    <a class="cta" href="#contact">샘플 신청</a>
   </div>
 </header>
 
@@ -84,97 +111,155 @@
   <div class="L">
     <div class="top">
       <span class="mono" style="color:var(--ink); font-size:12px; letter-spacing:.42em; font-weight:600;">WELCO</span>
-      <span class="mono">Technical Profile / Toll Roasting / Rev. 2026-08</span>
+      <span class="mono">For Cafés · Toll Roasting</span>
     </div>
 
-    <h1>보내 주시면,<br><i>산소 없이 150℃</i>에서<br>볶아 드립니다.</h1>
+    <h1>카페 원두를,<br><i>산소 없이</i> 볶아<br>납품합니다.</h1>
 
     <p class="lede">
-      커피 생두를 포함한 곡물을 진공 질소 상태에서 저온으로 볶는 임가공입니다.
-      원물은 귀사가 보내 주시고, 웰코는 볶아서 돌려드립니다.
-      로스팅 설비를 갖추지 않고도 특허받은 공법을 쓰실 수 있습니다.
+      개인 카페에 에티오피아 · 케냐 AA · 콜롬비아 싱글오리진을 납품합니다.
+      볶는 통의 공기를 먼저 빼고 질소를 채운 뒤 설정 150°C로 볶은 원두입니다.
+      200g 샘플로 먼저 맛보고 정하세요.
     </p>
 
     <div class="cta-row">
-      <a class="btn btn-fill" href="#oem">임가공 단가표</a>
-      <a class="btn btn-line" href="#contact">견적 문의</a>
+      <a class="btn btn-buy" href="#contact">샘플 신청하기</a>
+      <a class="btn btn-line" href="#cafe">납품 안내 보기</a>
     </div>
 
     <div class="specs">
-      <div class="srow"><span class="mono">Toll Roasting</span><span class="v">임가공비 · 투입 원물 1kg 기준 · 물량 구간별</span><span class="n">7,000원~</span></div>
-      <div class="srow"><span class="mono">Capacity</span><span class="v">1회 1.8kg · 12분 · 시간당 4사이클</span><span class="n">7.2kg/h</span></div>
-      <div class="srow"><span class="mono">Acrylamide</span><span class="v">공인 시험기관 2곳 · 검출한계 미만</span><span class="n sg">N.D.</span></div>
-      <div class="srow"><span class="mono">Patent</span><span class="v">곡물 로스팅장치 및 곡물의 로스팅 방법</span><span class="n">10-2004953</span></div>
+      <div class="srow"><span class="mono">Origins</span><span class="v">에티오피아 · 케냐 AA · 콜롬비아 싱글오리진</span><span class="n">3</span></div>
+      <div class="srow"><span class="mono">Sample</span><span class="v">원하시는 원두로 · 납품 검토용</span><span class="n">200g</span></div>
+      <div class="srow"><span class="mono">Process</span><span class="v">진공 0~8분 → 질소 8~12분 · 설정 온도</span><span class="n">150°C</span></div>
+      <div class="srow"><span class="mono">Patent</span><span class="v">질소 · 무산소 분위기 로스팅 등록특허</span><span class="n">10-2004953</span></div>
     </div>
   </div>
 
   <figure class="R">
-    <picture>
-      <source srcset="assets/roaster.webp" type="image/webp">
-      <img src="assets/roaster.jpg" alt="웰코 진공 질소 저온 로스팅 설비"
-           width="603" height="1046" fetchpriority="high" decoding="async">
-    </picture>
-    <figcaption><span>Vacuum Nitrogen Roaster</span><span>Goryeong, Korea</span></figcaption>
+    <span class="el" aria-hidden="true"><span class="z"><span>7</span><span>14.007</span></span><span class="sym">N<sub>2</sub></span><span class="nm"><span class="ko">질소 · </span>NITROGEN</span></span>
+    <img src="assets/img/roaster.webp" alt="경상북도 고령 WELCO 로스터리의 진공·질소 로스터 실물"
+         width="515" height="900" fetchpriority="high" decoding="async">
+    <figcaption><span>Vacuum · Nitrogen Roaster</span><span>Goryeong, Korea</span></figcaption>
   </figure>
 </div>
 
-<!-- ══ 00 두 가지 거래 ═══════════════════════════════════════ -->
+<!-- ══ 두 가지 거래 ═══════════════════════════════════════════ -->
 <section class="sect">
   <div class="wrap">
-    <div class="head"><span class="mono">What we do</span><span class="line"></span><span class="mono">00</span></div>
-    <h2 class="t">설비를 사지 않고,<br>공법만 빌려 쓰시는 방법입니다.</h2>
-    <p class="lede" style="margin-bottom:38px;">
-      진공 질소 로스팅 설비를 갖추려면 장비값과 인력, 식품제조가공업 등록이 필요합니다.
-      웰코는 이미 갖춰 두었습니다. 원물과 브랜드는 귀사가, 볶는 일은 웰코가 맡습니다.
-      한 배치가 1.8kg이라 소량도 받습니다.
-    </p>
+    <div class="head"><span class="mono">What we do</span><span class="line"></span><span class="mono">2 Ways</span></div>
+    <h2 class="t">볶은 원두를 받으시거나,<br>원물을 보내 볶아 받으시거나</h2>
 
-    <div class="duo">
-      <div style="border-right:1px solid var(--rule2);">
-        <span class="mono">01 &nbsp;Toll Roasting &nbsp;· &nbsp;주력</span>
-        <h3>로스팅 임가공</h3>
+    <div class="duo" style="margin-top:34px;">
+      <div>
+        <span class="label">카페 · 매장 · 주력</span>
+        <h3>카페 원두 납품</h3>
         <p style="color:var(--ink2); margin:0;">
-          커피 생두를 포함한 곡물을 보내 주시면 볶아서 돌려드립니다.
-          원물과 배송비는 귀사가, 볶는 일은 웰코가 맡습니다.
+          WELCO가 진공·질소로 볶은 싱글오리진 3종을 매장에 납품합니다.
+          샘플로 맛을 확인한 뒤, 물량과 주기에 맞춰 견적을 드립니다.
         </p>
         <ul>
-          <li>임가공비 <b>1kg 7,000원부터</b> · 투입 원물 기준</li>
+          <li>에티오피아 시다모 G2 · 케냐 AA · 콜롬비아 후일라 수프리모</li>
+          <li>200g 샘플로 먼저 맛보기</li>
+          <li>홀빈 기본 · 분쇄는 협의</li>
+          <li>세금계산서 발행 · 사업자 간 거래</li>
+        </ul>
+        <a class="go" href="#cafe">카페 납품 안내</a>
+      </div>
+      <div>
+        <span class="label">원물 보유 업체</span>
+        <h3>로스팅 임가공</h3>
+        <p style="color:var(--ink2); margin:0;">
+          커피 생두를 포함한 곡물을 보내 주시면 같은 설비로 볶아 돌려드립니다.
+          원물과 배송비는 귀사가, 볶는 일은 WELCO가 맡습니다.
+        </p>
+        <ul>
+          <li>임가공비 1kg 7,000원부터 · 투입 원물 기준</li>
           <li>최소 10kg — 한 배치가 1.8kg이라 소량 시작이 가능합니다</li>
           <li>커피 생두 · 보리 · 현미 · 귀리 · 옥수수 · 메밀 · 검은콩 · 율무 · 발아 곡물</li>
           <li>분쇄 · 소분 포장 · 귀사 라벨 부착까지 옵션으로</li>
         </ul>
-        <a class="go" href="#oem">단가표와 절차 보기</a>
-      </div>
-      <div>
-        <span class="mono">02 &nbsp;Finished Goods</span>
-        <h3>완제품 · 도매</h3>
-        <p style="color:var(--ink2); margin:0;">
-          원물까지 웰코가 준비하는 방식입니다.
-          귀사 라벨을 붙인 완제품 생산과, 케냐 AA 원두 도매 납품을 합니다.
-        </p>
-        <ul>
-          <li>완제품 OEM — 웰코 케냐 AA + 로스팅 + 포장, 귀사 라벨</li>
-          <li>도매 1kg 28,000원 · 5kg 이상 26,000원 · 10kg 이상 24,000원</li>
-          <li>5kg 이상 배송비 없음 · 고령·성주·달성은 직접 배송</li>
-          <li>200g 샘플 무료</li>
-        </ul>
-        <a class="go" href="#wholesale">완제품·도매 보기</a>
+        <a class="go" href="#oem">단가표와 절차</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 01 위탁생산 ═══════════════════════════════════════════ -->
+<!-- ══ 카페 원두 납품 ═════════════════════════════════════════ -->
+<section class="sect" id="cafe">
+  <span id="wholesale"></span>
+  <div class="wrap">
+    <div class="head"><span class="mono">For Cafés</span><span class="line"></span><span class="mono">Supply</span></div>
+    <h2 class="t">개인 카페를 위한<br>싱글오리진 세 가지</h2>
+    <p class="lede">
+      세 원두 모두 같은 로스터에서 같은 순서(진공 → 질소, 설정 150°C)로 볶습니다.
+      메뉴에 맞는 원두를 고르시고, 샘플로 매장 장비에서 직접 내려 보세요.
+    </p>
+
+    <div class="beans3">
+      <div>
+        <div class="id">
+          <span class="el sm leaf" aria-hidden="true"><span class="z"><span>G2</span><span></span></span><span class="sym">Et</span><span class="nm">ETHIOPIA</span></span>
+          <div><p class="reg">시다모 G2 워시드</p><h3>에티오피아</h3></div>
+        </div>
+        <p class="notes">재스민 · 레몬·베리 · 홍차</p>
+        <p>꽃향과 상큼함, 가벼운 블랙커피. 산미 4 · 단맛 3 · 바디 2 · 쌉쌀함 1.</p>
+        <p class="use">핸드드립 · 아이스 메뉴에 맞습니다. 진하고 고소한 라떼에는 덜 맞습니다.</p>
+      </div>
+      <div>
+        <div class="id">
+          <span class="el sm" aria-hidden="true"><span class="z"><span>AA</span><span></span></span><span class="sym">Ke</span><span class="nm">KENYA</span></span>
+          <div><p class="reg">AA</p><h3>케냐 AA</h3></div>
+        </div>
+        <p class="notes">자몽·포도 · 황설탕·아몬드</p>
+        <p>밝은 산미와 고소한 단맛을 함께. 산미 3 · 단맛 3 · 바디 3 · 쌉쌀함 1.</p>
+        <p class="use">핸드드립 메뉴에 맞습니다. 진한 다크 로스트 스타일을 찾는 매장에는 덜 맞습니다.</p>
+      </div>
+      <div>
+        <div class="id">
+          <span class="el sm ink" aria-hidden="true"><span class="z"><span>17/18</span><span></span></span><span class="sym">Co</span><span class="nm">COLOMBIA</span></span>
+          <div><p class="reg">후일라 수프리모 17/18 워시드</p><h3>콜롬비아</h3></div>
+        </div>
+        <p class="notes">시트러스 · 사탕수수 · 밀크 초콜릿</p>
+        <p>단맛이 앞에 오는 한 잔, 라떼까지. 산미 3 · 단맛 4 · 바디 3 · 쌉쌀함 2.</p>
+        <p class="use">핸드드립 · 아이스, 라떼에도 쓰기 좋습니다(밀크 초콜릿 노트).</p>
+      </div>
+    </div>
+    <p class="note">
+      맛 세기(5단계)와 향미는 WELCO가 볶을 때 목표로 하는 맛이며, 향미는 비유입니다.
+      원두별 맛 지도와 추출법은 <a href="shop.html#lineup">원두 3종 페이지</a>에 있습니다.
+    </p>
+
+    <h3 style="font-size:26px; margin:56px 0 0;">샘플에서 정기 납품까지</h3>
+    <div class="steps c4">
+      <div><div class="no">Step 01</div><b>샘플 신청</b><p>매장명 · 주소 · 원하시는 원두 · 주로 쓰시는 추출 방식을 이메일이나 전화로 알려 주세요.</p></div>
+      <div><div class="no">Step 02</div><b>200g 샘플</b><p>고르신 원두로 200g을 보내 드립니다. 매장 장비로 직접 내려 보세요.</p></div>
+      <div><div class="no">Step 03</div><b>조건 협의</b><p>원두 · 한 달 물량 · 주기 · 분쇄 여부를 정하면 그 조건으로 견적을 계산해 드립니다.</p></div>
+      <div><div class="no">Step 04</div><b>정기 납품</b><p>정한 주기로 볶아 보내 드립니다. 세금계산서는 주식회사 디올 명의로 발행합니다.</p></div>
+    </div>
+
+    <div class="sample">
+      <div>
+        <h3>먼저 200g으로 맛보세요</h3>
+        <p>납품 단가는 원두 · 물량 · 주기에 따라 달라 샘플 뒤 견적으로 안내합니다.
+        고령 · 성주 · 달성 지역은 직접 배송을 협의할 수 있습니다.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-buy" href="#contact">샘플 신청</a>
+        <a class="btn btn-line" href="tel:07077007891">전화 070-7700-7891</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 로스팅 임가공 ═════════════════════════════════════════ -->
 <section class="sect" id="oem">
   <div class="wrap">
-    <div class="head"><span class="mono">Toll Roasting</span><span class="line"></span><span class="mono">01</span></div>
+    <div class="head"><span class="mono">Toll Roasting</span><span class="line"></span><span class="mono">Rates</span></div>
     <h2 class="t">로스팅 임가공</h2>
     <p class="lede">
-      등록 특허의 이름은 「곡물 로스팅장치 및 곡물의 로스팅 방법」입니다.
+      등록특허의 이름은 「곡물 로스팅장치 및 곡물의 로스팅 방법」입니다.
       커피만을 위한 공법이 아닙니다. 커피 생두를 포함한 곡물을 보내 주시면
-      진공 질소 저온으로 볶아 돌려드립니다.
-      고온에서 볶을수록 쓴맛·탄맛과 아크릴아마이드가 함께 늘어나는 것은
-      곡물차와 볶음 분말도 마찬가지입니다.
+      같은 진공·질소 설비로 볶아 돌려드립니다.
     </p>
 
     <table class="price tbl" style="margin-top:34px;">
@@ -197,16 +282,16 @@
     <table class="tbl" style="margin-top:34px;">
       <tr><th>처리 능력</th><td>1회 1.8kg을 12분에 볶고, 전환을 포함해 시간당 네 번 돌립니다. 시간당 7.2kg, 하루 60kg 안팎</td></tr>
       <tr><th>최소 의뢰</th><td>10kg — 한 배치가 1.8kg이라 소량도 받습니다</td></tr>
-      <tr><th>반환</th><td>1kg 크라프트 봉투(아웃가스 밸브) 벌크. 소분·분쇄·라벨 부착은 옵션</td></tr>
+      <tr><th>반환</th><td>1kg 크라프트 봉투(아웃가스 밸브) 벌크. 소분 · 분쇄 · 라벨 부착은 옵션</td></tr>
       <tr><th>거래 조건</th><td>법인 사업자 간 거래 · 세금계산서 발행</td></tr>
     </table>
 
     <h3 style="font-size:26px; margin:56px 0 14px;">이런 곳에서 맡기십니다</h3>
     <table class="tbl">
-      <tr><th>곡물차 · 분말</th><td>보리차·현미차·볶음 분말·선식을 만들지만 볶는 공정은 외부에 맡기는 제조·판매사</td></tr>
-      <tr><th>원두 브랜드</th><td>생두는 직접 고르되 로스팅 설비는 두지 않으려는 커피 브랜드·온라인 셀러</td></tr>
-      <tr><th>산지 · 농가</th><td>직접 기른 곡물을 볶아서 부가가치를 붙이려는 생산자·농업회사법인</td></tr>
-      <tr><th>차별화가 필요한 곳</th><td>&lsquo;쓴맛·탄맛이 적다&rsquo;를 공인기관 시험 결과로 설명하고 싶은 경우</td></tr>
+      <tr><th>곡물차 · 분말</th><td>보리차 · 현미차 · 볶음 분말 · 선식을 만들지만 볶는 공정은 외부에 맡기는 제조 · 판매사</td></tr>
+      <tr><th>원두 브랜드</th><td>생두는 직접 고르되 로스팅 설비는 두지 않으려는 커피 브랜드 · 온라인 셀러</td></tr>
+      <tr><th>산지 · 농가</th><td>직접 기른 곡물을 볶아서 부가가치를 붙이려는 생산자 · 농업회사법인</td></tr>
+      <tr><th>공정이 필요한 곳</th><td>진공·질소 로스팅 공정을 상품 설명에 담고 싶은 경우</td></tr>
     </table>
 
     <div class="warn">
@@ -221,11 +306,11 @@
 
     <h3 style="font-size:26px; margin:56px 0 0;">진행 절차</h3>
     <div class="steps">
-      <div><div class="no">Step 01</div><b>문의</b><p>품목·물량·원하는 볶음 정도를 알려 주십시오. 견적을 계산해 회신드립니다.</p></div>
+      <div><div class="no">Step 01</div><b>문의</b><p>품목 · 물량 · 원하는 볶음 정도를 알려 주십시오. 견적을 계산해 회신드립니다.</p></div>
       <div><div class="no">Step 02</div><b>시험 로스팅</b><p>5kg 이하로 먼저 볶아 프로파일을 잡습니다. 결과를 보고 정하시면 됩니다.</p></div>
-      <div><div class="no">Step 03</div><b>원물 입고</b><p>확정한 프로파일로 본물량을 보내 주십시오. 입고 시 수분·이물을 확인합니다.</p></div>
+      <div><div class="no">Step 03</div><b>원물 입고</b><p>확정한 프로파일로 본물량을 보내 주십시오. 입고 시 수분 · 이물을 확인합니다.</p></div>
       <div><div class="no">Step 04</div><b>로스팅</b><p>배치 단위로 볶습니다. 다른 의뢰 건과 섞이지 않습니다.</p></div>
-      <div><div class="no">Step 05</div><b>반환 출고</b><p>1kg 벌크로 담아 보내드립니다. 소분·분쇄·라벨 부착은 요청에 따라.</p></div>
+      <div><div class="no">Step 05</div><b>반환 출고</b><p>1kg 벌크로 담아 보내드립니다. 소분 · 분쇄 · 라벨 부착은 요청에 따라.</p></div>
     </div>
 
     <h3 style="font-size:26px; margin:56px 0 14px;">받는 품목</h3>
@@ -237,71 +322,65 @@
     </table>
     <p class="note">
       식품용 원료만 취급합니다. 의약품으로 쓰이는 재료는 별도의 제조 허가가 필요해 취급하지 않습니다.
-      땅콩·견과류는 알레르기 유발물질 교차오염 문제로 별도 협의합니다.
-      원물은 이물·수분 상태를 확인한 뒤 볶습니다. 곰팡이·해충이 있는 원물은 그대로 반송해 드립니다.
+      땅콩 · 견과류는 알레르기 유발물질 교차오염 문제로 별도 협의합니다.
+      원물은 이물 · 수분 상태를 확인한 뒤 볶습니다. 곰팡이 · 해충이 있는 원물은 그대로 반송해 드립니다.
     </p>
   </div>
 </section>
 
-<!-- ══ 02 공정 (다크 플레이트) ═══════════════════════════════ -->
+<!-- ══ 공정 (잉크 판) ════════════════════════════════════════ -->
 <section class="sect plate" id="process">
   <div class="wrap">
-    <div class="head"><span class="mono">Process</span><span class="line"></span><span class="mono">02</span></div>
-    <h2 class="t">고온과 산소가 있어야 생기는 물질이라,<br>그 조건 자체를 없앴습니다.</h2>
+    <div class="head"><span class="mono">Vacuum · Nitrogen Roasting</span><span class="line"></span><span class="mono">Process</span></div>
+    <h2 class="t">공기를 빼고, 질소를 채우고,<br>설정 150°C로 볶습니다</h2>
     <p class="lede">
-      아크릴아마이드는 곡물·커피를 높은 온도에서 볶을 때 생기는 물질입니다.
-      세계보건기구가 발암 가능 물질(2A군)로 분류했고, 커피의 쓴맛과 탄맛을 만드는 원인이기도 합니다.
-      웰코는 용기 안을 진공으로 만들어 산소를 빼내고 질소를 채운 뒤, 150℃에서 원두를 익힙니다.
-      이 장치와 방법은 2019년 특허로 등록되었습니다.
+      공기 속에서 볶으면 산소 때문에 불완전 연소가 일어나 원두 껍질이 그을릴 수 있고,
+      그을음은 향을 가릴 수 있습니다. WELCO는 먼저 공기를 빼고(진공 0~8분),
+      질소를 채운 뒤(질소 8~12분) 볶습니다.
     </p>
 
     <div class="two">
       <figure class="shot">
-        <img src="assets/hmi.jpg" alt="로스팅 제어 화면 — 케냐 1.9kg 배치, 설정 온도 150℃"
+        <img src="assets/hmi.jpg" alt="로스팅 제어 화면 — 설정 온도 150°C, 질소·진공 공정"
              width="1000" height="684" loading="lazy" decoding="async">
-        <figcaption>실제 생산 제어 화면 · 케냐 1.9kg 배치 · 용기/하부 설정값 150℃ · 질소·진공 공정 순차 투입</figcaption>
+        <figcaption>생산 중 촬영한 제어 화면 · 설정값 150°C · 진공 · 질소 공정 순차 투입</figcaption>
       </figure>
       <div>
         <table class="tbl" style="margin-top:0;">
-          <tr><th>분위기</th><td>일반 대기(산소 있음) &nbsp;→&nbsp; <b style="color:#f0ece3;">진공 후 질소 충전</b></td></tr>
-          <tr><th>온도</th><td>일반 200℃대 &nbsp;→&nbsp; <b style="color:#f0ece3;">설정 150℃</b></td></tr>
-          <tr><th>맛</th><td>쓴맛·탄맛이 적고 산미와 단맛이 남습니다</td></tr>
-          <tr><th>검증</th><td>공인기관 두 곳 시험 결과 검출한계 미만</td></tr>
-          <tr><th>생산</th><td>경북 고령 자사 설비 · 외주 로스팅 아님</td></tr>
+          <tr><th>1단계</th><td>진공 0~8분 — 볶는 통의 공기를 빼냅니다 <span style="color:#8C9A93;">(WELCO 자체 공정)</span></td></tr>
+          <tr><th>2단계</th><td>질소 8~12분 — 질소를 채워 산소 없이 볶습니다 <span style="color:#8C9A93;">(등록특허의 범위)</span></td></tr>
+          <tr><th>설정 온도</th><td><b style="color:#F1F2EE;">150°C</b> <span style="color:#8C9A93;">(WELCO 자체 공정)</span></td></tr>
+          <tr><th>등록특허</th><td>제10-2004953호 · 질소 · 무산소 분위기에서 볶는 장치와 방법. 무산소 상태에서는 불완전 연소로 생기는 탄화물(그을음)이 생성되지 않는다고 명세서가 설명합니다</td></tr>
+          <tr><th>생산</th><td>경상북도 고령 자사 설비 · 외주 로스팅 아님</td></tr>
         </table>
-        <p class="note" style="color:#8d8579;">
-          위 화면은 실제 생산 중 촬영한 것입니다. 방문해 공정을 직접 보시는 것도 가능합니다.
+        <p class="note">
+          진공 단계와 150°C 설정은 특허가 아니라 WELCO가 정한 공정 값입니다.
+          방문해 공정을 직접 보시는 것도 가능합니다.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 03 검증 ═══════════════════════════════════════════════ -->
+<!-- ══ 특허 · 시험 ═══════════════════════════════════════════ -->
 <section class="sect" id="proof">
   <div class="wrap">
-    <div class="head"><span class="mono">Verification</span><span class="line"></span><span class="mono">03</span></div>
-    <h2 class="t">말이 아니라 서류로 보여 드립니다.</h2>
+    <div class="head"><span class="mono">Patent · Test</span><span class="line"></span><span class="mono">Evidence</span></div>
+    <h2 class="t">말이 아니라 서류로,<br>범위를 붙여 보여 드립니다</h2>
     <p class="lede" style="margin-bottom:34px;">
-      아래 두 건은 공인 시험기관에 의뢰한 아크릴아마이드 시험 결과입니다.
-      성적서 사본은 요청하시면 그대로 보내 드립니다. 거래 전에 먼저 확인하셔도 됩니다.
+      시험성적서와 특허증 사본은 요청하시면 그대로 보내 드립니다. 거래 전에 먼저 확인하셔도 됩니다.
     </p>
 
-    <div class="proof">
+    <div class="proof" style="grid-template-columns:repeat(2,1fr);">
       <div>
-        <span class="badge">검출한계 미만</span>
-        <p class="org">한국기능성식품연구원</p>
-        <p class="det">아크릴아마이드 시험<br><span class="n">2025. 09. 11.</span></p>
-      </div>
-      <div>
-        <span class="badge">검출한계 미만</span>
-        <p class="org">Intertek<br><span style="font-size:14px; color:var(--ink2);">한국인터텍테스팅서비스</span></p>
-        <p class="det">아크릴아마이드 시험 · <span class="n">2025. 09. 10.</span><br>성적서 <span class="n">RT25B-S0676</span></p>
-      </div>
-      <div>
-        <span class="badge gold">특허 등록</span>
+        <span class="badge gold">등록특허</span>
         <p class="org">제10-2004953호</p>
-        <p class="det">곡물 로스팅장치 및 곡물의 로스팅 방법<br><span class="n">2019. 07. 23.</span> 등록</p>
+        <p class="det">곡물 로스팅장치 및 곡물의 로스팅 방법<br><span class="n">2019. 7. 23.</span> 등록 · 특허권자 주식회사 디올</p>
+      </div>
+      <div>
+        <span class="badge">아크릴아마이드 불검출</span>
+        <p class="org">케냐 AA 시료 기준</p>
+        <p class="det">한국인터텍테스팅서비스 · 성적서 <span class="n">RT25B-S0676</span> · <span class="n">2025. 9. 10.</span><br>에티오피아 · 콜롬비아 원두의 별도 시험은 아닙니다</p>
       </div>
     </div>
 
@@ -317,91 +396,46 @@
           <tr><th>사업자등록번호</th><td>815-87-02736</td></tr>
           <tr><th>소재지</th><td>경상북도 고령군 개진면 치산길 2</td></tr>
           <tr><th>업종</th><td>식품제조가공업 등록업소</td></tr>
-          <tr><th>판매 중</th><td>자사 브랜드로 쿠팡에서 소비자 직접 판매 중 · 지금도 매주 로스팅</td></tr>
+          <tr><th>판매 중</th><td>에티오피아 · 케냐 AA · 콜롬비아 홀빈 200g을 자사 브랜드로 쿠팡에서 판매 중 — <a href="shop.html">원두 3종 보기</a></td></tr>
         </table>
         <p class="note">
-          &lsquo;검출한계 미만&rsquo;은 위 두 시험기관 성적서에 기재된 결과이며, 시험 대상은 의뢰한 해당 시료에 한합니다.
-          웰코는 이 결과를 근거로 특정 질병의 예방이나 치료 효과를 주장하지 않습니다.
+          아크릴아마이드 시험 결과는 같은 진공·질소 · 설정 150°C 공정으로 볶은 WELCO 케냐 AA 원두 시료에 한합니다.
+          다른 원두나 다른 회사 제품과의 비교를 뜻하지 않습니다.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 04 원두 · 도매 ════════════════════════════════════════ -->
-<section class="sect" id="wholesale">
-  <div class="wrap">
-    <div class="head"><span class="mono">Finished Goods · Wholesale</span><span class="line"></span><span class="mono">04</span></div>
-    <h2 class="t">완제품 · 도매</h2>
-    <p class="lede" style="margin-bottom:6px;">
-      원물까지 웰코가 준비하는 방식입니다. 귀사 라벨을 붙인 완제품 생산(OEM)과
-      케냐 AA 원두 도매 납품을 합니다. 완제품 단가는 포장 사양과 물량에 따라 달라져 문의 주시면 계산해 드립니다.
-    </p>
-
-    <div class="two narrow-r" style="margin-top:34px;">
-      <div>
-        <table class="tbl" style="margin-top:0;">
-          <tr><th>품목</th><td>Kenya AA · 니에리(Nyeri) 고원 해발 1,500m 이상 · SL28/34 · 워시드</td></tr>
-          <tr><th>맛</th><td>자몽 같은 산미와 황설탕 단맛이 균형을 이룹니다. 쓴맛·탄맛이 적어 산미가 부담스러운 손님에게도 호불호가 크지 않습니다</td></tr>
-          <tr><th>로스팅</th><td>진공 질소 저온 로스팅(설정 150℃) · 특허 등록 제10-2004953호</td></tr>
-          <tr><th>형태</th><td>홀빈(분쇄하지 않음) 기본 · 요청 시 분쇄 · 콜드브루용 별도 문의</td></tr>
-          <tr><th>납품</th><td>주문 후 로스팅해 2~3일 안에 발송</td></tr>
-        </table>
-
-        <h3 style="font-size:26px; margin:48px 0 14px;">납품 단가</h3>
-        <table class="price tbl">
-          <tr><th>수량</th><th>1kg당 단가</th><th>배송비</th></tr>
-          <tr><td>1kg</td><td>28,000</td><td>3,500</td></tr>
-          <tr class="hi"><td>5kg 이상</td><td>26,000</td><td>0</td></tr>
-          <tr><td>10kg 이상</td><td>24,000</td><td>0</td></tr>
-        </table>
-        <p class="note">
-          단위 원 · 부가가치세 별도 · 고령·성주·달성 지역은 수량과 무관하게 직접 배송해 드립니다.
-        </p>
-
-        <div style="border:1px solid var(--rule2); padding:24px 26px; margin-top:34px; background:var(--raised);">
-          <h3 style="font-size:19px; margin-bottom:8px;">소비자에게도 직접 팔고 있습니다</h3>
-          <p style="margin:0 0 16px; font-size:14.5px; color:var(--ink2);">
-            웰코 케냐 AA는 자사 브랜드로 쿠팡과 네이버 스마트스토어에서 판매 중입니다.
-            납품이나 위탁생산을 검토하시는 분께는, 이 원두가 실제 소비자 앞에 놓여 있는 제품이라는 뜻이기도 합니다.
-          </p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn btn-line" href="shop.html">원두 소개 보기</a>
-            <a class="btn btn-line" href="https://smartstore.naver.com/vacuum_roasting/products/12684056589"
-               target="_blank" rel="noopener">스마트스토어에서 보기</a>
-          </div>
-        </div>
-      </div>
-
-      <figure class="shot">
-        <picture>
-          <source srcset="assets/package.webp" type="image/webp">
-          <img src="assets/package.png" alt="WELCO 케냐 AA 200g 파우치"
-               width="388" height="617" loading="lazy" decoding="async">
-        </picture>
-        <figcaption>웰코 케냐 AA 200g 완제품<br>위탁생산에서는 이 자리에 귀사 라벨이 들어갑니다</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 05 FAQ ════════════════════════════════════════════════ -->
+<!-- ══ FAQ ═══════════════════════════════════════════════════ -->
 <section class="sect" id="faq">
   <div class="wrap">
-    <div class="head"><span class="mono">Questions</span><span class="line"></span><span class="mono">05</span></div>
+    <div class="head"><span class="mono">Questions</span><span class="line"></span><span class="mono">FAQ</span></div>
     <h2 class="t">자주 받는 질문</h2>
     <div class="faq">
       <details open>
-        <summary>단가가 투입 기준인가요, 볶고 난 뒤 기준인가요?</summary>
+        <summary>카페 샘플은 어떻게 받나요?</summary>
+        <p>이메일이나 전화로 매장명 · 받으실 주소 · 원하시는 원두 · 주로 쓰시는 추출 방식을 알려 주세요. 고르신 원두로 200g을 보내 드립니다. 아래 &lsquo;샘플 신청 메일 쓰기&rsquo;를 누르면 항목이 채워진 메일이 열립니다.</p>
+      </details>
+      <details>
+        <summary>우리 매장에는 어떤 원두가 맞을까요?</summary>
+        <p>핸드드립 · 아이스 중심의 산뜻한 메뉴라면 에티오피아, 산미와 고소한 단맛의 균형이라면 케냐 AA, 라떼까지 함께 쓰실 거라면 콜롬비아를 먼저 권합니다. 고민되시면 두세 가지를 샘플로 나란히 내려 보셔도 됩니다.</p>
+      </details>
+      <details>
+        <summary>납품 단가는 얼마인가요?</summary>
+        <p>원두 · 한 달 물량 · 주기 · 분쇄 여부에 따라 달라 샘플을 확인하신 뒤 견적으로 안내합니다. 소비자용 200g 가격은 쿠팡 판매 페이지에서 보실 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>진공도 특허인가요?</summary>
+        <p>아닙니다. 등록특허 제10-2004953호는 질소로 산소를 없앤 분위기에서 볶는 장치와 방법입니다. 질소를 채우기 전 공기를 빼는 진공 단계(0~8분)와 설정 150°C는 WELCO 자체 공정입니다.</p>
+      </details>
+      <details>
+        <summary>임가공 단가가 투입 기준인가요, 볶고 난 뒤 기준인가요?</summary>
         <p><b>보내 주신 원물 무게(투입) 기준</b>입니다. 볶으면 수분이 날아가 대개 12~18% 가벼워지는데, 그 감량분에는 임가공비를 받지 않습니다.</p>
       </details>
       <details>
-        <summary>얼마나 적은 양부터 되나요?</summary>
-        <p>10kg부터 받습니다. 한 번에 볶는 양이 1.8kg이라 소량도 배치 단위로 처리할 수 있습니다. 일반 로스터리는 한 배치가 20~30kg이라 소량을 꺼리는데, 저희는 그 반대입니다.</p>
-      </details>
-      <details>
-        <summary>다른 회사 원물과 섞이지 않나요?</summary>
-        <p>섞이지 않습니다. 배치 단위로 볶고 한 배치가 1.8kg입니다. 의뢰 건마다 따로 돌리고 따로 담습니다.</p>
+        <summary>임가공은 얼마나 적은 양부터 되나요?</summary>
+        <p>10kg부터 받습니다. 한 번에 볶는 양이 1.8kg이라 소량도 배치 단위로 처리할 수 있습니다. 의뢰 건마다 따로 돌리고 따로 담아 다른 원물과 섞이지 않습니다.</p>
       </details>
       <details>
         <summary>볶음 정도는 어떻게 정하나요?</summary>
@@ -409,63 +443,56 @@
       </details>
       <details>
         <summary>커피 말고 다른 것도 볶아 주시나요?</summary>
-        <p>등록 특허가 「곡물 로스팅장치 및 곡물의 로스팅 방법」이라 곡물이 오히려 본래 영역입니다. 보리·현미·귀리·옥수수·메밀·검은콩·율무·수수, 발아 곡물까지 받습니다. 그 외 볶아서 쓰는 식품 원료는 시험 로스팅으로 가능 여부를 먼저 확인해 드립니다. 다만 의약품으로 쓰이는 재료는 별도의 제조 허가가 필요해 취급하지 않습니다.</p>
-      </details>
-      <details>
-        <summary>얼마나 걸리나요?</summary>
-        <p>시간당 7.2kg, 하루 60kg 안팎을 처리합니다. 100kg이면 이틀, 300kg이면 닷새 정도가 순수 로스팅 시간입니다. 앞뒤 물량 사정에 따라 달라지므로 문의하시면 그때의 일정으로 답해 드리고, 정기 물량은 미리 잡아 둡니다.</p>
-      </details>
-      <details>
-        <summary>어떻게 담아 돌려주시나요?</summary>
-        <p>1kg 크라프트 봉투(아웃가스 밸브)에 벌크로 담아 보내드리며 단가에 포함됩니다. 200g·500g 소분은 봉당 900원, 분쇄는 kg당 1,500원, 귀사 라벨 부착도 가능합니다. 왕복 배송비는 의뢰하시는 쪽 부담입니다.</p>
+        <p>등록특허가 「곡물 로스팅장치 및 곡물의 로스팅 방법」이라 곡물이 오히려 본래 영역입니다. 보리 · 현미 · 귀리 · 옥수수 · 메밀 · 검은콩 · 율무 · 수수, 발아 곡물까지 받습니다. 의약품으로 쓰이는 재료는 별도의 제조 허가가 필요해 취급하지 않습니다.</p>
       </details>
       <details>
         <summary>세금계산서 발행과 결제 조건은 어떻게 되나요?</summary>
         <p>주식회사 디올(사업자등록번호 815-87-02736) 명의로 세금계산서를 발행합니다. 사업자 간 거래이며, 결제 조건은 물량과 주기에 맞춰 협의합니다.</p>
       </details>
       <details>
-        <summary>시험성적서와 특허를 저희 상세페이지에 써도 되나요?</summary>
-        <p>웰코 설비에서 볶은 물량에 한해 자료를 제공해 드립니다. 다만 표기 문구는 사실 범위를 넘지 않아야 하므로 문안은 사전에 함께 확인하는 것을 원칙으로 합니다. 아크릴아마이드 시험 결과는 웰코가 의뢰한 해당 시료의 결과이며, 귀사 원물에 그대로 적용되는 것은 아닙니다.</p>
+        <summary>특허와 시험성적서를 저희 상세페이지에 써도 되나요?</summary>
+        <p>WELCO 설비에서 볶은 물량에 한해 자료를 제공해 드립니다. 다만 표기 문구는 사실 범위를 넘지 않아야 하므로 문안은 사전에 함께 확인합니다. 아크릴아마이드 시험 결과는 WELCO 케냐 AA 원두 시료의 결과이며, 귀사 원물에 그대로 적용되는 것은 아닙니다.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ══ 06 문의 (다크 플레이트) ═══════════════════════════════ -->
+<!-- ══ 문의 (잉크 판) ════════════════════════════════════════ -->
 <section class="sect plate" id="contact" style="padding-bottom:76px;">
   <div class="wrap">
-    <div class="head"><span class="mono">Contact</span><span class="line"></span><span class="mono">06</span></div>
-    <h2 class="t">품목과 물량만 알려 주시면<br>견적을 계산해 회신드립니다.</h2>
+    <div class="head"><span class="mono">Sample · Contact</span><span class="line"></span><span class="mono">Reply</span></div>
+    <h2 class="t">샘플 신청과 견적 문의는<br>이메일이나 전화로</h2>
     <p class="lede">
-      이메일로 주시면 가장 빠릅니다. 완제품·도매 문의라면 200g 샘플을 다음 날 보내드립니다.
-      아래 항목을 적어 보내 주시면 그 조건 그대로 계산해 회신드립니다.
+      아래 항목을 적어 보내 주시면 그 조건 그대로 확인해 회신드립니다.
+      전화가 편하시면 070-7700-7891로 주셔도 됩니다.
     </p>
 
     <div class="contact">
       <div>
-        <span class="label">주식회사 디올 · 웰코</span>
+        <span class="label">주식회사 디올 · WELCO</span>
         <a class="mail" href="mailto:leeseunghun815@gmail.com">leeseunghun815@gmail.com</a>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-fill" href="mailto:leeseunghun815@gmail.com?subject=%5BWELCO%5D%20%EC%9C%84%ED%83%81%EC%83%9D%EC%82%B0%C2%B7%EB%8F%84%EB%A7%A4%20%EB%AC%B8%EC%9D%98&amp;body=%E2%91%A0%20%ED%9A%8C%EC%82%AC%EB%AA%85(%EB%98%90%EB%8A%94%20%EB%A7%A4%EC%9E%A5%EB%AA%85)%3A%0A%E2%91%A1%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%E2%91%A2%20%ED%95%84%EC%9A%94%ED%95%9C%20%EB%AC%BC%EB%9F%89%C2%B7%ED%8F%AC%EC%9E%A5%20%EB%8B%A8%EC%9C%84%3A%0A%E2%91%A3%20%EC%9C%84%ED%83%81%EC%83%9D%EC%82%B0%20%2F%20%EB%8F%84%EB%A7%A4%20%EB%82%A9%ED%92%88%3A%0A%E2%91%A4%20%EC%83%98%ED%94%84%20%EB%B0%9B%EC%9C%BC%EC%8B%A4%20%EC%A3%BC%EC%86%8C%3A%0A">이메일 보내기</a>
+          <a class="btn btn-buy" href="mailto:leeseunghun815@gmail.com?subject=%5BWELCO%5D%20%EC%B9%B4%ED%8E%98%20%EC%9B%90%EB%91%90%20%EC%83%98%ED%94%8C%20%EC%8B%A0%EC%B2%AD&amp;body=%E2%91%A0%20%EB%A7%A4%EC%9E%A5%EB%AA%85%20%C2%B7%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%E2%91%A1%20%EC%83%98%ED%94%8C%20%EB%B0%9B%EC%9C%BC%EC%8B%A4%20%EC%A3%BC%EC%86%8C%3A%0A%E2%91%A2%20%EC%9B%90%ED%95%98%EC%8B%9C%EB%8A%94%20%EC%9B%90%EB%91%90%20%28%EC%97%90%ED%8B%B0%EC%98%A4%ED%94%BC%EC%95%84%20/%20%EC%BC%80%EB%83%90%20AA%20/%20%EC%BD%9C%EB%A1%AC%EB%B9%84%EC%95%84%29%3A%0A%E2%91%A3%20%EC%A3%BC%EB%A1%9C%20%EC%93%B0%EC%8B%9C%EB%8A%94%20%EC%B6%94%EC%B6%9C%20%EB%B0%A9%EC%8B%9D%20%28%EC%97%90%EC%8A%A4%ED%94%84%EB%A0%88%EC%86%8C%20%C2%B7%20%ED%95%B8%EB%93%9C%EB%93%9C%EB%A6%BD%20%C2%B7%20%EC%BD%9C%EB%93%9C%EB%B8%8C%EB%A3%A8%20%EB%93%B1%29%3A%0A%E2%91%A4%20%ED%95%9C%20%EB%8B%AC%20%EC%9B%90%EB%91%90%20%EC%82%AC%EC%9A%A9%EB%9F%89%20%28%EB%8C%80%EB%9E%B5%29%3A%0A">샘플 신청 메일 쓰기</a>
+          <a class="btn btn-line" href="mailto:leeseunghun815@gmail.com?subject=%5BWELCO%5D%20%EB%A1%9C%EC%8A%A4%ED%8C%85%20%EC%9E%84%EA%B0%80%EA%B3%B5%20%EA%B2%AC%EC%A0%81%20%EB%AC%B8%EC%9D%98&amp;body=%E2%91%A0%20%ED%9A%8C%EC%82%AC%EB%AA%85%20%C2%B7%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%E2%91%A1%20%EB%B3%B6%EC%9C%BC%EC%8B%A4%20%ED%92%88%EB%AA%A9%20%28%EC%BB%A4%ED%94%BC%20%EC%83%9D%EB%91%90%20%C2%B7%20%EB%B3%B4%EB%A6%AC%20%C2%B7%20%ED%98%84%EB%AF%B8%20%EB%93%B1%29%3A%0A%E2%91%A2%20%EB%AC%BC%EB%9F%89%20%281%ED%9A%8C%EB%B6%84%EA%B3%BC%20%EB%8C%80%EB%9E%B5%EC%9D%98%20%EC%A3%BC%EA%B8%B0%29%3A%0A%E2%91%A3%20%EC%9B%90%ED%95%98%EC%8B%9C%EB%8A%94%20%EB%B3%B6%EC%9D%8C%20%EC%A0%95%EB%8F%84%3A%0A%E2%91%A4%20%EB%B0%98%ED%99%98%20%ED%98%95%ED%83%9C%20%281kg%20%EB%B2%8C%ED%81%AC%20%C2%B7%20%EC%86%8C%EB%B6%84%20%C2%B7%20%EB%B6%84%EC%87%84%29%3A%0A">임가공 견적 메일 쓰기</a>
           <a class="btn btn-line" href="tel:07077007891">전화 070-7700-7891</a>
         </div>
-        <p style="margin:24px 0 0; font-size:14.5px; color:#c5bfb2;">
+        <p style="margin:24px 0 0; font-size:14.5px; color:#C3CBC5;">
           경상북도 고령군 개진면 치산길 2<br>
-          평일 09:00 ~ 18:00 · 이메일은 받는 즉시 확인합니다
+          평일 09:00 ~ 18:00
         </p>
       </div>
       <div>
-        <span class="label">메일에 적어 주실 내용</span>
+        <span class="label">카페 샘플 신청 때 적어 주실 내용</span>
         <ol class="ol">
-          <li>회사명 (또는 매장명) · 연락처</li>
-          <li>볶으실 품목 (커피 생두 · 보리 · 현미 등)</li>
-          <li>물량 — 1회분과 대략의 주기</li>
-          <li>원하시는 볶음 정도</li>
-          <li>반환 형태 — 1kg 벌크 · 소분 · 분쇄</li>
+          <li>매장명 · 연락처</li>
+          <li>샘플 받으실 주소</li>
+          <li>원하시는 원두 — 에티오피아 / 케냐 AA / 콜롬비아</li>
+          <li>주로 쓰시는 추출 방식 — 에스프레소 · 핸드드립 · 콜드브루 등</li>
+          <li>한 달 원두 사용량(대략)</li>
         </ol>
-        <p class="note" style="color:#8d8579;">
-          위 &lsquo;이메일 보내기&rsquo;를 누르시면 이 항목이 채워진 채로 메일이 열립니다.
-          전화가 편하시면 070-7700-7891로 주셔도 됩니다.
+        <p class="note" style="color:#8C9A93;">
+          임가공 견적은 품목 · 물량(1회분과 주기) · 볶음 정도 · 반환 형태를 적어 주세요.
+          메일 버튼을 누르면 항목이 채워진 채로 열립니다.
         </p>
       </div>
     </div>
@@ -485,13 +512,13 @@
       <p style="margin:0; font-size:14px;">
         이메일 <a href="mailto:leeseunghun815@gmail.com">leeseunghun815@gmail.com</a><br>
         전화 <a href="tel:07077007891">070-7700-7891</a><br>
-        진공 질소 저온 로스팅 · 특허 등록 제10-2004953호
+        <a href="shop.html">원두 3종 · 구매</a> · 등록특허 제10-2004953호
       </p>
     </div>
     <p class="disc">
-      ※ 본 페이지의 &lsquo;검출한계 미만&rsquo;은 한국기능성식품연구원(2025. 09. 11.)과 Intertek(2025. 09. 10., RT25B-S0676)
-      시험성적서에 기재된 결과이며, 시험 대상은 의뢰한 해당 시료에 한합니다. 성적서 사본은 요청 시 제공해 드립니다.<br>
-      ※ 본 페이지는 특정 질병의 예방·치료 효과를 표방하지 않습니다.
+      ※ 아크릴아마이드 &lsquo;불검출&rsquo;은 WELCO 케냐 AA 원두 시료에 대한 한국인터텍테스팅서비스 시험성적서(RT25B-S0676, 2025. 9. 10.)의 결과이며,
+      시험 대상은 의뢰한 해당 시료에 한합니다.<br>
+      ※ 등록특허 제10-2004953호는 질소 · 무산소 분위기 로스팅에 관한 것이며, 진공 단계와 설정 150°C는 WELCO 자체 공정입니다.
     </p>
   </div>
 </footer>

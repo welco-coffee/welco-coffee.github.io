@@ -2,7 +2,7 @@
 
 주식회사 디올(브랜드 WELCO)의 사이트입니다. 독자가 달라 두 페이지로 나뉩니다.
 
-- `index.html` — **B2B**. 개인 카페 원두 납품(샘플 신청)과 로스팅 임가공.
+- `index.html` — **소비자용 첫 화면**. 브랜드 이야기 · 원두 3종 요약 · 고르는 법 · 연재 · FAQ. 카페 샘플 문의는 맨 아래 한 줄.
 - `shop.html` — **B2C**. 원두 3종(에티오피아 · 케냐 AA · 콜롬비아). 구매는 쿠팡으로 보내고, 케냐 AA만 스마트스토어를 보조로 둡니다. 가격 · 재고는 적지 않습니다.
 
 2026-11-15 v3 개편: 디자인 시스템 "N₂ SHEET"(WELCO 색 · Gowun Batang · Noto Sans KR), 상품 이미지는 `assets/img/`.
@@ -11,8 +11,8 @@
 
 ```
 welco-coffee.github.io/
-├─ index.html          ← B2B (임가공·도매)
-├─ shop.html           ← B2C (원두 소개)
+├─ index.html          ← 첫 화면 (소비자용 요약 · 안내)
+├─ shop.html           ← 원두 3종 상세
 ├─ assets/             ← 이미지 (원본은 ..\케냐AA)
 │  ├─ spec.css         ← 디자인 시스템. 두 페이지가 공유하므로 여기만 고치면 둘 다 바뀐다
 │  ├─ hero-beans.jpg  logo.png  roaster.jpg  hmi.jpg  package.png  patent.jpg  beans.jpg

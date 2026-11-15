@@ -366,4 +366,9 @@
     .card .sub, .cafe a, .bean .cta-row .sub a, .contact .btn{display:inline-block; padding:11px 0;}
     .card .sub{display:block;}
   }
-  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  /* 서명 모션: 첫 화면의 N₂ 칸이 한 번만 내려앉는다. 다른 곳에는 모션을 두지 않는다 */
+  @keyframes settle{from{opacity:0; transform:translateY(-14px);} to{opacity:1; transform:none;}}
+  @keyframes rise{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;}}
+  .hero .R .el{animation:settle .7s cubic-bezier(.2,.7,.2,1) .15s both;}
+  .hero h1{animation:rise .6s cubic-bezier(.2,.7,.2,1) both;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} .hero .R .el, .hero h1{animation:none;} }

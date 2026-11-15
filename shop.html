@@ -113,6 +113,14 @@
   .taste b{font-family:var(--mono); font-weight:600; font-size:14px; text-align:right; color:var(--leaf);}
   .taste li.top b{color:var(--cherry);}
 
+  /* 원두 바로가기 */
+  .jump{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:26px 0 10px;}
+  .jump a{display:flex; gap:12px; align-items:center; padding:10px; border:1px solid var(--rule2); text-decoration:none; background:var(--raised); min-width:0;}
+  .jump a:hover{border-color:var(--ink);}
+  .jump .t2{font-family:var(--serif); font-weight:700; font-size:17px; line-height:1.35; color:var(--ink); min-width:0;}
+  .jump small{display:block; font-family:var(--sans); font-weight:400; font-size:12.5px; color:var(--ink3);}
+  @media(max-width:700px){ .jump{gap:6px;} .jump a{flex-direction:column; align-items:flex-start; gap:8px; padding:8px;} .jump .el.sm{width:52px; height:58px; padding:5px 6px;} .jump .el.sm .sym{font-size:22px;} .jump .el.sm .nm, .jump small{display:none;} .jump .t2{font-size:14.5px;} }
+
   /* 원두별 상세 */
   .bean{padding:56px 0 8px; border-top:1px solid var(--rule2);}
   .bean:first-of-type{border-top:0; padding-top:20px;}
@@ -137,7 +145,7 @@
   table.brew{border-top:1px solid var(--ink);}
   table.brew th{width:76px;}
   table.brew td{font-size:14px;}
-  table.brew td .m{display:block; font-family:var(--mono); font-size:13px; color:var(--ink); letter-spacing:.01em;}
+  table.brew td .m{display:block; font-family:var(--sans); font-weight:500; font-size:13.5px; color:var(--ink); font-variant-numeric:tabular-nums;}
   .tip{font-size:13.5px; color:var(--ink2); background:var(--paper2); padding:11px 14px; margin-top:14px;}
   .bean .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; align-items:center;}
   .bean .cta-row .sub{font-size:13px; color:var(--ink3);}
@@ -367,6 +375,11 @@
   <div class="wrap">
     <div class="head"><span class="mono">Tasting · Fit · Brewing</span><span class="line"></span><span class="mono">Detail</span></div>
     <h2 class="t">나와 맞는지,<br>어떻게 내리면 되는지</h2>
+    <nav class="jump" aria-label="원두별 상세 바로가기">
+      <a href="#ethiopia"><span class="el sm leaf" aria-hidden="true"><span class="z"><span>G2</span><span></span></span><span class="sym">Et</span><span class="nm">ETHIOPIA</span></span><span class="t2">에티오피아<small>재스민 · 레몬·베리</small></span></a>
+      <a href="#kenya"><span class="el sm" aria-hidden="true"><span class="z"><span>AA</span><span></span></span><span class="sym">Ke</span><span class="nm">KENYA</span></span><span class="t2">케냐 AA<small>자몽·포도 · 황설탕</small></span></a>
+      <a href="#colombia"><span class="el sm ink" aria-hidden="true"><span class="z"><span>17/18</span><span></span></span><span class="sym">Co</span><span class="nm">COLOMBIA</span></span><span class="t2">콜롬비아<small>시트러스 · 사탕수수</small></span></a>
+    </nav>
 
     <!-- 에티오피아 -->
     <article class="bean" id="ethiopia">

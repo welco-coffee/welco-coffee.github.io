@@ -82,7 +82,8 @@
     .hero .R .el{left:20px; top:20px;}
     .hero .R img{max-height:300px;}
   }
-  @media(max-width:700px){ .hero h1{font-size:31px;} .hero .R img{max-height:270px;} }
+  /* 모바일: 사진 띠를 낮게 눌러 첫 화면에 제목과 구매 버튼이 함께 들어오게 한다 */
+  @media(max-width:700px){ .hero h1{font-size:31px; margin-top:20px;} .hero .R{padding:16px 20px 38px;} .hero .R img{max-height:200px;} .hero .R figcaption{bottom:12px;} .hero .lede{margin:16px 0 22px;} .hero .L{padding-top:22px;} .hero .cta-row{margin-bottom:30px;} }
 
   /* 원두 3종 비교 카드 */
   .lineup{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--ink); margin-top:38px;}

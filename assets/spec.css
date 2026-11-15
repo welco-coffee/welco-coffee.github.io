@@ -311,6 +311,8 @@
     .hero .cta-row{ display:grid; grid-template-columns:1fr; gap:8px; margin-bottom:36px; }
     .hero .cta-row .btn{ text-align:center; }
     .hero h1{ font-size:30px; margin-top:26px; }
+    /* 헤더에 이미 워드마크가 있으므로 모바일 히어로의 머리줄은 숨겨 제목을 끌어올린다 */
+    .hero .top{ display:none; }
     .hero .R{ padding:20px 20px 44px; }
     .hero .R img{ max-height:280px; }
     /* 좌우로 벌어지는 캡션이 좁은 화면에서 각각 두 줄로 접힌다. 자간을 좁혀 한 줄에 앉힌다 */

@@ -85,12 +85,14 @@
   .ex .chamber{margin-top:6px;}
   .ex .tl{margin-top:0;}
   @media(max-width:980px){
-    .hero .R{padding:30px 20px 52px;}
+    /* 결론 먼저: 좁은 화면에서는 결론 · 요약 · 구매 버튼이 사진보다 먼저 온다 */
+    .hero .R{order:2; padding:30px 20px 52px;}
+    .hero .L{padding-bottom:40px;}
     .hero .R .el{left:20px; top:20px;}
     .hero .R img{max-height:300px;}
   }
   /* 모바일: 사진 띠를 낮게 눌러 첫 화면에 제목과 구매 버튼이 함께 들어오게 한다 */
-  @media(max-width:700px){ .hero h1{font-size:26px; line-height:1.5; margin-top:0;} .hero .exec{margin-bottom:18px;} .hero .lede{font-size:15.5px;} .hero .R{padding:16px 20px 38px;} .hero .R img{max-height:200px;} .hero .R figcaption{bottom:12px;} .hero .lede{margin:16px 0 22px;} .hero .L{padding-top:22px;} .hero .cta-row{margin-bottom:30px;} }
+  @media(max-width:700px){ .hero h1{font-size:26px; line-height:1.5; margin-top:0;} .hero .exec{margin-bottom:18px;} .hero .lede{font-size:15.5px;} .hero .R{padding:20px 20px 44px;} .hero .R figcaption{bottom:12px;} .hero .lede{margin:16px 0 22px;} .hero .L{padding-top:22px;} .hero .cta-row{margin-bottom:30px;} .hero .R img{max-height:300px;} }
 
   /* 원두 3종 비교 카드 */
   .lineup{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--ink); margin-top:38px;}
@@ -143,11 +145,11 @@
   .tiles .v{display:block; font-family:var(--serif); font-weight:700; font-size:18px; line-height:1.4; margin:2px 0 1px;}
   .tiles .s{display:block; font-size:12.5px; color:var(--ink3);}
   .fit h5{font-size:14px; margin:0 0 6px; font-weight:700;}
-  .fit h5.yes{color:var(--leaf);} .fit h5.no{color:var(--cherry); margin-top:20px;}
+  .fit h5.yes{color:var(--leaf);} .fit h5.no{color:var(--ink2); margin-top:20px;}
   .fit ul{list-style:none; margin:0; padding:0;}
   .fit li{position:relative; padding:6px 0 6px 18px; font-size:14.5px; color:var(--ink2); border-bottom:1px solid var(--rule);}
   .fit li::before{content:''; position:absolute; left:0; top:17px; width:9px; height:2px; background:var(--leaf);}
-  .fit ul.no li::before{background:var(--cherry);}
+  .fit ul.no li::before{background:var(--ink3);}
   table.brew{border-top:1px solid var(--ink);}
   table.brew th{width:76px;}
   table.brew td{font-size:14px;}
@@ -162,9 +164,9 @@
         font-size:44px; line-height:1.2; margin:26px 0 6px;}
   .calc small{display:block; font-family:var(--sans); font-weight:500; font-size:13px; color:var(--ink3); text-align:center;}
   .calc .op{color:var(--ink3); font-weight:400;}
-  .calc .eq{color:var(--cherry);}
+  .calc .eq{color:var(--ink);}
   .cups{display:grid; grid-template-columns:repeat(13,1fr); gap:5px; max-width:560px; margin:14px 0 6px;}
-  .cups i{height:22px; background:var(--leaf);} .cups i.w2{background:var(--cherry);}
+  .cups i{height:22px; background:var(--leaf);} .cups i.w2{background:var(--ink3);}
   .cupl{display:flex; justify-content:space-between; max-width:560px; font-size:12.5px; color:var(--ink3);}
 
   /* 공법: 비교 그림과 시간 막대 */
@@ -283,8 +285,8 @@
     </nav>
 
     <div class="cta-row">
-      <a class="btn btn-buy" href="#lineup">원두 3종 비교하기</a>
-      <a class="btn btn-line" href="#process">볶는 방법 보기</a>
+      <a class="btn btn-buy" href="#buy">원두 고르고 쿠팡에서 사기</a>
+      <a class="btn btn-line" href="#lineup">세 원두 비교 보기</a>
     </div>
 
     <div class="specs">

@@ -138,6 +138,16 @@
   .duo3{display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:40px; align-items:start;}
   .duo3 figure img{border:1px solid var(--rule);}
 
+  /* Exhibit 6 — 개발 공정 */
+  .flow3{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--ink);}
+  .flow3 li{padding:16px 18px 18px 0; min-width:0;}
+  .flow3 li + li{padding-left:18px; border-left:1px solid var(--rule);}
+  .flow3 .s{display:block; font-family:var(--mono); font-size:12px; color:var(--ink3); margin-bottom:6px;}
+  .flow3 b{font-size:18px;}
+  .flow3 p{margin:6px 0 0; font-size:14.5px; color:var(--ink2);}
+  #rnd .ex + .ex{margin-top:44px;}
+  @media(max-width:700px){ .flow3{grid-template-columns:1fr;} .flow3 li + li{padding-left:0; border-left:0; border-top:1px solid var(--rule);} }
+
   /* 다음 행동 */
   .next{list-style:none; margin:30px 0 0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid #4E5F58;}
   .next li{padding:22px 24px 24px 0; min-width:0;}
@@ -210,6 +220,7 @@
       <li><a href="#process">1 공정</a></li>
       <li><a href="#origins">2 산지</a></li>
       <li><a href="#evidence">3 근거</a></li>
+      <li><a href="#rnd">개발 중</a></li>
       <li><a href="#next">원두 고르기</a></li>
       <li><a href="#faq">자주 묻는 질문</a></li>
       <li><a class="x" href="shop.html">원두 상세</a></li>
@@ -397,17 +408,55 @@
               <tr><td>질소 · 무산소 분위기 로스팅</td><td>등록특허 제10-2004953호 「곡물 로스팅장치 및 곡물의 로스팅 방법」 · 2019. 7. 23. 등록 · 특허권자 주식회사 디올</td><td><span class="tag pt">등록특허</span></td></tr>
               <tr><td>진공 단계(0~8분)</td><td>질소를 채우기 전에 볶는 통의 공기를 먼저 빼냅니다</td><td><span class="tag">자체 공정</span></td></tr>
               <tr><td>설정 온도 150°C</td><td>산지의 꽃 · 과일 향이 열에 가려지지 않게 낮춘 설정</td><td><span class="tag">자체 공정</span></td></tr>
+              <tr><td>아크릴아마이드 시험</td><td>케냐 AA 볶은 원두 시료 1건 · 불검출 · 한국인터텍테스팅서비스(주)(식약처 지정 시험기관) 성적서 RT25B-S0676 · 2025. 9. 10.</td><td><span class="tag">시료 시험</span></td></tr>
+              <tr><td>나노버블 발아</td><td>특허 출원 제10-2025-0112350호 · 개발 중이며 현재 판매 원두에는 적용하지 않았습니다</td><td><span class="tag">특허 출원</span></td></tr>
               <tr><td>제조</td><td>경상북도 고령 · 주식회사 디올(브랜드 WELCO) · 식품제조가공업 등록업소</td><td><span class="tag">사업자 정보</span></td></tr>
             </tbody>
           </table>
         </div>
-        <figcaption class="ex-src"><b>출처</b> 특허증 · 특허청 등록특허 제10-2004953호, WELCO 로스팅 공정, 사업자 정보. <b>주</b> 원두 시료 시험 결과와 성적서 번호는 시험 범위와 함께 <a href="shop.html#proof">원두 상세 · 시험 · 특허</a>에 적었습니다.</figcaption>
+        <figcaption class="ex-src"><b>출처</b> 특허증 · 특허청 등록특허 제10-2004953호, WELCO 로스팅 공정, 사업자 정보. <b>주</b> 시험 결과는 의뢰한 케냐 AA 시료 1건에 한하며, 에티오피아 · 콜롬비아와 다른 생산 로트는 시험하지 않았습니다. 특허 출원은 등록을 보장하지 않습니다. 자세한 범위는 <a href="shop.html#proof">원두 상세 · 시험 · 특허</a>에 적었습니다.</figcaption>
       </figure>
       <figure class="shot" style="margin-top:44px;">
         <img src="assets/patent.jpg" alt="특허증 제10-2004953호" width="760" height="974" loading="lazy" decoding="async">
         <figcaption>특허증 · 주식회사 디올</figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<!-- ══ 개발 중 · 나노버블 발아 ══════════════════════════════════ -->
+<section class="sect" id="rnd">
+  <div class="wrap">
+    <div class="chap"><span class="n">개발 중</span><span class="label">다음 원두</span><span class="line"></span></div>
+    <h2 class="t act">먼저 싹 튼 생두가 상하는 발아 문제를, 나노버블 발아로 풀고자 개발하고 있습니다</h2>
+    <p class="lede">생두를 고르게 싹 틔운 뒤 지금과 같은 진공 · 질소 공법으로 볶는 원두입니다. <b>시험 전이며 출시 일정은 정해지지 않았습니다.</b> 지금 판매하는 세 원두에는 적용하지 않았습니다.</p>
+
+    <figure class="ex">
+      <div class="ex-h"><span class="ex-no">Exhibit 6</span><p class="ex-t">생두 선별 → 나노버블 발아 → 진공 · 질소 로스팅, 세 단계로 만듭니다</p><p class="ex-sub">개발 중인 공정 · 2단계는 특허 출원, 3단계는 등록특허</p></div>
+      <div class="ex-b">
+        <ol class="flow3">
+          <li><span class="s">STEP 1</span><b>생두</b><p>싱글오리진 생두를 고릅니다</p></li>
+          <li><span class="s">STEP 2 · 특허 출원</span><b>나노버블 발아</b><p>아주 작은 기포가 든 물로 생두를 고르게 싹 틔웁니다</p></li>
+          <li><span class="s">STEP 3 · 등록특허</span><b>진공 · 질소 로스팅</b><p>지금 판매하는 원두와 같은 공법으로 볶습니다</p></li>
+        </ol>
+      </div>
+      <figcaption class="ex-src"><b>출처</b> WELCO 개발 계획, 특허 출원 제10-2025-0112350호(나노버블 발아), 등록특허 제10-2004953호(질소 로스팅). <b>주</b> 출원은 등록을 보장하지 않습니다.</figcaption>
+    </figure>
+
+    <figure class="ex">
+      <div class="ex-h"><span class="ex-no">Exhibit 7</span><p class="ex-t">물속 산소가 줄어드는 것을 늦춰, 먼저 싹 튼 생두도 상하지 않게 하는 것이 목표입니다</p></div>
+      <div class="ex-b">
+        <table class="cmp">
+          <thead><tr><th scope="col">단계</th><th scope="col">일반 침지 발아</th><th scope="col" class="we">나노버블 발아 (개발 목표)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">물속 기포</th><td>큰 기포는 곧 떠올라 수면에서 터집니다</td><td class="we">지름 1µm 미만의 기포가 떠오르지 않고 물속에 오래 머뭅니다</td></tr>
+            <tr><th scope="row">물속 산소</th><td>생두가 호흡하며 녹아 있던 산소를 써서 점점 줄어듭니다</td><td class="we">기포 속 기체가 천천히 녹아 산소가 줄어드는 것을 늦춥니다</td></tr>
+            <tr><th scope="row">먼저 싹 튼 생두</th><td>산소가 부족해지면 산소 없이 사는 미생물이 늘기 쉬워, 먼저 싹 튼 생두부터 상하기 쉽습니다</td><td class="we">먼저 싹 튼 생두가 상하지 않고 나머지가 고르게 발아하는 것이 목표입니다</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figcaption class="ex-src"><b>출처</b> 발아 시기 차이와 침지 발아의 어려움은 WELCO 개발 과정에서 확인한 내용, 산소 부족과 부패 · 나노버블의 거동은 일반 원리입니다. 나노버블 크기 정의는 ISO 20480-1. <b>주</b> 시제품 시험 전이라 발아율 · 맛 결과는 아직 없습니다. 결과가 나오면 범위와 함께 공개합니다.</figcaption>
+    </figure>
   </div>
 </section>
 

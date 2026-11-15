@@ -85,7 +85,7 @@
     section[id], div[id]{scroll-margin-top:104px;}
     .nav{flex-wrap:wrap; height:auto; gap:0;}
     .nav .wm{height:52px; display:flex; align-items:center; margin-right:auto;}
-    .nav .cta{align-self:center; padding:8px 13px; font-size:13px;}
+    .nav .cta{align-self:center; padding:12px 14px; font-size:13px;}
     .nav ul{order:3; width:100%; min-width:0; margin:0; padding:0; gap:20px;
             flex-wrap:nowrap; overflow-x:auto; overscroll-behavior-x:contain;
             border-top:1px solid var(--rule); scrollbar-width:none; -ms-overflow-style:none;}
@@ -351,4 +351,19 @@
   .btn-buy:hover{background:#8a1a31; border-color:#8a1a31;}
   .plate .btn-buy{background:var(--cherry); border-color:var(--cherry); color:#fff;}
   a:focus-visible, summary:focus-visible, button:focus-visible{outline:2px solid var(--cherry); outline-offset:3px;}
+  html{-webkit-tap-highlight-color:rgba(163,32,58,.15);}
+  a, summary, button{touch-action:manipulation;}
+  .srow .n, .calc, .taste b{font-variant-numeric:tabular-nums;}
+  h1, h2.t{text-wrap:balance;}
+  /* 본문 바로가기 — 키보드로 들어오면 첫 탭에서 보인다 */
+  .skip{position:absolute; left:16px; top:-60px; z-index:100; background:var(--ink); color:var(--paper);
+        padding:12px 16px; font-size:14px; text-decoration:none;}
+  .skip:focus{top:12px;}
+  /* 모바일 터치 대상 44px — 문단 안 링크를 뺀 독립 링크들 */
+  @media(max-width:700px){
+    .nav ul a{padding:12px 0;}
+    footer a{padding:11px 0;}
+    .card .sub, .cafe a, .bean .cta-row .sub a, .contact .btn{display:inline-block; padding:11px 0;}
+    .card .sub{display:block;}
+  }
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }

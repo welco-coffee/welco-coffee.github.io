@@ -5,7 +5,9 @@
   디자인 시스템 v3 "N₂ SHEET" — assets/spec.css 를 index.html과 공유한다.
 
   내용 원천 = 쿠팡 판매 정보(상세 원고 premium.py · premium_kenya.py · premium_colombia.py
-  의 s_taste · s_fit · s_brew · s_qty · s_why 와 LINEUP 값). 이 범위 밖 사실은 쓰지 않는다.
+  의 s_summary · s_real · s_taste · s_fit · s_brew · s_qty · s_why · s_next 와 LINEUP 값,
+  kenya_reviews_patch.py 의 케냐 쿠팡 구매 후기 — 원문 전체만, 금지 표현이 든 후기는 뺀다). 이 범위 밖 사실은 쓰지 않는다.
+  쿠팡 상세 ↔ 홈페이지 대조표 = 쿠팡\홍보방법_2026-11-15\홈페이지_쿠팡상세_대조_v1.0.md
   ⚑ 가격·재고 상태는 적지 않는다(2026-08-10 원칙). 구매는 쿠팡 링크로 보낸다.
   ⚑ 특허(제10-2004953호) = 질소·무산소 분위기 로스팅. 진공 단계는 WELCO 자체 공정 — 섞어 쓰지 않는다.
   ⚑ 아크릴아마이드는 "케냐 AA 시료 기준" 범위를 붙여서만 쓴다.
@@ -198,6 +200,39 @@
   .adv p{margin:0; font-size:14.5px; color:#C3CBC5;}
   .adv .chip{display:block; font-family:var(--mono); font-size:12px; color:var(--jasmine); letter-spacing:.02em; margin-top:6px;}
 
+  /* 원두 기본 사양 비교표(3열) — 좁은 화면에서는 항목별로 쌓는다 */
+  table.sp3{border-top:1px solid var(--ink); margin:0;}
+  table.sp3 thead th{font-size:13px; color:var(--ink); font-weight:700; white-space:normal; width:auto;}
+  table.sp3 thead th:first-child, table.sp3 tbody th{width:118px; white-space:normal;}
+  table.sp3 td{font-size:14.5px; color:var(--ink2);}
+  table.sp3 td.na{color:var(--ink3);}
+  /* 쿠팡 구매 후기 원문 */
+  .rv-sum{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 30px; margin:2px 0 4px;}
+  .rv-sum b{font-family:var(--serif); font-size:40px; line-height:1.1; color:var(--ink);}
+  .rv-sum span{font-size:13.5px; color:var(--ink3); margin-left:6px;}
+  .rv{margin:16px 0 0; max-width:760px;}
+  .rv blockquote{margin:0; padding:16px 18px; background:var(--raised); border:1px solid var(--rule); border-left:4px solid var(--leaf);}
+  .rv blockquote p{margin:6px 0 10px; font-size:15px; line-height:1.85; color:var(--ink);}
+  .rv .st{color:#9A6F22; letter-spacing:2px; font-size:14px;}
+  .rv cite{display:block; font-style:normal; font-size:12.5px; color:var(--ink3);}
+  /* 분쇄 굵기 */
+  .grind{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; max-width:720px; margin:6px 0 0;}
+  .grind div{border-top:6px solid var(--rule2); padding:12px 0 0; min-width:0;}
+  .grind div.mid{border-top-color:var(--leaf);}
+  .grind b{display:block; font-size:18px; color:var(--ink);}
+  .grind span{display:block; font-size:14px; color:var(--ink2);}
+  .grind small{display:block; font-size:12.5px; color:var(--ink3); margin-top:2px;}
+  .fit .tip{margin-top:16px;}
+  @media(max-width:700px){
+    table.sp3, table.sp3 thead, table.sp3 tbody, table.sp3 tr, table.sp3 th, table.sp3 td{display:block; width:auto !important;}
+    table.sp3 thead{display:none;}
+    table.sp3 tr{border-bottom:1px solid var(--rule); padding:12px 0;}
+    table.sp3 th, table.sp3 td{border:0; padding:0;}
+    table.sp3 tbody th{font-size:12.5px; padding-bottom:6px;}
+    table.sp3 td{font-size:14.5px; padding:3px 0;}
+    table.sp3 td::before{content:attr(data-h); display:block; font-size:12px; color:var(--ink3); font-weight:400;}
+    .grind b{font-size:16px;} .grind span{font-size:13px;}
+  }
   /* 로스터 */
   .rost{display:grid; grid-template-columns:minmax(0,420px) minmax(0,1fr); gap:44px; margin-top:38px; align-items:start;}
   .rost .stage{background:var(--paper2); padding:28px 20px 0; display:flex; justify-content:center;}
@@ -398,6 +433,29 @@
       <a href="#colombia"><span class="el sm ink" aria-hidden="true"><span class="z"><span>17/18</span><span></span></span><span class="sym">Co</span><span class="nm">COLOMBIA</span></span><span class="t2">콜롬비아<small>시트러스 · 사탕수수</small></span></a>
     </nav>
 
+    <figure class="ex" style="margin-top:34px;">
+    <div class="ex-h"><span class="ex-no">Exhibit 2</span><p class="ex-t">세 원두는 산지 · 등급 · 가공이 다르고, 볶는 곳 · 공정 · 용량은 같습니다</p><p class="ex-sub">쿠팡 상세에 적은 기본 사양 · 상세에 없는 항목은 &lsquo;표기 없음&rsquo;</p></div>
+      <div class="ex-b">
+        <table class="sp3">
+          <thead><tr><th scope="col">항목</th><th scope="col">에티오피아</th><th scope="col">케냐 AA</th><th scope="col">콜롬비아</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">산지 · 등급</th><td data-h="에티오피아">에티오피아 남부 시다모 · G2</td><td data-h="케냐 AA">케냐 · AA(케냐 생두의 콩 크기 등급)</td><td data-h="콜롬비아">콜롬비아 후일라 · 수프리모 17/18</td></tr>
+          <tr><th scope="row">재배 고도</th><td data-h="에티오피아">해발 1,500~2,200m 고원</td><td data-h="케냐 AA" class="na">표기 없음</td><td data-h="콜롬비아" class="na">표기 없음</td></tr>
+          <tr><th scope="row">가공</th><td data-h="에티오피아">워시드 — 물로 씻어 말림</td><td data-h="케냐 AA" class="na">표기 없음</td><td data-h="콜롬비아">워시드 — 물로 씻어 말림</td></tr>
+          <tr><th scope="row">향미 노트</th><td data-h="에티오피아">재스민 · 레몬·베리 · 꿀 · 홍차</td><td data-h="케냐 AA">자몽·포도 · 황설탕 · 아몬드·군밤</td><td data-h="콜롬비아">시트러스 · 사탕수수 · 밀크 초콜릿</td></tr>
+          <tr><th scope="row">노트 기준</th><td data-h="에티오피아">WELCO가 볶을 때 맞춘 맛 목표</td><td data-h="케냐 AA">WELCO 테이스팅 노트</td><td data-h="콜롬비아">커핑 노트</td></tr>
+          <tr><th scope="row">로스팅</th><td data-h="세 원두 공통" colspan="3">경상북도 고령 WELCO 로스터리 · 진공 0~8분 → 질소 8~12분 · 설정 150°C</td></tr>
+          <tr><th scope="row">형태 · 용량</th><td data-h="세 원두 공통" colspan="3">홀빈(통원두) 200g · 그라인더 필요 · 핸드드립 약 13잔</td></tr>
+          <tr><th scope="row">포장</th><td data-h="세 원두 공통" colspan="3">지퍼 · 원형 밸브 파우치</td></tr>
+          <tr><th scope="row">잘 맞는 추출</th><td data-h="에티오피아">핸드드립 · 아이스</td><td data-h="케냐 AA">핸드드립 · 아이스</td><td data-h="콜롬비아">핸드드립 · 아이스 · 라떼</td></tr>
+          <tr><th scope="row">아크릴아마이드 시험</th><td data-h="에티오피아" class="na">하지 않음</td><td data-h="케냐 AA">시료 1건 불검출(성적서 RT25B-S0676) · 다른 로트는 시험하지 않음</td><td data-h="콜롬비아" class="na">하지 않음</td></tr>
+          <tr><th scope="row">나노버블 발아</th><td data-h="세 원두 공통" colspan="3">세 원두 모두 적용하지 않음(개발 중)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figcaption class="ex-src"><b>출처</b> WELCO 쿠팡 상세페이지(원두별 실물 · 산지 · 맛 목표 · 로스팅 장, 2026. 11. 판). <b>주</b> 향미 노트는 맛을 비유한 것이며 실제 재료는 들어 있지 않습니다. 품종은 세 원두 모두 상세에 적지 않았습니다. 가격 · 할인 · 배송은 수시로 바뀌므로 이 페이지에 적지 않으며, 쿠팡 상품 페이지 기준입니다.</figcaption>
+    </figure>
+
     <!-- 에티오피아 -->
     <article class="bean" id="ethiopia">
       <div class="bh">
@@ -423,6 +481,7 @@
           <ul><li>레몬·베리처럼 상큼한 블랙커피를 찾는 분</li><li>홍차처럼 깔끔한 한 잔을 좋아하는 분</li><li>핸드드립·아이스로 가볍게 마시는 분</li></ul>
           <h5 class="no">다시 생각해 보세요</h5>
           <ul class="no"><li>진하고 고소한 라떼를 주로 마시는 분</li><li>신맛이 조금이라도 싫은 분</li><li>묵직하고 쌉쌀한 맛이 먼저인 분</li></ul>
+          <p class="tip">산미가 걱정된다면 물 온도를 조금 높여 내려 보세요.</p>
         </div>
         <div>
           <span class="label">첫 잔 레시피</span>
@@ -437,6 +496,7 @@
       </div>
       <div class="cta-row">
         <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9765493123" target="_blank" rel="noopener">에티오피아 쿠팡에서 보기</a>
+        <span class="sub">가격 · 배송은 쿠팡 상품 페이지 기준입니다</span>
       </div>
     </article>
 
@@ -465,6 +525,7 @@
           <ul><li>과일향이 느껴지는 커피가 궁금한 분</li><li>핸드드립으로 내려 마시는 분</li><li>산미와 단맛의 균형을 즐기는 분</li></ul>
           <h5 class="no">다시 생각해 보세요</h5>
           <ul class="no"><li>산미가 전혀 없는 커피를 찾는 분</li><li>분쇄된 원두가 필요한 분(홀빈으로만 판매)</li><li>진한 다크 로스트 스타일을 찾는 분</li></ul>
+          <p class="tip">산미가 걱정된다면 물 온도를 조금 높여 내려 보세요.</p>
         </div>
         <div>
           <span class="label">첫 잔 레시피</span>
@@ -474,13 +535,23 @@
             <tr><th>아이스</th><td><span class="m">조금 곱게 · 20g · 160ml</span>뜨거운 물로 내려 얼음잔에 바로</td></tr>
             <tr><th>콜드브루</th><td><span class="m">굵게 · 50g · 500ml</span>찬물 · 냉장 12~24시간</td></tr>
           </table>
-          <p class="tip">산미가 걱정된다면 물 온도를 조금 높여 내려 보세요.</p>
+          <p class="tip">시게 느껴지면 조금 더 곱게 갈거나 물 온도를 조금 올려 보세요.</p>
         </div>
       </div>
       <div class="cta-row">
         <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9252103197" target="_blank" rel="noopener">케냐 AA 쿠팡에서 보기</a>
-        <span class="sub">케냐 AA는 <a href="https://smartstore.naver.com/vacuum_roasting/products/12684056589" target="_blank" rel="noopener">네이버 스마트스토어</a>에서도 팝니다</span>
+        <span class="sub">가격 · 배송은 쿠팡 상품 페이지 기준입니다. 케냐 AA는 <a href="https://smartstore.naver.com/vacuum_roasting/products/12684056589" target="_blank" rel="noopener">네이버 스마트스토어</a>에서도 팝니다</span>
       </div>
+      <figure class="ex">
+        <div class="ex-h"><span class="ex-no">Exhibit 3</span><p class="ex-t">케냐 AA 쿠팡 상품평은 385개, 별점 평균 4.5입니다</p><p class="ex-sub">쿠팡 구매 후기 원문 · 이름 일부 가림</p></div>
+        <div class="ex-b">
+          <div class="rv-sum"><div><b>385</b><span>개 상품평</span></div><div><b>4.5</b><span>별점 평균(5점 만점)</span></div></div>
+          <div class="rv">
+            <blockquote><span class="st" role="img" aria-label="별점 5점 만점에 5점">★★★★★</span><p>&ldquo;원래 케냐를 즐기진 않았는데 회사에 산미커피를 싫어하는 사람이 생겨서 절충하느라 에티오피아에서 케냐로 바꾸었어요 고소한걸 좋아하는 사람이 생겨서 브라질을 삿다가 산미를 좋아하는 사람들이 또 불만이 생겨서 절충을 위해 고른건데 다들 맘에 든다고 해서 정말 다행이에요 산미를 떠나서 커피 맛 자체도 좋아요 맛있어요! 이거로 계속 구매를 하게될것 같네요&rdquo;</p><cite>엄*하 · 2026. 2. 4. · 쿠팡 구매 후기, 케냐 AA</cite></blockquote>
+          </div>
+        </div>
+        <figcaption class="ex-src"><b>출처</b> 쿠팡 구매 후기, 케냐 AA(상품 9252103197). 상품평 수와 별점 평균(4.48, 반올림 4.5)은 2026. 11. 14. 기준(2025. 12. 18. ~ 2026. 11. 11. 작성분)이며 이후 바뀝니다. <b>주</b> 후기는 고친 글자 없이 원문 전체를 옮겼습니다. 맛은 개인차가 있습니다.</figcaption>
+      </figure>
     </article>
 
     <!-- 콜롬비아 -->
@@ -508,6 +579,7 @@
           <ul><li>산뜻하면서 단맛 있는 커피를 찾는 분</li><li>핸드드립·아이스로 즐기는 분</li><li>라떼에도 쓰고 싶은 분(밀크 초콜릿 노트)</li></ul>
           <h5 class="no">다시 생각해 보세요</h5>
           <ul class="no"><li>산미가 아주 약한 커피를 찾는 분</li><li>분쇄된 원두가 필요한 분(홀빈으로만 판매)</li><li>진한 다크 로스트 스타일을 찾는 분</li></ul>
+          <p class="tip">산미가 걱정된다면 물 온도를 조금 높여 내려 보세요.</p>
         </div>
         <div>
           <span class="label">첫 잔 레시피</span>
@@ -522,16 +594,29 @@
       </div>
       <div class="cta-row">
         <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9765914575" target="_blank" rel="noopener">콜롬비아 쿠팡에서 보기</a>
+        <span class="sub">가격 · 배송은 쿠팡 상품 페이지 기준입니다</span>
       </div>
     </article>
     <p class="note">추출 기준은 일반적인 예시이며 취향에 맞게 조절하세요. 산미는 개인차가 큰 영역입니다.</p>
+
+    <figure class="ex">
+      <div class="ex-h"><span class="ex-no">Exhibit 4</span><p class="ex-t">분쇄는 콜드브루 굵게, 핸드드립 중간, 모카포트 곱게입니다</p><p class="ex-sub">세 원두 공통 · 아이스(뜨거운 물로 내려 얼음잔에)는 &lsquo;조금 곱게&rsquo;</p></div>
+      <div class="ex-b">
+        <div class="grind" role="list">
+          <div role="listitem"><b>굵게</b><span>콜드브루</span><small>50g · 찬물 500ml · 냉장 12~24시간</small></div>
+          <div class="mid" role="listitem"><b>중간</b><span>핸드드립</span><small>15g · 240ml</small></div>
+          <div role="listitem"><b>곱게</b><span>모카포트</span><small>아이스는 &lsquo;조금 곱게&rsquo;</small></div>
+        </div>
+      </div>
+      <figcaption class="ex-src"><b>출처</b> WELCO 쿠팡 상세페이지 &lsquo;첫 잔 레시피&rsquo; 장. <b>주</b> 일반적인 추출 예시입니다. 시게 느껴지면 조금 더 곱게 갈거나 물 온도를 조금 올려 보세요.</figcaption>
+    </figure>
 
     <!-- 한 봉 -->
     <div style="margin-top:64px;">
       <span class="label">분량 · 보관</span>
       <h3 style="font-size:26px; margin:6px 0 0;">한 봉은 약 2주 분량이고, 지퍼를 닫아 그늘에 두면 됩니다</h3>
       <figure class="ex">
-      <div class="ex-h"><span class="ex-no">Exhibit 2</span><p class="ex-t">200g 한 봉은 핸드드립 약 13잔, 하루 한 잔이면 약 2주입니다</p></div>
+      <div class="ex-h"><span class="ex-no">Exhibit 5</span><p class="ex-t">200g 한 봉은 핸드드립 약 13잔, 하루 한 잔이면 약 2주입니다</p></div>
       <div class="calc" aria-label="200g 나누기 15g은 약 13잔">
         <span>200g<small>한 봉</small></span><span class="op">÷</span><span>15g<small>1잔</small></span><span class="op">=</span><span class="eq">약 13잔<small>핸드드립</small></span>
       </div>
@@ -562,7 +647,7 @@
     </p>
 
     <figure class="ex">
-    <div class="ex-h"><span class="ex-no">Exhibit 3</span><p class="ex-t">차이는 볶는 통 안에 산소가 있느냐 없느냐입니다</p></div>
+    <div class="ex-h"><span class="ex-no">Exhibit 6</span><p class="ex-t">차이는 볶는 통 안에 산소가 있느냐 없느냐입니다</p></div>
     <svg class="chamber" viewBox="0 0 560 270" role="img" aria-label="공기 속에서 볶을 때와 진공·질소 속에서 볶을 때를 비교한 그림. 왼쪽은 산소와 그을음이 원두를 둘러싸고, 오른쪽은 질소만 있습니다.">
       <circle class="wall" cx="140" cy="118" r="100"/>
       <circle class="wall" cx="420" cy="118" r="100"/>
@@ -581,7 +666,7 @@
     </figure>
 
     <figure class="ex">
-    <div class="ex-h"><span class="ex-no">Exhibit 4</span><p class="ex-t">12분 공정 중 앞 8분은 공기를 빼고, 뒤 4분은 질소 속에서 볶습니다</p></div>
+    <div class="ex-h"><span class="ex-no">Exhibit 7</span><p class="ex-t">12분 공정 중 앞 8분은 공기를 빼고, 뒤 4분은 질소 속에서 볶습니다</p></div>
     <div class="tl" aria-label="로스팅 시간 순서: 0분부터 8분까지 진공, 8분부터 12분까지 질소, 설정 150°C">
       <span class="label">한 번 볶는 순서 · 설정 150°C</span>
       <div class="track" style="margin-top:10px;"><span class="vac">1단계 진공 — 공기를 빼냅니다</span><span class="nit">2단계 질소 — 채워 볶습니다</span></div>
@@ -627,7 +712,7 @@
         <figcaption class="note">실제 로스팅 설비 · 경상북도 고령 WELCO 로스터리</figcaption>
       </figure>
       <div>
-        <p class="lede">경상북도 고령에 있는 WELCO 로스터리의 진공·질소 로스터입니다. 세 원두 모두 이 설비에서 같은 순서로 볶습니다.</p>
+        <p class="lede">경상북도 고령에 있는 WELCO 로스터리의 진공·질소 로스터입니다. 세 원두 모두 이 설비에서 같은 순서로 볶습니다. 산소는 빼고, 온도는 낮추고, 산지의 향은 살리려 합니다.</p>
         <table class="tbl" style="margin-top:28px;">
           <tr><th>1단계</th><td>진공 구간 0~8분 — 공기를 빼냅니다</td></tr>
           <tr><th>2단계</th><td>질소 구간 8~12분 — 질소를 채워 볶습니다</td></tr>
@@ -635,7 +720,7 @@
           <tr><th>로스터리</th><td>경상북도 고령 · 주식회사 디올(브랜드 WELCO)</td></tr>
         </table>
         <figure class="ex">
-          <div class="ex-h"><span class="ex-no">Exhibit 5</span><p class="ex-t">생산 중 제어 화면의 설정값은 150°C이고, 진공 · 질소를 차례로 넣습니다</p></div>
+          <div class="ex-h"><span class="ex-no">Exhibit 8</span><p class="ex-t">생산 중 제어 화면의 설정값은 150°C이고, 진공 · 질소를 차례로 넣습니다</p></div>
           <div class="ex-b"><img src="assets/hmi.jpg" alt="로스팅 제어 화면 — 설정 온도 150°C, 질소·진공 공정" width="1000" height="684" loading="lazy" decoding="async"></div>
           <figcaption class="ex-src"><b>출처</b> WELCO 로스터리, 생산 중 촬영한 제어 화면.</figcaption>
         </figure>
@@ -651,7 +736,7 @@
     <h2 class="t act">특허는 질소 로스팅에, 시험 결과는 케냐 AA 시료에 한정해 말합니다</h2>
 
     <figure class="ex">
-    <div class="ex-h"><span class="ex-no">Exhibit 6</span><p class="ex-t">공개하는 근거는 둘이고, 각각 범위가 정해져 있습니다</p></div>
+    <div class="ex-h"><span class="ex-no">Exhibit 9</span><p class="ex-t">공개하는 근거는 둘이고, 각각 범위가 정해져 있습니다</p></div>
     <div class="proof" style="grid-template-columns:repeat(2,1fr); margin-top:0; border-top:0;">
       <div>
         <span class="badge gold">등록특허</span>

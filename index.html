@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <!--
   ============================================================================
-  WELCO (주식회사 디올) — 첫 화면 / welco-coffee.github.io  (v4, 2026-11-15)
-  독자 = 일반 소비자. 역할 = 요약 · 안내. 원두별 맛 지도 · 추출법 · 시험은 shop.html(상세)이 맡는다.
-  디자인 시스템 v3 "N₂ SHEET" — assets/spec.css 를 shop.html과 공유한다.
+  WELCO (주식회사 디올) — 첫 화면 / welco-coffee.github.io  (v5 보고서식, 2026-11-15)
+  독자 = 일반 소비자. 구조 = 결론 한 문장 → 근거 3개(공정 · 산지 · 근거 공개) → 각 근거의 Exhibit → 다음 행동.
+  제목은 모두 그 구간의 결론 문장(액션 타이틀). 도표는 번호 + 결론형 캡션 + 출처·주석.
 
   ⚑ 가격 · 재고는 적지 않는다. 구매는 쿠팡 링크로 보낸다.
-  ⚑ 특허(제10-2004953호) = 질소 · 무산소 분위기 로스팅. 진공 단계는 WELCO 자체 공정.
+  ⚑ 특허(제10-2004953호) = 질소 · 무산소 분위기 로스팅. 진공 단계와 설정 150°C는 WELCO 자체 공정.
   ⚑ 시험 결과는 이 페이지에 쓰지 않는다(범위 표기와 함께 shop.html에만).
-  ⚑ 봉투 사진의 로고와 THE WORLD'S MOST ADVANCED ROAST 문구는 자르거나 흐리지 않는다.
+  ⚑ 봉투 사진의 로고와 THE WORLD'S MOST ADVANCED ROAST 문구는 자르거나 흐리지 않는다(본문으로 되풀이하지 않음).
+  ⚑ 수치는 저장소에 이미 있는 사실만. 새 수치를 만들지 않는다.
   ⚑ 카페 납품은 맨 아래 한 줄(#cafe)만.
   ============================================================================
 -->
@@ -16,9 +17,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WELCO — 산소를 뺀 방에서 볶은 싱글오리진 원두 | 경북 고령 로스터리</title>
-<meta name="description" content="경북 고령 WELCO 로스터리가 공기를 빼고(진공) 질소를 채운 뒤 설정 150°C로 볶은 싱글오리진 홀빈 200g. 에티오피아 · 케냐 AA · 콜롬비아 중 취향에 맞는 원두를 고르고 쿠팡에서 만나 보세요.">
-<meta property="og:title" content="WELCO — 산소를 뺀 방에서 볶은 싱글오리진 원두">
+<title>WELCO — 산소를 뺀 질소 속에서 볶은 싱글오리진 원두 | 경북 고령 로스터리</title>
+<meta name="description" content="WELCO는 볶는 통의 공기를 빼고(진공) 질소를 채운 뒤 설정 150°C로 볶아, 그을음이 산지의 향을 가리지 않도록 합니다. 에티오피아 · 케냐 AA · 콜롬비아 홀빈 200g. 구매는 쿠팡에서.">
+<meta property="og:title" content="WELCO — 산소를 뺀 질소 속에서 볶은 싱글오리진 원두">
 <meta property="og:description" content="경북 고령 로스터리의 진공·질소 로스팅. 에티오피아 · 케냐 AA · 콜롬비아 홀빈 200g.">
 <meta property="og:image" content="https://welco-coffee.github.io/assets/img/og-lineup.jpg">
 <meta property="og:url" content="https://welco-coffee.github.io/">
@@ -53,59 +54,108 @@
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/spec.css">
 <style>
-  /* 히어로 오른쪽: 잉크 판 위에 실물 봉투(로고 · 문구 그대로), 왼쪽 위에 N₂ 칸 */
+  /* ── 히어로: 왼쪽 = 결론 + 근거 3개, 오른쪽 = 실물 봉투(로고 · 문구 그대로) ── */
   .hero .R{background:var(--ink); border-left:0;}
   .hero .R .el{position:absolute; left:40px; top:40px;}
   .hero .R img{max-height:560px; filter:drop-shadow(0 22px 26px rgba(0,0,0,.34));}
   .hero .R figcaption{color:#8C9A93; border-top-color:#2E3F39;}
-  .hero h1{font-size:58px;}
-  @media(max-width:980px){ .hero .R{padding:30px 20px 52px;} .hero .R .el{left:20px; top:20px;} .hero .R img{max-height:300px;} }
-  /* 모바일: 사진 띠를 낮게 눌러 첫 화면에 제목과 구매 버튼이 함께 들어오게 한다 */
-  @media(max-width:700px){ .hero h1{font-size:31px; margin-top:20px;} .hero .R{padding:16px 20px 38px;} .hero .R img{max-height:200px;} .hero .R figcaption{bottom:12px;} .hero .lede{margin:16px 0 22px;} .hero .L{padding-top:22px;} .hero .cta-row{margin-bottom:30px;} }
+  .hero .L{padding-top:44px;}
+  .hero h1{font-size:44px; line-height:1.42; margin:30px 0 0;}
+  .hero .lede{font-size:17px; margin:18px 0 26px;}
+  .hero .exec{margin-bottom:26px;}
+  .hero .cta-row{margin-bottom:8px;}
+  @media(max-width:980px){ .hero .R{order:2; padding:30px 20px 52px;} .hero .R .el{left:20px; top:20px;} .hero .R img{max-height:340px;} .hero .L{padding-bottom:44px;} }
+  @media(max-width:700px){
+    .hero h1{font-size:27px; line-height:1.5; margin-top:0;}
+    .hero .L{padding-top:22px;}
+    .hero .lede{font-size:15.5px; margin:12px 0 18px;}
+    .hero .exec{margin-bottom:18px;}
+    .hero .R img{max-height:300px;}
+    .hero .cta-row{margin-bottom:0;}
+  }
 
-  /* WELCO 이야기 */
-  .story{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,380px); gap:48px; align-items:start; margin-top:30px;}
-  .story .stage{background:var(--paper2); padding:26px 20px 0; display:flex; justify-content:center;}
-  .story .stage img{max-height:440px; width:auto;}
-  .facts{list-style:none; margin:30px 0 0; padding:0; border-top:1px solid var(--ink);}
-  .facts li{display:grid; grid-template-columns:120px minmax(0,1fr); gap:14px; padding:14px 0; border-bottom:1px solid var(--rule);}
-  .facts .k{font-size:12.5px; color:var(--ink3); padding-top:2px;}
-  .facts .v{font-size:15px; color:var(--ink2);}
-  .facts .v b{color:var(--ink); font-weight:700;}
-  .facts .tag{display:inline-block; font-size:11.5px; padding:1px 7px; margin-left:6px; border:1px solid var(--cherry); color:var(--cherry); vertical-align:1px;}
-  .facts .tag.own{border-color:var(--ink3); color:var(--ink3);}
+  .band{padding:56px 0 60px; border-top:0;}
+  .band .label{display:block; margin-bottom:12px;}
 
-  /* 원두 3종 요약 카드 */
-  .trio{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:34px;}
-  .trio article{display:flex; flex-direction:column; min-width:0; border-top:1px solid var(--ink);}
-  .trio .ph{background:var(--ink); aspect-ratio:1/1; overflow:hidden;}
-  .trio .ph img{width:100%; height:100%; object-fit:contain;}
-  .trio .id{display:flex; gap:12px; align-items:flex-start; margin:18px 0 10px;}
-  .trio h3{font-size:22px; line-height:1.35;}
-  .trio .reg{font-size:12.5px; color:var(--ink3); margin:2px 0 4px;}
-  .trio .notes{font-size:14.5px; color:var(--cherry); font-weight:500; margin:0 0 6px;}
-  .trio .one{font-size:15px; color:var(--ink2); margin:0 0 18px;}
-  .trio .go{margin-top:auto; display:flex; gap:8px; flex-wrap:wrap;}
-  .trio .go .btn{flex:1 1 auto; text-align:center; padding:12px 14px;}
+  /* Exhibit 1 — 공정 시간 막대 */
+  .tl2 .seg{display:grid; grid-template-columns:8fr 4fr; min-height:64px;}
+  .tl2 .seg > div{padding:10px 14px; display:flex; flex-direction:column; justify-content:center; min-width:0;}
+  .tl2 .vac{background:var(--leaf); color:#F1F2EE;}
+  .tl2 .nit{background:var(--jasmine); color:var(--ink);}
+  .tl2 b{font-size:15px; font-weight:700; line-height:1.4;}
+  .tl2 .seg span{font-size:13px; line-height:1.5;}
+  .tl2 .ticks{display:grid; grid-template-columns:8fr 4fr; font-family:var(--mono); font-size:12px; color:var(--ink3); margin-top:6px;}
+  .tl2 .ticks span:last-child{display:flex; justify-content:space-between;}
+  .tl2 .temp{display:flex; align-items:center; gap:12px; margin-top:16px; font-size:13.5px; color:var(--ink2);}
+  .tl2 .temp i{flex:1; height:0; border-top:1px dashed var(--ink3);}
+  .tl2 .temp b{font-family:var(--mono); font-size:15px; color:var(--ink);}
+  .scope{display:grid; grid-template-columns:8fr 4fr; margin-top:14px; font-size:13px; line-height:1.6;}
+  .scope span{padding:8px 12px 0 0; border-top:1px solid var(--ink3); color:var(--ink2);}
+  .scope span + span{padding-left:12px; border-top:2px solid var(--cherry); color:var(--ink);}
 
-  /* 고르는 법 */
-  .pick{list-style:none; margin:30px 0 0; padding:0; border-top:1px solid var(--ink);}
-  .pick li{border-bottom:1px solid var(--rule);}
-  .pick a{display:grid; grid-template-columns:minmax(0,1.3fr) 28px minmax(0,1fr); gap:16px; align-items:center;
-          padding:20px 0; text-decoration:none;}
-  .pick .if{font-family:var(--serif); font-weight:700; font-size:21px; line-height:1.45; color:var(--ink);}
-  .pick .if small{display:block; font-family:var(--sans); font-weight:400; font-size:13.5px; color:var(--ink3); margin-top:3px;}
-  .pick .ar{font-family:var(--mono); color:var(--cherry); font-size:18px; text-align:center;}
-  .pick .then{font-size:17px; font-weight:700; color:var(--leaf);}
-  .pick .then span{display:block; font-size:13px; font-weight:400; color:var(--ink3);}
-  .pick a:hover .then{color:var(--cherry);}
+  /* Exhibit 2 — 비교표 */
+  table.cmp{border-top:1px solid var(--ink); margin:0;}
+  table.cmp thead th{font-size:13px; color:var(--ink); font-weight:700; white-space:normal; width:auto; padding-top:13px;}
+  table.cmp thead th:first-child{width:150px;}
+  table.cmp tbody th{width:150px; color:var(--ink3);}
+  table.cmp td{font-size:15px; color:var(--ink2);}
+  table.cmp td.we{color:var(--ink); background:var(--raised); padding-left:14px; font-weight:500;}
+  table.cmp thead th.we{background:var(--raised); padding-left:14px; padding-top:13px; border-top:2px solid var(--leaf);}
 
-  /* 연재 목록 */
+  .duo2{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,320px); gap:44px; align-items:start;}
+  .duo2 .stage{background:var(--paper2); padding:22px 18px 0; display:flex; justify-content:center;}
+  .duo2 .stage img{max-height:330px; width:auto;}
+
+  /* Exhibit 3 — 산지 비교 매트릭스 */
+  .mx{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px;}
+  .mx > .c{min-width:0; display:flex; flex-direction:column;}
+  .mx .rh{display:block; font-size:12.5px; font-weight:500; color:var(--ink3); border-top:1px solid var(--rule); padding-top:10px; margin:14px 0 6px;}
+  .mx .ph{background:var(--ink); aspect-ratio:1/1; overflow:hidden;}
+  .mx .ph img{width:100%; height:100%; object-fit:contain;}
+  .mx h3{font-size:22px; line-height:1.35;}
+  .mx .reg{font-size:13px; color:var(--ink3); margin:2px 0 0;}
+  .mx .notes{font-size:15px; color:var(--ink); font-weight:500; margin:0;}
+  .mx .fit{font-size:14.5px; color:var(--ink2); margin:0;}
+  .dots{list-style:none; margin:0; padding:0;}
+  .dots li{display:grid; grid-template-columns:48px minmax(0,1fr) 14px; gap:10px; align-items:center; font-size:13px; color:var(--ink2); padding:3px 0;}
+  .dots .bar{display:grid; grid-template-columns:repeat(5,1fr); gap:3px; height:8px;}
+  .dots .bar i{background:var(--paper2);}
+  .dots .bar i.on{background:var(--ink3);}
+  .dots li.top .bar i.on{background:var(--leaf);}
+  .dots b{font-family:var(--mono); font-weight:600; font-size:13px; text-align:right; color:var(--ink);}
+  .mx .buy{display:flex; flex-direction:column; gap:6px; margin-top:auto; padding-top:18px;}
+  .mx .buy .btn{text-align:center; padding:12px 14px;}
+  .mx .buy .sub{font-size:13px; color:var(--ink2); text-align:center; text-decoration:none; border-bottom:1px solid transparent; padding:8px 0;}
+  .mx .buy .sub:hover{color:var(--ink); text-decoration:underline;}
+
+  /* Exhibit 4 — 근거 공개표 */
+  table.ev{border-top:1px solid var(--ink); margin:0;}
+  table.ev thead th{font-size:13px; color:var(--ink); font-weight:700; padding-top:0;}
+  table.ev th{width:auto;}
+  table.ev td:first-child{color:var(--ink); font-weight:500; width:28%;}
+  table.ev .tag{display:inline-block; font-size:12px; padding:1px 8px; border:1px solid var(--ink3); color:var(--ink2); white-space:nowrap;}
+  table.ev .tag.pt{border-color:var(--cherry); color:var(--cherry);}
+  .duo3{display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:40px; align-items:start;}
+  .duo3 figure img{border:1px solid var(--rule);}
+
+  /* 다음 행동 */
+  .next{list-style:none; margin:30px 0 0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid #4E5F58;}
+  .next li{padding:22px 24px 24px 0; min-width:0;}
+  .next li + li{padding-left:24px; border-left:1px solid #2A3833;}
+  .next .s{font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; color:#9AA79F;}
+  .next b{display:block; font-family:var(--serif); font-size:19px; color:#F6F7F3; margin:8px 0 6px;}
+  .next p{margin:0; font-size:14.5px; color:#C3CBC5;}
+  .next p a{color:#F6F7F3;}
+  .buyrow{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:30px;}
+  .buyrow .btn{text-align:center;}
+  .buyrow .btn small{display:block; font-size:12.5px; font-weight:400; opacity:.9;}
+
+  /* 연재 */
   .series{list-style:none; margin:30px 0 0; padding:0; border-top:1px solid var(--ink);}
   .series li{border-bottom:1px solid var(--rule);}
   .series a{display:grid; grid-template-columns:44px minmax(0,1fr) auto; gap:14px; align-items:baseline; padding:15px 0; text-decoration:none;}
-  .series a:hover .ti{color:var(--cherry);}
-  .series .no{font-family:var(--serif); font-weight:700; font-size:20px; color:var(--cherry);}
+  .series a:hover .ti{text-decoration:underline; text-underline-offset:4px;}
+  .series .no{font-family:var(--serif); font-weight:700; font-size:18px; color:var(--ink3);}
   .series .ti{font-size:15.5px; color:var(--ink);}
   .series .ar{font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--ink3);}
 
@@ -113,22 +163,40 @@
   .cafe{border-top:1px solid var(--rule2); padding:22px var(--pad) 26px;}
   .cafe p{margin:0; font-size:14.5px; color:var(--ink2);}
   .cafe a{color:var(--ink); border-bottom:1px solid var(--rule2); text-decoration:none;}
-  .cafe a:hover{border-bottom-color:var(--cherry); color:var(--cherry);}
+  .cafe a:hover{border-bottom-color:var(--ink);}
 
   @media(max-width:980px){
-    .story{grid-template-columns:1fr;}
-    .story .stage img{max-height:340px;}
-    .trio{grid-template-columns:1fr; gap:40px;}
+    .duo2, .duo3{grid-template-columns:1fr;}
+    .duo2 figure{max-width:340px;}
+    .duo3 figure.shot{max-width:220px; margin-top:24px !important;}
+    .mx{grid-template-columns:1fr; gap:36px;}
+    .mx .ph{max-width:420px;}
+    .next{grid-template-columns:1fr;}
+    .next li, .next li + li{padding:20px 0; border-left:0; border-bottom:1px solid #2A3833;}
+    .buyrow{grid-template-columns:1fr;}
   }
   @media(max-width:700px){
-    .facts li{grid-template-columns:1fr; gap:2px;}
-    .pick a{grid-template-columns:minmax(0,1fr) auto; gap:6px 12px;}
-    .pick .if{grid-column:1 / -1; font-size:18px;}
-    .pick .ar{text-align:left;}
+    .band{padding:40px 0 44px;}
+    table.cmp, table.cmp thead, table.cmp tbody, table.cmp tr, table.cmp th, table.cmp td{display:block; width:auto !important;}
+    table.cmp thead{display:none;}
+    table.cmp tr{border-bottom:1px solid var(--rule); padding:12px 0;}
+    table.cmp th, table.cmp td{border:0; padding:0;}
+    table.cmp tbody th{font-size:12.5px; padding-bottom:6px;}
+    table.cmp td{font-size:14.5px; padding:2px 0;}
+    table.cmp td.we{padding:6px 10px; margin-top:4px;}
+    table.cmp td::before{content:attr(data-h); display:block; font-size:12px; color:var(--ink3); font-weight:400;}
+    table.ev, table.ev thead, table.ev tbody, table.ev tr, table.ev th, table.ev td{display:block; width:auto !important;}
+    table.ev thead{display:none;}
+    table.ev tr{border-bottom:1px solid var(--rule); padding:12px 0;}
+    table.ev td{border:0; padding:2px 0; font-size:14.5px;}
+    .tl2 .seg > div{padding:8px 10px;}
+    .tl2 b{font-size:13.5px;} .tl2 .seg span{font-size:12px;}
+    .scope{font-size:12px;}
     .series a{grid-template-columns:30px minmax(0,1fr);}
     .series .ar{display:none;}
     .series .ti{font-size:15px;}
     .cafe a{display:inline-block; padding:11px 0 9px;}
+    .mx .buy .sub{display:block; padding:12px 0;}
   }
 </style>
 </head>
@@ -139,19 +207,19 @@
   <div class="wrap nav">
     <a class="wm" href="#top" translate="no">WELCO</a>
     <ul>
-      <li><a href="#story">WELCO 이야기</a></li>
-      <li><a href="#beans">원두 3종</a></li>
-      <li><a href="#pick">고르는 법</a></li>
-      <li><a href="#blog">연재</a></li>
+      <li><a href="#process">1 공정</a></li>
+      <li><a href="#origins">2 산지</a></li>
+      <li><a href="#evidence">3 근거</a></li>
+      <li><a href="#next">원두 고르기</a></li>
       <li><a href="#faq">자주 묻는 질문</a></li>
       <li><a class="x" href="shop.html">원두 상세</a></li>
     </ul>
-    <a class="cta" href="#beans">원두 고르기</a>
+    <a class="cta" href="#next">쿠팡에서 사기</a>
   </div>
 </header>
 
-<!-- ══ HERO ══════════════════════════════════════════════════ -->
 <main id="main">
+<!-- ══ 결론 한 문장 + 근거 3개 ═══════════════════════════════ -->
 <div class="hero" id="top">
   <div class="L">
     <div class="top">
@@ -159,22 +227,22 @@
       <span class="mono">Roasted in Goryeong, Korea</span>
     </div>
 
-    <h1>산소를 뺀 방에서<br>볶은 <i>싱글오리진</i></h1>
+    <h1>산소를 뺀 질소 속에서 볶아, 그을음이 산지의 향을 가리지 않게 했습니다</h1>
 
-    <p class="lede">
-      경북 고령의 WELCO 로스터리에서, 볶는 통의 공기를 먼저 빼고 질소를 채운 뒤 볶습니다.
-      에티오피아 · 케냐 AA · 콜롬비아. 산지의 향이 그대로 오도록 볶은 홀빈 200g입니다.
-    </p>
+    <p class="lede">경북 고령의 WELCO 로스터리가 볶은 싱글오리진 홀빈 200g입니다. 이유는 세 가지입니다.</p>
+
+    <nav class="exec" aria-label="핵심 3가지">
+      <span class="label">핵심 3가지</span>
+      <ol>
+        <li><a href="#process"><span class="n">1</span><span class="c">공기를 먼저 빼고, 질소를 채운 뒤 볶습니다</span><span class="e">진공 0~8분 → 질소 8~12분 · 설정 150°C</span><span class="go">1장 ↓</span></a></li>
+        <li><a href="#origins"><span class="n">2</span><span class="c">세 원두를 같은 공정으로 볶아, 산지로 고르면 됩니다</span><span class="e">에티오피아 · 케냐 AA · 콜롬비아</span><span class="go">2장 ↓</span></a></li>
+        <li><a href="#evidence"><span class="n">3</span><span class="c">특허와 자체 공정을 나눠, 범위를 붙여 밝힙니다</span><span class="e">질소 로스팅 등록특허 제10-2004953호</span><span class="go">3장 ↓</span></a></li>
+      </ol>
+    </nav>
 
     <div class="cta-row">
-      <a class="btn btn-buy" href="#beans">원두 3종 보기</a>
-      <a class="btn btn-line" href="#pick">나에게 맞는 원두 찾기</a>
-    </div>
-
-    <div class="specs">
-      <div class="srow"><span class="mono">Origins</span><span class="v">에티오피아 · 케냐 AA · 콜롬비아</span><span class="n">3</span></div>
-      <div class="srow"><span class="mono">Roast</span><span class="v">진공 → 질소 · 설정 온도</span><span class="n">150°C</span></div>
-      <div class="srow"><span class="mono">Form</span><span class="v">홀빈(통원두) · 핸드드립 약 13잔</span><span class="n">200g</span></div>
+      <a class="btn btn-buy" href="#next">원두 고르고 쿠팡에서 사기</a>
+      <a class="btn btn-line" href="#origins">세 원두 비교 보기</a>
     </div>
   </div>
 
@@ -186,148 +254,220 @@
   </figure>
 </div>
 
-<!-- ══ WELCO 이야기 ══════════════════════════════════════════ -->
-<section class="sect" id="story">
+<!-- ══ 핵심 수치 ══════════════════════════════════════════════ -->
+<section class="sect band" aria-labelledby="kpi-t">
   <div class="wrap">
-    <div class="head"><span class="mono">Our Roastery</span><span class="line"></span><span class="mono">Goryeong</span></div>
-    <h2 class="t">공기 대신<br>질소 속에서 볶습니다</h2>
-    <div class="story">
-      <div>
-        <p class="lede">
-          공기 속에서 볶으면 산소 때문에 원두 껍질이 그을릴 수 있고, 그을음은 커피 향을 가릴 수 있습니다.
-          그래서 WELCO는 볶는 통의 공기를 먼저 빼고, 질소를 채운 뒤 설정 150°C로 볶습니다.
-          세 원두 모두 같은 로스터에서 같은 순서로 볶아, 산지의 차이만 남깁니다.
-        </p>
-        <ul class="facts">
-          <li><span class="k">로스터리</span><span class="v"><b>경상북도 고령</b> · 주식회사 디올(브랜드 WELCO)</span></li>
-          <li><span class="k">1단계 · 진공</span><span class="v">0~8분, 공기를 빼냅니다<span class="tag own">WELCO 자체 공정</span></span></li>
-          <li><span class="k">2단계 · 질소</span><span class="v">8~12분, 질소를 채워 볶습니다<span class="tag">등록특허 제10-2004953호</span></span></li>
-          <li><span class="k">설정 온도</span><span class="v">150°C<span class="tag own">WELCO 자체 공정</span></span></li>
-        </ul>
-        <p class="note">등록특허는 질소로 산소를 없앤 분위기에서 볶는 방법에 관한 것이고, 진공 단계와 150°C 설정은 WELCO가 정한 공정입니다.
-        자세한 그림과 근거는 <a href="shop.html#process">원두 상세 페이지</a>에 있습니다.</p>
+    <h2 class="label" id="kpi-t">숫자로 본 WELCO 원두</h2>
+    <div class="kpis">
+      <div><span class="v">150<small>°C</small></span><span class="k">설정 온도<sup>1</sup></span><span class="s">통상 범위 150~280°C의 낮은 끝</span></div>
+      <div><span class="v">12<small>분</small></span><span class="k">한 번 볶는 공정<sup>1</sup></span><span class="s">진공 8분 → 질소 4분</span></div>
+      <div><span class="v">3</span><span class="k">산지<sup>2</sup></span><span class="s">에티오피아 · 케냐 AA · 콜롬비아</span></div>
+      <div><span class="v">13<small>잔</small></span><span class="k">한 봉 200g<sup>3</sup></span><span class="s">핸드드립 1잔 15g 기준, 약 13잔</span></div>
+    </div>
+    <ol class="fn">
+      <li><span>1</span>WELCO 로스팅 공정(제어 화면 설정값). 통상 범위는 특허청 등록특허 제10-2004953호 명세서. 진공 단계와 150°C 설정은 특허가 아닌 자체 공정입니다.</li>
+      <li><span>2</span>세 원두 모두 같은 로스터에서 같은 순서로 볶습니다.</li>
+      <li><span>3</span>200 ÷ 15 = 약 13.3. 분쇄 · 추출 방식에 따라 달라집니다.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ 근거 1 · 공정 ═════════════════════════════════════════ -->
+<section class="sect" id="process">
+  <div class="wrap">
+    <div class="chap"><span class="n">1 / 3</span><span class="label">어떻게 볶는가</span><span class="line"></span></div>
+    <h2 class="t act">공기를 먼저 빼고 질소를 채워 볶아, 껍질이 그을리지 않도록 합니다</h2>
+    <p class="lede">공기 속에서 볶으면 산소 때문에 불완전 연소가 일어나 원두 껍질이 그을릴 수 있고, 그을음은 커피 향을 가릴 수 있습니다. 그래서 볶는 통의 공기를 먼저 빼고, 질소를 채운 뒤 볶습니다.</p>
+
+    <figure class="ex">
+      <div class="ex-h"><span class="ex-no">Exhibit 1</span><p class="ex-t">12분 공정 중 앞 8분은 공기를 빼고, 뒤 4분은 질소 속에서 볶습니다</p><p class="ex-sub">한 번 볶는 순서 · 설정 온도 150°C</p></div>
+      <div class="ex-b tl2" role="img" aria-label="0분부터 8분까지 진공 단계로 공기를 빼고, 8분부터 12분까지 질소를 채워 볶는다. 설정 온도는 150°C. 진공 단계와 150°C는 WELCO 자체 공정이고, 질소 · 무산소 분위기 로스팅은 등록특허 제10-2004953호.">
+        <div class="seg">
+          <div class="vac"><b>1단계 · 진공</b><span>볶는 통의 공기를 빼냅니다</span></div>
+          <div class="nit"><b>2단계 · 질소</b><span>질소를 채워 볶습니다</span></div>
+        </div>
+        <div class="ticks" aria-hidden="true"><span>0분</span><span><span>8분</span><span>12분</span></span></div>
+        <div class="scope" aria-hidden="true"><span>WELCO 자체 공정</span><span>등록특허 제10-2004953호</span></div>
+        <div class="temp" aria-hidden="true"><span>설정 온도</span><i></i><b>150°C</b><span>자체 공정</span></div>
       </div>
-      <figure>
-        <div class="stage"><img src="assets/img/roaster.webp" alt="경상북도 고령 WELCO 로스터리의 진공·질소 로스터 실물" width="514" height="900" loading="lazy" decoding="async"></div>
-        <figcaption class="note">실제 로스팅 설비 · 경상북도 고령</figcaption>
+      <figcaption class="ex-src"><b>출처</b> WELCO 로스팅 공정(생산 중 제어 화면 설정값). <b>주</b> 등록특허 제10-2004953호는 질소로 산소를 없앤 분위기에서 볶는 방법에 관한 것이며, 질소를 채우기 전의 진공 단계와 설정 150°C는 특허 범위가 아닌 WELCO 자체 공정입니다.</figcaption>
+    </figure>
+
+    <div class="duo2">
+      <figure class="ex">
+        <div class="ex-h"><span class="ex-no">Exhibit 2</span><p class="ex-t">차이는 볶는 통 안에 산소가 있느냐 없느냐입니다</p></div>
+        <div class="ex-b">
+          <table class="cmp">
+            <thead><tr><th scope="col">비교 항목</th><th scope="col">공기 속에서 볶을 때</th><th scope="col" class="we">WELCO · 진공 후 질소 속에서</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">통 안의 기체</th><td data-h="공기 속에서 볶을 때">공기(산소 포함)</td><td class="we" data-h="WELCO">공기를 뺀 뒤 채운 질소</td></tr>
+              <tr><th scope="row">산소</th><td data-h="공기 속에서 볶을 때">있음 — 불완전 연소가 일어날 수 있음</td><td class="we" data-h="WELCO">진공 단계에서 빼냄</td></tr>
+              <tr><th scope="row">그을음(탄화물)</th><td data-h="공기 속에서 볶을 때">껍질이 그을릴 수 있고, 향을 가릴 수 있음</td><td class="we" data-h="WELCO">생기지 않도록 함<sup>1</sup></td></tr>
+              <tr><th scope="row">설정 온도</th><td data-h="공기 속에서 볶을 때">통상 150~280°C<sup>1</sup></td><td class="we" data-h="WELCO">150°C<sup>2</sup></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption class="ex-src"><b>출처</b> 1) 특허청 등록특허 제10-2004953호 명세서 — 무산소 상태에서는 공기 중 불완전 연소로 생기는 탄화물이 생성되지 않는다고 설명합니다. 2) WELCO 로스팅 공정. <b>주</b> 볶는 환경의 차이를 설명한 표이며, 다른 회사 제품의 맛 · 품질을 비교한 것이 아닙니다.</figcaption>
+      </figure>
+      <figure class="ex">
+        <div class="ex-h"><span class="ex-no">Exhibit 3</span><p class="ex-t">세 원두 모두 이 로스터에서 볶습니다</p></div>
+        <div class="ex-b"><div class="stage"><img src="assets/img/roaster.webp" alt="경상북도 고령 WELCO 로스터리의 진공·질소 로스터 실물" width="514" height="900" loading="lazy" decoding="async"></div></div>
+        <figcaption class="ex-src"><b>출처</b> WELCO 로스터리 실물 사진 · 경상북도 고령.</figcaption>
+      </figure>
+    </div>
+    <p class="note">공정 그림과 제어 화면은 <a href="shop.html#process">원두 상세 · 볶는 방법</a>에 있습니다.</p>
+  </div>
+</section>
+
+<!-- ══ 근거 2 · 산지 ═════════════════════════════════════════ -->
+<section class="sect" id="origins">
+  <div class="wrap">
+    <div class="chap"><span class="n">2 / 3</span><span class="label">무엇을 볶는가</span><span class="line"></span></div>
+    <h2 class="t act">공정이 같으니, 산미 · 균형 · 단맛 중 취향 하나로 고르면 됩니다</h2>
+    <p class="lede">세 원두 모두 홀빈 200g, 같은 로스터, 같은 순서, 설정 150°C입니다. 남는 차이는 산지입니다.</p>
+
+    <figure class="ex">
+      <div class="ex-h"><span class="ex-no">Exhibit 4</span><p class="ex-t">산뜻한 블랙은 에티오피아, 균형은 케냐 AA, 단맛과 라떼는 콜롬비아</p><p class="ex-sub">맛 세기 5단계 · 가장 강한 항목을 짙게 표시</p></div>
+      <div class="ex-b">
+        <div class="mx">
+          <div class="c card3">
+            <div class="ph"><img src="assets/img/ethiopia-01.webp" alt="WELCO 에티오피아 — 재스민 향이 먼저 오도록, 산소 없이 볶은 에티오피아" width="800" height="800" loading="lazy" decoding="async"></div>
+            <p class="reg" style="margin-top:14px;">동아프리카 · 시다모 G2 워시드</p><h3>에티오피아</h3>
+            <span class="rh">향미 노트</span><p class="notes">재스민 · 레몬·베리 · 홍차</p>
+            <span class="rh">맛 세기</span>
+            <ul class="dots" aria-label="에티오피아 맛 세기 5단계 중">
+              <li class="top"><span>산미</span><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><b>4</b></li>
+              <li><span>단맛</span><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>3</b></li>
+              <li><span>바디</span><span class="bar"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><b>2</b></li>
+              <li><span>쌉쌀함</span><span class="bar"><i class="on"></i><i></i><i></i><i></i><i></i></span><b>1</b></li>
+            </ul>
+            <span class="rh">이런 분께</span><p class="fit">레몬·베리 같은 상큼함, 홍차처럼 가벼운 블랙커피</p>
+            <div class="buy"><a class="btn btn-buy" href="https://www.coupang.com/vp/products/9765493123" target="_blank" rel="noopener">에티오피아 쿠팡에서 보기</a><a class="sub" href="shop.html#ethiopia">맛 · 추출법 자세히</a></div>
+          </div>
+          <div class="c card3">
+            <div class="ph"><img src="assets/img/kenya-01.webp" alt="WELCO 케냐 AA — 자몽·포도 향이 살아나도록, 산소 없이 볶은 케냐 AA" width="800" height="800" loading="lazy" decoding="async"></div>
+            <p class="reg" style="margin-top:14px;">동아프리카 · AA(콩 크기 등급)</p><h3>케냐 AA</h3>
+            <span class="rh">향미 노트</span><p class="notes">자몽·포도 · 황설탕·아몬드</p>
+            <span class="rh">맛 세기</span>
+            <ul class="dots" aria-label="케냐 AA 맛 세기 5단계 중">
+              <li class="top"><span>산미</span><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>3</b></li>
+              <li class="top"><span>단맛</span><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>3</b></li>
+              <li class="top"><span>바디</span><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>3</b></li>
+              <li><span>쌉쌀함</span><span class="bar"><i class="on"></i><i></i><i></i><i></i><i></i></span><b>1</b></li>
+            </ul>
+            <span class="rh">이런 분께</span><p class="fit">밝은 산미와 고소한 단맛의 균형을 원하는 분</p>
+            <div class="buy"><a class="btn btn-buy" href="https://www.coupang.com/vp/products/9252103197" target="_blank" rel="noopener">케냐 AA 쿠팡에서 보기</a><a class="sub" href="shop.html#kenya">맛 · 추출법 자세히</a></div>
+          </div>
+          <div class="c card3">
+            <div class="ph"><img src="assets/img/colombia-01.webp" alt="WELCO 콜롬비아 — 시트러스와 단맛을 살려, 산소 없이 볶은 콜롬비아" width="800" height="800" loading="lazy" decoding="async"></div>
+            <p class="reg" style="margin-top:14px;">남아메리카 · 후일라 수프리모 17/18 워시드</p><h3>콜롬비아</h3>
+            <span class="rh">향미 노트</span><p class="notes">시트러스 · 사탕수수 · 밀크 초콜릿</p>
+            <span class="rh">맛 세기</span>
+            <ul class="dots" aria-label="콜롬비아 맛 세기 5단계 중">
+              <li><span>산미</span><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>3</b></li>
+              <li class="top"><span>단맛</span><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><b>4</b></li>
+              <li><span>바디</span><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>3</b></li>
+              <li><span>쌉쌀함</span><span class="bar"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><b>2</b></li>
+            </ul>
+            <span class="rh">이런 분께</span><p class="fit">단맛이 앞에 오는 한 잔, 라떼까지 생각하는 분</p>
+            <div class="buy"><a class="btn btn-buy" href="https://www.coupang.com/vp/products/9765914575" target="_blank" rel="noopener">콜롬비아 쿠팡에서 보기</a><a class="sub" href="shop.html#colombia">맛 · 추출법 자세히</a></div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="ex-src"><b>출처</b> WELCO 쿠팡 판매 정보(원두별 맛 목표 · 산지). <b>주</b> 맛 세기는 WELCO가 볶을 때 맞춘 목표값(5단계)입니다. 향미는 맛을 비유한 것이며 실제 재료는 들어 있지 않습니다. 추출과 취향에 따라 다르게 느낄 수 있고, 산미는 개인차가 큰 영역입니다.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══ 근거 3 · 근거 공개 ═════════════════════════════════════ -->
+<section class="sect" id="evidence">
+  <div class="wrap">
+    <div class="chap"><span class="n">3 / 3</span><span class="label">무엇으로 확인하는가</span><span class="line"></span></div>
+    <h2 class="t act">특허는 질소 로스팅에만, 나머지는 자체 공정이라고 나눠 밝힙니다</h2>
+    <p class="lede">무엇이 특허이고 무엇이 우리 로스터리의 운영 방식인지 섞지 않습니다. 확인할 수 있는 근거를 범위와 함께 둡니다.</p>
+
+    <div class="duo3">
+      <figure class="ex">
+        <div class="ex-h"><span class="ex-no">Exhibit 5</span><p class="ex-t">특허 범위는 질소 · 무산소 분위기 로스팅이고, 진공과 150°C는 자체 공정입니다</p></div>
+        <div class="ex-b">
+          <table class="ev">
+            <thead><tr><th scope="col">항목</th><th scope="col">내용</th><th scope="col">구분</th></tr></thead>
+            <tbody>
+              <tr><td>질소 · 무산소 분위기 로스팅</td><td>등록특허 제10-2004953호 「곡물 로스팅장치 및 곡물의 로스팅 방법」 · 2019. 7. 23. 등록 · 특허권자 주식회사 디올</td><td><span class="tag pt">등록특허</span></td></tr>
+              <tr><td>진공 단계(0~8분)</td><td>질소를 채우기 전에 볶는 통의 공기를 먼저 빼냅니다</td><td><span class="tag">자체 공정</span></td></tr>
+              <tr><td>설정 온도 150°C</td><td>산지의 꽃 · 과일 향이 열에 가려지지 않게 낮춘 설정</td><td><span class="tag">자체 공정</span></td></tr>
+              <tr><td>제조</td><td>경상북도 고령 · 주식회사 디올(브랜드 WELCO) · 식품제조가공업 등록업소</td><td><span class="tag">사업자 정보</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption class="ex-src"><b>출처</b> 특허증 · 특허청 등록특허 제10-2004953호, WELCO 로스팅 공정, 사업자 정보. <b>주</b> 원두 시료 시험 결과와 성적서 번호는 시험 범위와 함께 <a href="shop.html#proof">원두 상세 · 시험 · 특허</a>에 적었습니다.</figcaption>
+      </figure>
+      <figure class="shot" style="margin-top:44px;">
+        <img src="assets/patent.jpg" alt="특허증 제10-2004953호" width="760" height="974" loading="lazy" decoding="async">
+        <figcaption>특허증 · 주식회사 디올</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- ══ 원두 3종 ══════════════════════════════════════════════ -->
-<section class="sect" id="beans">
+<!-- ══ 다음 행동 ══════════════════════════════════════════════ -->
+<section class="sect plate" id="next">
   <div class="wrap">
-    <div class="head"><span class="mono">Lineup</span><span class="line"></span><span class="mono">3 Origins</span></div>
-    <h2 class="t">같은 공법, 산지만 다른<br>세 가지 원두</h2>
-    <p class="lede">모두 홀빈 200g입니다. 맛 지도와 추출법은 원두별 상세에서 볼 수 있습니다.</p>
-
-    <div class="trio">
-      <article>
-        <div class="ph"><img src="assets/img/ethiopia-01.webp" alt="WELCO 에티오피아 — 재스민 향이 먼저 오도록, 산소 없이 볶은 에티오피아" width="800" height="800" loading="lazy" decoding="async"></div>
-        <div class="id">
-          <span class="el sm leaf" aria-hidden="true"><span class="z"><span>G2</span><span></span></span><span class="sym">Et</span><span class="nm">ETHIOPIA</span></span>
-          <div><p class="reg">시다모 G2 워시드</p><h3>에티오피아</h3></div>
-        </div>
-        <p class="notes">재스민 · 레몬·베리 · 홍차</p>
-        <p class="one">꽃향과 상큼함, 가벼운 블랙커피</p>
-        <div class="go">
-          <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9765493123" target="_blank" rel="noopener">쿠팡에서 보기</a>
-          <a class="btn btn-line" href="shop.html#ethiopia">상세 보기</a>
-        </div>
-      </article>
-      <article>
-        <div class="ph"><img src="assets/img/kenya-01.webp" alt="WELCO 케냐 AA — 자몽·포도 향이 살아나도록, 산소 없이 볶은 케냐 AA" width="800" height="800" loading="lazy" decoding="async"></div>
-        <div class="id">
-          <span class="el sm" aria-hidden="true"><span class="z"><span>AA</span><span></span></span><span class="sym">Ke</span><span class="nm">KENYA</span></span>
-          <div><p class="reg">AA</p><h3>케냐 AA</h3></div>
-        </div>
-        <p class="notes">자몽·포도 · 황설탕·아몬드</p>
-        <p class="one">밝은 산미와 고소한 단맛을 함께</p>
-        <div class="go">
-          <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9252103197" target="_blank" rel="noopener">쿠팡에서 보기</a>
-          <a class="btn btn-line" href="shop.html#kenya">상세 보기</a>
-        </div>
-      </article>
-      <article>
-        <div class="ph"><img src="assets/img/colombia-01.webp" alt="WELCO 콜롬비아 — 시트러스와 단맛을 살려, 산소 없이 볶은 콜롬비아" width="800" height="800" loading="lazy" decoding="async"></div>
-        <div class="id">
-          <span class="el sm ink" aria-hidden="true"><span class="z"><span>17/18</span><span></span></span><span class="sym">Co</span><span class="nm">COLOMBIA</span></span>
-          <div><p class="reg">후일라 수프리모 17/18 워시드</p><h3>콜롬비아</h3></div>
-        </div>
-        <p class="notes">시트러스 · 사탕수수 · 밀크 초콜릿</p>
-        <p class="one">단맛이 앞에 오는 한 잔, 라떼까지</p>
-        <div class="go">
-          <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9765914575" target="_blank" rel="noopener">쿠팡에서 보기</a>
-          <a class="btn btn-line" href="shop.html#colombia">상세 보기</a>
-        </div>
-      </article>
+    <div class="chap"><span class="n" style="color:#F6F7F3;">다음 행동</span><span class="line" style="background:#2E3F39;"></span></div>
+    <h2 class="t act">취향 하나를 정하고, 그라인더를 확인한 뒤 쿠팡에서 고르세요</h2>
+    <ol class="next">
+      <li><span class="s">STEP 1</span><b>취향 정하기</b><p>산뜻한 블랙 · 균형 · 단맛과 라떼 중 하나. <a href="#origins">Exhibit 4</a>에서 비교할 수 있습니다.</p></li>
+      <li><span class="s">STEP 2</span><b>그라인더 확인</b><p>홀빈(통원두)만 팝니다. 선물이라면 받는 분께 그라인더가 있는지 먼저 확인하세요.</p></li>
+      <li><span class="s">STEP 3</span><b>쿠팡에서 구매</b><p>가격 · 배송은 쿠팡 판매 페이지에서 확인할 수 있습니다.</p></li>
+    </ol>
+    <div class="buyrow">
+      <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9765493123" target="_blank" rel="noopener">에티오피아<small>산뜻한 블랙커피</small></a>
+      <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9252103197" target="_blank" rel="noopener">케냐 AA<small>산미와 단맛의 균형</small></a>
+      <a class="btn btn-buy" href="https://www.coupang.com/vp/products/9765914575" target="_blank" rel="noopener">콜롬비아<small>단맛 · 라떼</small></a>
     </div>
-    <p class="note">향미는 WELCO가 볶을 때 목표로 하는 맛을 비유한 것이며, 실제 재료는 들어 있지 않습니다.</p>
-  </div>
-</section>
-
-<!-- ══ 고르는 법 ═════════════════════════════════════════════ -->
-<section class="sect" id="pick">
-  <div class="wrap">
-    <div class="head"><span class="mono">How to Choose</span><span class="line"></span><span class="mono">Pick One</span></div>
-    <h2 class="t">어떤 커피를 즐기시나요?</h2>
-    <ol class="pick">
-      <li><a href="shop.html#ethiopia">
-        <span class="if">산뜻한 블랙커피를 좋아한다면<small>레몬·베리 같은 상큼함, 홍차처럼 가벼운 끝맛</small></span>
-        <span class="ar">→</span><span class="then">에티오피아<span>산미 4 · 쌉쌀함 1</span></span></a></li>
-      <li><a href="shop.html#kenya">
-        <span class="if">산미와 단맛의 균형을 원한다면<small>밝은 산미에 황설탕 · 아몬드의 고소한 단맛</small></span>
-        <span class="ar">→</span><span class="then">케냐 AA<span>산미 3 · 단맛 3 · 바디 3</span></span></a></li>
-      <li><a href="shop.html#colombia">
-        <span class="if">라떼로도 마시고 싶다면<small>사탕수수 같은 단맛, 밀크 초콜릿 노트</small></span>
-        <span class="ar">→</span><span class="then">콜롬비아<span>단맛 4 · 바디 3</span></span></a></li>
-    </ol>
-    <p class="note">맛 세기는 5단계 기준으로 WELCO가 맞춘 목표값입니다. 산미는 개인차가 큰 영역입니다.</p>
-  </div>
-</section>
-
-<!-- ══ 블로그 연재 ═══════════════════════════════════════════ -->
-<section class="sect" id="blog">
-  <div class="wrap">
-    <div class="head"><span class="mono">Journal</span><span class="line"></span><span class="mono">7 Parts</span></div>
-    <h2 class="t">진공·질소 로스팅 커피의 모든 것</h2>
-    <p class="lede">원두를 직접 볶고 파는 WELCO가 네이버 블로그에 쓴 일곱 편의 연재입니다.</p>
-    <ol class="series">
-      <li><a href="https://blog.naver.com/leeseunghun815/224477705615" target="_blank" rel="noopener"><span class="no">①</span><span class="ti">진공 질소 로스팅이란? 공기 속 로스팅과 무엇이 다른가</span><span class="ar">Blog ↗</span></a></li>
-      <li><a href="https://blog.naver.com/leeseunghun815/224477707424" target="_blank" rel="noopener"><span class="no">②</span><span class="ti">질소 로스팅, 산소를 왜 빼는가: 불완전 연소와 그을음, 그리고 특허</span><span class="ar">Blog ↗</span></a></li>
-      <li><a href="https://blog.naver.com/leeseunghun815/224477708943" target="_blank" rel="noopener"><span class="no">③</span><span class="ti">저온 로스팅 원두, 설정 150°C로 볶는다는 것</span><span class="ar">Blog ↗</span></a></li>
-      <li><a href="https://blog.naver.com/leeseunghun815/224477710483" target="_blank" rel="noopener"><span class="no">④</span><span class="ti">진공 질소 로스팅 공정 따라가기: 진공 0~8분, 질소 8~12분</span><span class="ar">Blog ↗</span></a></li>
-      <li><a href="https://blog.naver.com/leeseunghun815/224477712047" target="_blank" rel="noopener"><span class="no">⑤</span><span class="ti">시험성적서, 어디까지 말할 수 있나</span><span class="ar">Blog ↗</span></a></li>
-      <li><a href="https://blog.naver.com/leeseunghun815/224477713742" target="_blank" rel="noopener"><span class="no">⑥</span><span class="ti">같은 진공 질소 로스팅, 다른 산지 3종: 원두 고르는 법</span><span class="ar">Blog ↗</span></a></li>
-      <li><a href="https://blog.naver.com/leeseunghun815/224477715603" target="_blank" rel="noopener"><span class="no">⑦</span><span class="ti">진공 질소 로스팅 원두 자주 묻는 질문: 분쇄 · 보관 · 추출 · 라떼</span><span class="ar">Blog ↗</span></a></li>
-    </ol>
   </div>
 </section>
 
 <!-- ══ 자주 묻는 질문 ════════════════════════════════════════ -->
 <section class="sect" id="faq">
   <div class="wrap">
-    <div class="head"><span class="mono">Questions</span><span class="line"></span><span class="mono">FAQ</span></div>
-    <h2 class="t">자주 묻는 질문</h2>
+    <div class="chap"><span class="label">자주 묻는 질문</span><span class="line"></span></div>
+    <h2 class="t act">사기 전에 확인할 것은 그라인더와 분량입니다</h2>
     <div class="faq">
       <details open>
-        <summary>어디서 살 수 있고, 가격은 얼마인가요?</summary>
-        <p>세 원두 모두 쿠팡에서 팝니다. 가격과 배송은 쿠팡 판매 페이지에서 확인해 주세요 — <a href="https://www.coupang.com/vp/products/9765493123" target="_blank" rel="noopener">에티오피아</a> · <a href="https://www.coupang.com/vp/products/9252103197" target="_blank" rel="noopener">케냐 AA</a> · <a href="https://www.coupang.com/vp/products/9765914575" target="_blank" rel="noopener">콜롬비아</a>.</p>
-      </details>
-      <details>
         <summary>그라인더가 없어요.</summary>
         <p>홀빈(통원두) 상품이라 분쇄가 필요합니다. 분쇄된 가루는 판매하지 않습니다. 선물하실 때도 받는 분께 그라인더가 있는지 먼저 확인해 주세요.</p>
-      </details>
-      <details>
-        <summary>진공도 특허인가요?</summary>
-        <p>아닙니다. 등록특허 제10-2004953호는 질소로 산소를 없앤 분위기에서 볶는 방법입니다. 질소를 채우기 전에 공기를 빼는 진공 단계와 설정 150°C는 WELCO가 정한 자체 공정입니다.</p>
       </details>
       <details>
         <summary>한 봉으로 몇 잔이 나오나요?</summary>
         <p>핸드드립 한 잔에 원두 15g이면 200g 한 봉으로 약 13잔입니다. 하루 한 잔이면 약 2주 분량입니다. 원두별 추출법은 <a href="shop.html#beans">원두 상세</a>에 있습니다.</p>
       </details>
+      <details>
+        <summary>어디서 살 수 있고, 가격은 얼마인가요?</summary>
+        <p>세 원두 모두 쿠팡에서 팝니다. 가격과 배송은 쿠팡 판매 페이지에서 확인해 주세요 — <a href="https://www.coupang.com/vp/products/9765493123" target="_blank" rel="noopener">에티오피아</a> · <a href="https://www.coupang.com/vp/products/9252103197" target="_blank" rel="noopener">케냐 AA</a> · <a href="https://www.coupang.com/vp/products/9765914575" target="_blank" rel="noopener">콜롬비아</a>.</p>
+      </details>
+      <details>
+        <summary>진공도 특허인가요?</summary>
+        <p>아닙니다. 등록특허 제10-2004953호는 질소로 산소를 없앤 분위기에서 볶는 방법입니다. 질소를 채우기 전에 공기를 빼는 진공 단계와 설정 150°C는 WELCO가 정한 자체 공정입니다.</p>
+      </details>
     </div>
+  </div>
+</section>
+
+<!-- ══ 연재 ══════════════════════════════════════════════════ -->
+<section class="sect" id="blog">
+  <div class="wrap">
+    <div class="chap"><span class="label">더 읽을거리</span><span class="line"></span></div>
+    <h2 class="t act">공정 · 특허 · 고르는 법은 일곱 편의 연재에 자세히 썼습니다</h2>
+    <ol class="series">
+      <li><a href="https://blog.naver.com/leeseunghun815/224477705615" target="_blank" rel="noopener"><span class="no">1</span><span class="ti">진공 질소 로스팅이란? 공기 속 로스팅과 무엇이 다른가</span><span class="ar">Blog ↗</span></a></li>
+      <li><a href="https://blog.naver.com/leeseunghun815/224477707424" target="_blank" rel="noopener"><span class="no">2</span><span class="ti">질소 로스팅, 산소를 왜 빼는가: 불완전 연소와 그을음, 그리고 특허</span><span class="ar">Blog ↗</span></a></li>
+      <li><a href="https://blog.naver.com/leeseunghun815/224477708943" target="_blank" rel="noopener"><span class="no">3</span><span class="ti">저온 로스팅 원두, 설정 150°C로 볶는다는 것</span><span class="ar">Blog ↗</span></a></li>
+      <li><a href="https://blog.naver.com/leeseunghun815/224477710483" target="_blank" rel="noopener"><span class="no">4</span><span class="ti">진공 질소 로스팅 공정 따라가기: 진공 0~8분, 질소 8~12분</span><span class="ar">Blog ↗</span></a></li>
+      <li><a href="https://blog.naver.com/leeseunghun815/224477712047" target="_blank" rel="noopener"><span class="no">5</span><span class="ti">시험성적서, 어디까지 말할 수 있나</span><span class="ar">Blog ↗</span></a></li>
+      <li><a href="https://blog.naver.com/leeseunghun815/224477713742" target="_blank" rel="noopener"><span class="no">6</span><span class="ti">같은 진공 질소 로스팅, 다른 산지 3종: 원두 고르는 법</span><span class="ar">Blog ↗</span></a></li>
+      <li><a href="https://blog.naver.com/leeseunghun815/224477715603" target="_blank" rel="noopener"><span class="no">7</span><span class="ti">진공 질소 로스팅 원두 자주 묻는 질문: 분쇄 · 보관 · 추출 · 라떼</span><span class="ar">Blog ↗</span></a></li>
+    </ol>
   </div>
 </section>
 
@@ -358,7 +498,7 @@
     </div>
     <p class="disc">
       ※ 등록특허 제10-2004953호는 질소 · 무산소 분위기 로스팅에 관한 것이며, 진공 단계와 설정 150°C는 WELCO 자체 공정입니다.<br>
-      ※ 향미와 맛 세기는 WELCO가 목표로 하는 맛이며 비유입니다. 제품의 실제 표시사항은 포장에 기재된 내용을 따릅니다.
+      ※ 향미와 맛 세기는 WELCO가 목표로 하는 맛이며 비유입니다. 개인차가 있으며, 제품의 실제 표시사항은 포장에 기재된 내용을 따릅니다.
     </p>
   </div>
 </footer>

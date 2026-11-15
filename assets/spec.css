@@ -372,3 +372,76 @@
   .hero .R .el{animation:settle .7s cubic-bezier(.2,.7,.2,1) .15s both;}
   .hero h1{animation:rise .6s cubic-bezier(.2,.7,.2,1) both;}
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} .hero .R .el, .hero h1{animation:none;} }
+
+/* ══ v4 보고서 문법 층 (2026-11-15) ══════════════════════════════
+   결론 먼저 → 근거 3개 → 각 근거의 Exhibit(도표).
+   - 제목(h1·h2)은 주제어가 아니라 그 구간의 결론 문장이다.
+   - 도표는 "Exhibit n" 번호 + 결론형 캡션 + 아래 출처·주석 한 줄을 반드시 갖춘다.
+   - 체리는 구매 버튼과 도표 안 강조 한 곳에만. 나머지는 잉크·잎·회색 괘선. */
+.hero h1 i{color:inherit;}
+.kicker{font-size:13px; font-weight:500; color:var(--ink3); letter-spacing:.02em; margin:0;}
+.kicker b{color:var(--ink); font-weight:700;}
+
+/* 근거 3개 — 요약 박스. 번호는 아래 장 번호와 1:1로 대응한다 */
+.exec{border-top:2px solid var(--ink); background:var(--raised); padding:6px 22px 4px; margin:0;}
+.exec .label{display:block; padding:12px 0 4px;}
+.exec ol{list-style:none; margin:0; padding:0;}
+.exec li{border-top:1px solid var(--rule);}
+.exec li:first-child{border-top:0;}
+.exec a{display:grid; grid-template-columns:30px minmax(0,1fr) auto; gap:4px 12px; align-items:baseline;
+        padding:13px 0 14px; text-decoration:none; min-height:44px;}
+.exec .n{font-family:var(--serif); font-weight:700; font-size:21px; line-height:1.2; color:var(--ink);}
+.exec .c{font-size:16px; font-weight:700; line-height:1.55; color:var(--ink);}
+.exec .e{grid-column:2 / 3; font-size:13.5px; line-height:1.7; color:var(--ink3);}
+.exec .go{grid-row:1 / 3; grid-column:3; align-self:center; font-family:var(--mono); font-size:12px; color:var(--ink3);}
+.exec a:hover .c{text-decoration:underline; text-underline-offset:4px;}
+
+/* 핵심 수치 타일 */
+.kpis{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid var(--ink); border-bottom:1px solid var(--rule2);}
+.kpis > div{padding:24px 22px 22px 0; min-width:0;}
+.kpis > div + div{padding-left:22px; border-left:1px solid var(--rule);}
+.kpis .v{display:block; font-family:var(--serif); font-weight:700; font-size:46px; line-height:1.1; letter-spacing:-.02em; color:var(--ink); font-variant-numeric:tabular-nums;}
+.kpis .v small{font-size:.42em; font-weight:700; margin-left:3px; letter-spacing:0;}
+.kpis .k{display:block; font-size:14px; font-weight:500; color:var(--ink); margin-top:10px;}
+.kpis .s{display:block; font-size:13px; color:var(--ink3); line-height:1.7; margin-top:2px;}
+.kpis sup, .ex sup{font-family:var(--mono); font-size:10px; color:var(--ink3); margin-left:2px;}
+.fn{list-style:none; margin:14px 0 0; padding:0; font-size:12.5px; line-height:1.85; color:var(--ink3); max-width:900px;}
+.fn li{padding-left:18px; text-indent:-18px;}
+.fn li span{font-family:var(--mono); display:inline-block; width:18px; text-indent:0;}
+
+/* Exhibit */
+.ex{margin:44px 0 0; border-top:2px solid var(--ink);}
+.ex > .ex-h{display:grid; grid-template-columns:110px minmax(0,1fr); gap:6px 18px; padding:14px 0 18px; border-bottom:1px solid var(--rule);}
+.ex .ex-no{font-family:var(--mono); font-size:11.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); padding-top:5px;}
+.ex .ex-t{font-family:var(--serif); font-weight:700; font-size:21px; line-height:1.5; margin:0; color:var(--ink);}
+.ex .ex-sub{grid-column:2; font-size:13.5px; color:var(--ink3); margin:0;}
+.ex .ex-b{padding:22px 0 6px;}
+.ex > figcaption, .ex .ex-src{border-top:1px solid var(--rule); margin-top:18px; padding-top:11px; font-size:12.5px; line-height:1.85; color:var(--ink3);}
+.ex .ex-src b{font-weight:700; color:var(--ink2);}
+.plate .ex{border-top-color:#F1F2EE;}
+.plate .ex .ex-no, .plate .ex .ex-t{color:#F6F7F3;}
+.plate .ex > .ex-h, .plate .ex .ex-src{border-color:#2E3F39;}
+.plate .ex .ex-sub, .plate .ex .ex-src{color:#A3B0A9;} .plate .ex .ex-src b{color:#CBD3CD;}
+
+/* 장 머리 — 근거 n / 3 */
+.chap{display:flex; align-items:baseline; gap:14px; margin-bottom:18px;}
+.chap .n{font-family:var(--serif); font-weight:700; font-size:15px; color:var(--ink);}
+.chap .label{color:var(--ink3);}
+.chap .line{flex:1; height:1px; background:var(--rule2); align-self:center;}
+h2.t.act{font-size:34px; line-height:1.45; max-width:860px;}
+
+@media(max-width:980px){ .kpis{grid-template-columns:1fr 1fr;} .kpis > div:nth-child(3){padding-left:0; border-left:0;} .kpis > div:nth-child(n+3){border-top:1px solid var(--rule);} }
+@media(max-width:700px){
+  h2.t.act{font-size:23px; line-height:1.5;}
+  .exec{padding:2px 16px 2px;}
+  .exec a{grid-template-columns:24px minmax(0,1fr); padding:11px 0 12px;}
+  .exec .go{display:none;}
+  .exec .n{font-size:18px;} .exec .c{font-size:15.5px;} .exec .e{font-size:13.5px;}
+  .kpis > div{padding:18px 12px 16px 0;} .kpis > div + div{padding-left:12px;}
+  .kpis > div:nth-child(3){padding-left:0;}
+  .kpis .v{font-size:34px;} .kpis .k{font-size:13.5px;} .kpis .s{font-size:12.5px;}
+  .ex{margin-top:34px;}
+  .ex > .ex-h{grid-template-columns:1fr; gap:4px;}
+  .ex .ex-sub{grid-column:1;}
+  .ex .ex-t{font-size:18px;}
+}

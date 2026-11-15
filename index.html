@@ -191,7 +191,7 @@
     table.ev td{border:0; padding:2px 0; font-size:14.5px;}
     .tl2 .seg > div{padding:8px 10px;}
     .tl2 b{font-size:13.5px;} .tl2 .seg span{font-size:12px;}
-    .scope{font-size:12px;}
+    .scope{font-size:12px;} .scope .lg{display:none;}
     .series a{grid-template-columns:30px minmax(0,1fr);}
     .series .ar{display:none;}
     .series .ti{font-size:15px;}
@@ -257,7 +257,8 @@
 <!-- ══ 핵심 수치 ══════════════════════════════════════════════ -->
 <section class="sect band" aria-labelledby="kpi-t">
   <div class="wrap">
-    <h2 class="label" id="kpi-t">숫자로 본 WELCO 원두</h2>
+    <span class="label">핵심 수치</span>
+    <h2 class="t act" id="kpi-t" style="font-size:24px; margin-bottom:22px;">낮게 설정한 150°C로 12분, 한 봉은 핸드드립 약 13잔입니다</h2>
     <div class="kpis">
       <div><span class="v">150<small>°C</small></span><span class="k">설정 온도<sup>1</sup></span><span class="s">통상 범위 150~280°C의 낮은 끝</span></div>
       <div><span class="v">12<small>분</small></span><span class="k">한 번 볶는 공정<sup>1</sup></span><span class="s">진공 8분 → 질소 4분</span></div>
@@ -287,7 +288,7 @@
           <div class="nit"><b>2단계 · 질소</b><span>질소를 채워 볶습니다</span></div>
         </div>
         <div class="ticks" aria-hidden="true"><span>0분</span><span><span>8분</span><span>12분</span></span></div>
-        <div class="scope" aria-hidden="true"><span>WELCO 자체 공정</span><span>등록특허 제10-2004953호</span></div>
+        <div class="scope" aria-hidden="true"><span>WELCO 자체 공정</span><span>등록특허<span class="lg"> 제10-2004953호</span></span></div>
         <div class="temp" aria-hidden="true"><span>설정 온도</span><i></i><b>150°C</b><span>자체 공정</span></div>
       </div>
       <figcaption class="ex-src"><b>출처</b> WELCO 로스팅 공정(생산 중 제어 화면 설정값). <b>주</b> 등록특허 제10-2004953호는 질소로 산소를 없앤 분위기에서 볶는 방법에 관한 것이며, 질소를 채우기 전의 진공 단계와 설정 150°C는 특허 범위가 아닌 WELCO 자체 공정입니다.</figcaption>
